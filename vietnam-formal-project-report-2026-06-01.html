@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>vietnam-formal-project-report-2026-06-01</title>
+    <style>
+@page {
+    size: A4;
+    margin: 2cm 2.5cm;
+    @bottom-center {
+        content: counter(page);
+        font-size: 9pt;
+        color: #999;
+    }
+}
+
+/* 强制使用 Noto Sans CJK SC，绕过 Pango 字体匹配的不确定性 */
+@font-face {
+    font-family: 'CJK';
+    src: url('/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'CJK';
+    src: url('/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'CJK';
+    src: url('/usr/share/fonts/opentype/noto/NotoSerifCJK-Regular.ttc') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+body {
+    font-family: 'CJK', 'Noto Sans CJK SC', sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.8;
+    color: #1a1a1a;
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 20pt;
+    color: #1a1a2e;
+    border-bottom: 3px solid #e94560;
+    padding-bottom: 8pt;
+    margin-top: 24pt;
+    page-break-before: always;
+}
+
+h1:first-of-type {
+    page-break-before: avoid;
+}
+
+h2 {
+    font-size: 15pt;
+    color: #16213e;
+    border-bottom: 1.5px solid #0f3460;
+    padding-bottom: 5pt;
+    margin-top: 18pt;
+}
+
+h3 {
+    font-size: 12.5pt;
+    color: #0f3460;
+    margin-top: 14pt;
+}
+
+h4 {
+    font-size: 11pt;
+    color: #333;
+    margin-top: 10pt;
+}
+
+/* 表格样式 - 关键修复 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12pt 0;
+    font-size: 9.5pt;
+    page-break-inside: avoid;
+    display: table;
+}
+
+thead {
+    display: table-header-group;
+}
+
+th {
+    background-color: #16213e;
+    color: white;
+    padding: 8px 10px;
+    text-align: left;
+    font-weight: 600;
+    border: 1px solid #0f3460;
+    font-size: 9pt;
+}
+
+td {
+    padding: 7px 10px;
+    border: 1px solid #ddd;
+    vertical-align: top;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tr:hover {
+    background-color: #e8f4f8;
+}
+
+/* 代码块 */
+code {
+    font-family: 'CJK', "Noto Sans Mono CJK SC", monospace;
+    font-size: 8.5pt;
+    background: #f4f4f4;
+    padding: 2px 5px;
+    border-radius: 3px;
+    border: 1px solid #e0e0e0;
+}
+
+pre {
+    background: #1e1e2e;
+    color: #cdd6f4;
+    padding: 12pt;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-size: 8.5pt;
+    line-height: 1.6;
+    margin: 10pt 0;
+    page-break-inside: avoid;
+}
+
+pre code {
+    background: none;
+    border: none;
+    color: inherit;
+    padding: 0;
+}
+
+/* 引用块 */
+blockquote {
+    border-left: 4px solid #e94560;
+    margin: 10pt 0;
+    padding: 8pt 14pt;
+    background: #fff5f5;
+    color: #666;
+    font-size: 9.5pt;
+}
+
+/* 列表 */
+ul, ol {
+    padding-left: 20pt;
+    margin: 6pt 0;
+}
+
+li {
+    margin: 3pt 0;
+}
+
+li > ul, li > ol {
+    margin: 2pt 0;
+}
+
+/* 任务列表 */
+input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+/* 链接 */
+a {
+    color: #0f3460;
+    text-decoration: none;
+}
+
+/* 水平线 */
+hr {
+    border: none;
+    border-top: 1.5px solid #e0e0e0;
+    margin: 16pt 0;
+}
+
+/* 强调 */
+strong {
+    color: #1a1a2e;
+}
+
+em {
+    color: #555;
+}
+
+/* emoji 处理 */
+img.emoji {
+    height: 1em;
+    width: 1em;
+    vertical-align: middle;
+}
+
+/* 警告/提示块 (用 blockquote 变体) */
+blockquote p:first-child strong {
+    color: #e94560;
+}
+
+/* Mermaid 图表占位 - 跳过不支持的图表 */
+pre code.language-mermaid {
+    display: none;
+}
+</style>
+</head>
+<body>
+<h1 id="_1">越南跨境电商选品分析报告</h1>
+<p><strong>正式项目报告</strong> | 2026-06-01</p>
+<hr />
+<p><strong>报告编号</strong>: VN-ENTRY-2026-001<br />
+<strong>目标市场</strong>: Vietnam (越南)<br />
+<strong>执行日期</strong>: 2026-06-01<br />
+<strong>Orchestrator</strong>: Emma<br />
+<strong>报告版本</strong>: 1.0</p>
+<hr />
+<h2 id="_2">目录</h2>
+<ol>
+<li><a href="#一执行摘要">执行摘要</a></li>
+<li><a href="#二市场概览">市场概览</a></li>
+<li><a href="#三品类机会矩阵">品类机会矩阵</a></li>
+<li><a href="#四搜索热点分析">搜索热点分析</a></li>
+<li><a href="#五舆情与竞品分析">舆情与竞品分析</a></li>
+<li><a href="#六top-10-选品清单">Top 10 选品清单</a></li>
+<li><a href="#七成本模型与盈利分析">成本模型与盈利分析</a></li>
+<li><a href="#八合规风险评估">合规风险评估</a></li>
+<li><a href="#九最终决策建议">最终决策建议</a></li>
+<li><a href="#十附录">附录</a></li>
+</ol>
+<hr />
+<h2 id="_3">一、执行摘要</h2>
+<h3 id="11">1.1 核心结论</h3>
+<p>越南电商市场正处于<strong>高速增长+格局重塑</strong>的关键窗口期：</p>
+<ul>
+<li><strong>市场规模</strong>: 2026 Q1 GMV达US$5.7B，同比增长47%，预计全年US$28-32B</li>
+<li><strong>平台格局</strong>: Shopee(56%) vs TikTok Shop(41%)双寡头竞争，Tiki已退出主流</li>
+<li><strong>推荐进入</strong>: <strong>9个SKU</strong>，综合风险评级均为"低"或"无"</li>
+<li><strong>预计投入</strong>: $9,500-15,000 (首批备货+认证+物流+广告)</li>
+<li><strong>预计回报</strong>: 月净利润$7,000+ (保守估计)</li>
+</ul>
+<h3 id="12">1.2 推荐进入清单</h3>
+<table>
+<thead>
+<tr>
+<th>排名</th>
+<th>产品</th>
+<th>毛利率</th>
+<th>净利率</th>
+<th>风险</th>
+<th>优先级</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>桌面手机支架</td>
+<td>63.9%</td>
+<td>20.4%</td>
+<td>🟢 无</td>
+<td>P0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>发夹套装</td>
+<td>61.0%</td>
+<td>20.3%</td>
+<td>🟢 无</td>
+<td>P0</td>
+</tr>
+<tr>
+<td>3</td>
+<td>时尚项链</td>
+<td>64.2%</td>
+<td>21.4%</td>
+<td>🟢 无</td>
+<td>P0</td>
+</tr>
+<tr>
+<td>4</td>
+<td>收纳盒套装</td>
+<td>52.5%</td>
+<td>12.6%</td>
+<td>🟢 低</td>
+<td>P0</td>
+</tr>
+<tr>
+<td>5</td>
+<td>宠物玩具套装</td>
+<td>54.8%</td>
+<td>19.4%</td>
+<td>🟢 低</td>
+<td>P0</td>
+</tr>
+<tr>
+<td>6</td>
+<td>车载磁吸支架</td>
+<td>61.0%</td>
+<td>21.0%</td>
+<td>🟢 无</td>
+<td>P0</td>
+</tr>
+<tr>
+<td>7</td>
+<td>男士护肤工具</td>
+<td>61.2%</td>
+<td>21.4%</td>
+<td>🟢 低</td>
+<td>P0</td>
+</tr>
+<tr>
+<td>8</td>
+<td>压缩袋套装</td>
+<td>62.7%</td>
+<td>21.0%</td>
+<td>🟢 低</td>
+<td>P1</td>
+</tr>
+<tr>
+<td>9</td>
+<td>切菜器</td>
+<td>52.9%</td>
+<td>15.9%</td>
+<td>🟡 中</td>
+<td>P1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="13">1.3 暂不进入</h3>
+<table>
+<thead>
+<tr>
+<th>产品</th>
+<th>原因</th>
+<th>建议</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>蓝牙音箱</td>
+<td>合规风险高(需多项认证，费用4000万VND)</td>
+<td>选择已有认证产品或暂不上架</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_4">二、市场概览</h2>
+<h3 id="21">2.1 电商规模与增速</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>数值</th>
+<th>同比变化</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026 Q1 GMV</td>
+<td><strong>US$5.7B</strong></td>
+<td><strong>+47.0%</strong></td>
+</tr>
+<tr>
+<td>2026全年预测</td>
+<td>US$28-32B</td>
+<td>~30%</td>
+</tr>
+<tr>
+<td>日均GMV</td>
+<td>VND 1.65万亿</td>
+<td>—</td>
+</tr>
+<tr>
+<td>活跃店铺数</td>
+<td>~490,900家</td>
+<td>+4.0%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22">2.2 平台格局</h3>
+<table>
+<thead>
+<tr>
+<th>平台</th>
+<th>市场份额</th>
+<th>增速</th>
+<th>定位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Shopee</strong></td>
+<td><strong>56%</strong></td>
+<td>+4%</td>
+<td>全品类龙头</td>
+</tr>
+<tr>
+<td><strong>TikTok Shop</strong></td>
+<td><strong>41%</strong></td>
+<td><strong>+69%~148%</strong></td>
+<td>内容电商爆发</td>
+</tr>
+<tr>
+<td>Lazada</td>
+<td>3%</td>
+<td>持平</td>
+<td>品牌化+高端</td>
+</tr>
+<tr>
+<td>Tiki</td>
+<td>&lt;1%</td>
+<td>-80%</td>
+<td>已退出主流</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23">2.3 消费偏好</h3>
+<table>
+<thead>
+<tr>
+<th>排名</th>
+<th>品类</th>
+<th>收入占比</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Beauty (美妆)</td>
+<td>16.4%</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Women's Fashion (女装)</td>
+<td>14.1%</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Home &amp; Living (家居)</td>
+<td>12.2%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>主力价格带</strong>: VND 100,000-350,000 (占比~42%)</p>
+<hr />
+<h2 id="_5">三、品类机会矩阵</h2>
+<h3 id="31-15">3.1 15大品类潜力评分</h3>
+<table>
+<thead>
+<tr>
+<th>排名</th>
+<th>品类</th>
+<th>综合潜力分</th>
+<th>机会评级</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>美妆护肤</td>
+<td>4.3</td>
+<td>🟢 强烈推荐</td>
+</tr>
+<tr>
+<td>2</td>
+<td>家居生活</td>
+<td>3.9</td>
+<td>🟢 强烈推荐</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3C配件</td>
+<td>3.7</td>
+<td>🟢 强烈推荐</td>
+</tr>
+<tr>
+<td>4</td>
+<td>运动户外</td>
+<td>3.5</td>
+<td>🟡 推荐</td>
+</tr>
+<tr>
+<td>5</td>
+<td>个护健康</td>
+<td>3.5</td>
+<td>🟡 推荐</td>
+</tr>
+<tr>
+<td>6</td>
+<td>珠宝饰品</td>
+<td>3.5</td>
+<td>🟢 蓝海(高利润)</td>
+</tr>
+<tr>
+<td>7</td>
+<td>宠物用品</td>
+<td>3.4</td>
+<td>🟢 蓝海</td>
+</tr>
+<tr>
+<td>8</td>
+<td>母婴用品</td>
+<td>3.4</td>
+<td>🟡 推荐</td>
+</tr>
+<tr>
+<td>9</td>
+<td>食品饮料</td>
+<td>3.2</td>
+<td>🟡 推荐(合规风险高)</td>
+</tr>
+<tr>
+<td>10</td>
+<td>汽车用品</td>
+<td>3.1</td>
+<td>🟡 推荐</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32">3.2 蓝海品类机会</h3>
+<table>
+<thead>
+<tr>
+<th>品类</th>
+<th>年增速</th>
+<th>竞争度</th>
+<th>推荐指数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>宠物用品</td>
+<td>50%+</td>
+<td>极低</td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>男士美容工具</td>
+<td>80%+</td>
+<td>极低</td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>珠宝饰品</td>
+<td>55%+</td>
+<td>低</td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_6">四、搜索热点分析</h2>
+<h3 id="41">4.1 品类搜索热度</h3>
+<table>
+<thead>
+<tr>
+<th>品类</th>
+<th>搜索热度指数</th>
+<th>同比增速</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Beauty</td>
+<td>100</td>
+<td>+40%</td>
+</tr>
+<tr>
+<td>Women's Fashion</td>
+<td>85</td>
+<td>+25%</td>
+</tr>
+<tr>
+<td>Home &amp; Living</td>
+<td>72</td>
+<td>+30%</td>
+</tr>
+<tr>
+<td>Electronics</td>
+<td>68</td>
+<td>+35%</td>
+</tr>
+<tr>
+<td>Pet Supplies</td>
+<td>28</td>
+<td><strong>+80%</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="42">4.2 推荐布局关键词</h3>
+<table>
+<thead>
+<tr>
+<th>关键词</th>
+<th>月搜索量</th>
+<th>竞争度</th>
+<th>推荐指数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"kệ để đồ" (收纳架)</td>
+<td>45,000+</td>
+<td>低</td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>"đồ chơi thú cưng" (宠物玩具)</td>
+<td>8,000+</td>
+<td>极低</td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>"giá đỡ điện thoại" (手机支架)</td>
+<td>35,000+</td>
+<td>低</td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>"kẹp tóc" (发夹)</td>
+<td>15,000+</td>
+<td>低</td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_7">五、舆情与竞品分析</h2>
+<h3 id="51">5.1 消费者核心痛点</h3>
+<table>
+<thead>
+<tr>
+<th>痛点</th>
+<th>优先级</th>
+<th>影响品类</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>假货/劣质产品担忧</td>
+<td>🔴 最高</td>
+<td>美妆、3C</td>
+</tr>
+<tr>
+<td>成分安全担忧</td>
+<td>🔴 高</td>
+<td>美妆、个护</td>
+</tr>
+<tr>
+<td>物流时效不稳定</td>
+<td>🟡 中</td>
+<td>跨境全品类</td>
+</tr>
+<tr>
+<td>产品与描述不符</td>
+<td>🟡 中</td>
+<td>美妆、服装、家居</td>
+</tr>
+<tr>
+<td>售后客服响应慢</td>
+<td>🟡 中</td>
+<td>全品类</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52">5.2 竞品竞争度对比</h3>
+<table>
+<thead>
+<tr>
+<th>品类</th>
+<th>头部集中度</th>
+<th>平均差评率</th>
+<th>进入难度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>面膜</td>
+<td>45%</td>
+<td>5.5%</td>
+<td>🔴 高</td>
+</tr>
+<tr>
+<td>手机壳</td>
+<td>60%</td>
+<td>6.2%</td>
+<td>🔴 极高</td>
+</tr>
+<tr>
+<td>收纳用品</td>
+<td>35%</td>
+<td>5.2%</td>
+<td>🟡 中</td>
+</tr>
+<tr>
+<td>宠物用品</td>
+<td>20%</td>
+<td>3.8%</td>
+<td>🟢 低</td>
+</tr>
+<tr>
+<td>珠宝饰品</td>
+<td>25%</td>
+<td>4.5%</td>
+<td>🟢 低</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="top-10">六、Top 10 选品清单</h2>
+<h3 id="61-9sku">6.1 最终推荐9个SKU</h3>
+<table>
+<thead>
+<tr>
+<th>排名</th>
+<th>产品</th>
+<th>规格</th>
+<th>目标价(VND)</th>
+<th>毛利率</th>
+<th>搜索量</th>
+<th>竞争度</th>
+<th>风险</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>桌面手机支架</td>
+<td>铝合金，多角度</td>
+<td>35,000-55,000</td>
+<td>63.9%</td>
+<td>35,000+</td>
+<td>2.0</td>
+<td>🟢</td>
+</tr>
+<tr>
+<td>2</td>
+<td>发夹套装</td>
+<td>20件，合金</td>
+<td>28,000-45,000</td>
+<td>61.0%</td>
+<td>15,000+</td>
+<td>2.0</td>
+<td>🟢</td>
+</tr>
+<tr>
+<td>3</td>
+<td>时尚项链</td>
+<td>银镀合金</td>
+<td>55,000-85,000</td>
+<td>64.2%</td>
+<td>12,000+</td>
+<td>2.5</td>
+<td>🟢</td>
+</tr>
+<tr>
+<td>4</td>
+<td>收纳盒套装</td>
+<td>6件，塑料</td>
+<td>85,000-120,000</td>
+<td>52.5%</td>
+<td>45,000+</td>
+<td>2.5</td>
+<td>🟢</td>
+</tr>
+<tr>
+<td>5</td>
+<td>宠物玩具套装</td>
+<td>5件，耐咬</td>
+<td>80,000-120,000</td>
+<td>54.8%</td>
+<td>8,000+</td>
+<td>1.5</td>
+<td>🟢</td>
+</tr>
+<tr>
+<td>6</td>
+<td>车载磁吸支架</td>
+<td>磁吸+重力</td>
+<td>55,000-85,000</td>
+<td>61.0%</td>
+<td>25,000+</td>
+<td>2.5</td>
+<td>🟢</td>
+</tr>
+<tr>
+<td>7</td>
+<td>男士护肤工具</td>
+<td>4件，不锈钢</td>
+<td>65,000-95,000</td>
+<td>61.2%</td>
+<td>5,000+</td>
+<td>1.5</td>
+<td>🟢</td>
+</tr>
+<tr>
+<td>8</td>
+<td>压缩袋套装</td>
+<td>8件，PET+PA</td>
+<td>55,000-85,000</td>
+<td>62.7%</td>
+<td>20,000+</td>
+<td>2.5</td>
+<td>🟢</td>
+</tr>
+<tr>
+<td>9</td>
+<td>切菜器</td>
+<td>5合1，ABS+钢</td>
+<td>55,000-85,000</td>
+<td>52.9%</td>
+<td>35,000+</td>
+<td>2.5</td>
+<td>🟡</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_8">七、成本模型与盈利分析</h2>
+<h3 id="71">7.1 成本构成</h3>
+<table>
+<thead>
+<tr>
+<th>成本类别</th>
+<th>平均占比</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>采购成本</td>
+<td>31%</td>
+</tr>
+<tr>
+<td>平台+广告</td>
+<td>48%</td>
+</tr>
+<tr>
+<td>物流+关税</td>
+<td>8%</td>
+</tr>
+<tr>
+<td>售后+仓储</td>
+<td>6%</td>
+</tr>
+<tr>
+<td>其他</td>
+<td>7%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="72">7.2 盈利预测(保守)</h3>
+<table>
+<thead>
+<tr>
+<th>SKU</th>
+<th>预估月销量</th>
+<th>单件净利</th>
+<th>月净利润</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#5 手机支架</td>
+<td>200</td>
+<td>$4.89</td>
+<td>$978</td>
+</tr>
+<tr>
+<td>#8 项链</td>
+<td>200</td>
+<td>$6.43</td>
+<td>$1,286</td>
+</tr>
+<tr>
+<td>#4 发夹</td>
+<td>300</td>
+<td>$1.83</td>
+<td>$549</td>
+</tr>
+<tr>
+<td>#1 收纳盒</td>
+<td>200</td>
+<td>$3.02</td>
+<td>$604</td>
+</tr>
+<tr>
+<td>#3 宠物玩具</td>
+<td>100</td>
+<td>$5.83</td>
+<td>$583</td>
+</tr>
+<tr>
+<td>#6 车载支架</td>
+<td>150</td>
+<td>$6.30</td>
+<td>$945</td>
+</tr>
+<tr>
+<td>#7 男士工具</td>
+<td>80</td>
+<td>$6.43</td>
+<td>$514</td>
+</tr>
+<tr>
+<td>#10 压缩袋</td>
+<td>150</td>
+<td>$6.30</td>
+<td>$945</td>
+</tr>
+<tr>
+<td>#2 切菜器</td>
+<td>150</td>
+<td>$4.77</td>
+<td>$716</td>
+</tr>
+<tr>
+<td><strong>合计</strong></td>
+<td><strong>1,530</strong></td>
+<td></td>
+<td><strong>$7,120</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="73">7.3 投资预算</h3>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>金额(USD)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>首批备货</td>
+<td>$5,000-8,000</td>
+</tr>
+<tr>
+<td>认证费用</td>
+<td>$2,000-3,000</td>
+</tr>
+<tr>
+<td>物流费用</td>
+<td>$1,000-2,000</td>
+</tr>
+<tr>
+<td>广告预算(首月)</td>
+<td>$1,500-2,000</td>
+</tr>
+<tr>
+<td><strong>总计</strong></td>
+<td><strong>$9,500-15,000</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_9">八、合规风险评估</h2>
+<h3 id="81">8.1 风险等级分布</h3>
+<table>
+<thead>
+<tr>
+<th>风险等级</th>
+<th>SKU数量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🟢 无/低</td>
+<td>8</td>
+</tr>
+<tr>
+<td>🟡 中</td>
+<td>1 (切菜器-食品接触认证)</td>
+</tr>
+<tr>
+<td>🔴 高</td>
+<td>1 (蓝牙音箱-多项认证)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="82">8.2 总合规成本</h3>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>费用(VND)</th>
+<th>周期</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>税务登记</td>
+<td>2,000,000</td>
+<td>7-14天</td>
+</tr>
+<tr>
+<td>产品标签</td>
+<td>3,000,000</td>
+<td>3-5天</td>
+</tr>
+<tr>
+<td>切菜器认证</td>
+<td>10,500,000</td>
+<td>15-30天</td>
+</tr>
+<tr>
+<td>宠物用品认证</td>
+<td>7,500,000</td>
+<td>10-20天</td>
+</tr>
+<tr>
+<td>蓝牙音箱认证</td>
+<td><strong>40,000,000</strong></td>
+<td><strong>30-60天</strong></td>
+</tr>
+<tr>
+<td><strong>合计(不含音箱)</strong></td>
+<td><strong>~23,000,000</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="83">8.3 合规建议</h3>
+<ul>
+<li><strong>立即行动</strong>: 完成跨境电商税务登记</li>
+<li><strong>优先处理</strong>: 确认切菜器食品接触认证</li>
+<li><strong>谨慎处理</strong>: 蓝牙音箱需4000万VND认证，建议暂不上架</li>
+</ul>
+<hr />
+<h2 id="_10">九、最终决策建议</h2>
+<h3 id="91">9.1 进入策略</h3>
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>时间</th>
+<th>SKU</th>
+<th>目标</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>阶段1</td>
+<td>第1-2周</td>
+<td>#5, #4, #8</td>
+<td>快速上架3个无风险SKU</td>
+</tr>
+<tr>
+<td>阶段2</td>
+<td>第3-4周</td>
+<td>#1, #3, #6</td>
+<td>上架3个低风险SKU</td>
+</tr>
+<tr>
+<td>阶段3</td>
+<td>第5-6周</td>
+<td>#7, #10</td>
+<td>上架2个蓝海SKU</td>
+</tr>
+<tr>
+<td>阶段4</td>
+<td>第7-8周</td>
+<td>#2</td>
+<td>上架切菜器(需认证)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="92">9.2 平台策略</h3>
+<table>
+<thead>
+<tr>
+<th>平台</th>
+<th>推荐SKU</th>
+<th>理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shopee</td>
+<td>全9个SKU</td>
+<td>流量大，搜索电商</td>
+</tr>
+<tr>
+<td>TikTok Shop</td>
+<td>#4, #8, #3, #7</td>
+<td>内容电商，视觉效果好</td>
+</tr>
+</tbody>
+</table>
+<h3 id="93">9.3 关键成功因素</h3>
+<ol>
+<li><strong>合规先行</strong>: 确保所有产品认证齐全</li>
+<li><strong>内容营销</strong>: TikTok短视频/直播核心引流</li>
+<li><strong>好评管理</strong>: 严格控制品控，降低差评率</li>
+<li><strong>大促参与</strong>: 积极参与618、双11等平台大促</li>
+<li><strong>数据驱动</strong>: 每周监控销售数据，及时调整</li>
+</ol>
+<hr />
+<h2 id="_11">十、附录</h2>
+<h3 id="101">10.1 报告文件清单</h3>
+<table>
+<thead>
+<tr>
+<th>步骤</th>
+<th>文件名</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Step 1</td>
+<td>vietnam-market-overview-2026-06-01.md</td>
+</tr>
+<tr>
+<td>Step 2</td>
+<td>vietnam-category-matrix-2026-06-01.md</td>
+</tr>
+<tr>
+<td>Step 3</td>
+<td>vietnam-search-trends-2026-06-01.md</td>
+</tr>
+<tr>
+<td>Step 4</td>
+<td>vietnam-sentiment-analysis-2026-06-01.md</td>
+</tr>
+<tr>
+<td>Step 5</td>
+<td>vietnam-competitor-matrix-2026-06-01.md</td>
+</tr>
+<tr>
+<td>Step 6</td>
+<td>vietnam-user-insights-2026-06-01.md</td>
+</tr>
+<tr>
+<td>Step 7</td>
+<td>vietnam-top10-selection-2026-06-01.md</td>
+</tr>
+<tr>
+<td>Step 8</td>
+<td>vietnam-cost-model-2026-06-01.md</td>
+</tr>
+<tr>
+<td>Step 9</td>
+<td>vietnam-compliance-checklist-2026-06-01.md</td>
+</tr>
+<tr>
+<td>Step 10</td>
+<td>vietnam-final-selection-2026-06-01.md</td>
+</tr>
+<tr>
+<td>Step 11</td>
+<td>vietnam-formal-project-report-2026-06-01.md (本文件)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="102">10.2 数据来源</h3>
+<ul>
+<li>Metric.vn (2026 Q1 越南电商数据)</li>
+<li>Vietnam Briefing (2026 电商展望)</li>
+<li>VOV (越南之声广播电台)</li>
+<li>Vietdata (越南电商情报)</li>
+<li>YouNet ECI (越南电商智能报告)</li>
+<li>BRF Logistics (越南电商市场更新)</li>
+<li>各平台公开数据</li>
+</ul>
+<hr />
+<p><strong>报告结束</strong></p>
+<p><em>生成时间: 2026-06-01 | Orchestrator: Emma | 版本: 1.0</em></p>
+</body>
+</html>

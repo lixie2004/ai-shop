@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>philippines-formal-project-report-2026-06-03</title>
+    <style>
+@page {
+    size: A4;
+    margin: 2cm 2.5cm;
+    @bottom-center {
+        content: counter(page);
+        font-size: 9pt;
+        color: #999;
+    }
+}
+
+/* 强制使用 Noto Sans CJK SC，绕过 Pango 字体匹配的不确定性 */
+@font-face {
+    font-family: 'CJK';
+    src: url('/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'CJK';
+    src: url('/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'CJK';
+    src: url('/usr/share/fonts/opentype/noto/NotoSerifCJK-Regular.ttc') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+body {
+    font-family: 'CJK', 'Noto Sans CJK SC', sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.8;
+    color: #1a1a1a;
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 20pt;
+    color: #1a1a2e;
+    border-bottom: 3px solid #e94560;
+    padding-bottom: 8pt;
+    margin-top: 24pt;
+    page-break-before: always;
+}
+
+h1:first-of-type {
+    page-break-before: avoid;
+}
+
+h2 {
+    font-size: 15pt;
+    color: #16213e;
+    border-bottom: 1.5px solid #0f3460;
+    padding-bottom: 5pt;
+    margin-top: 18pt;
+}
+
+h3 {
+    font-size: 12.5pt;
+    color: #0f3460;
+    margin-top: 14pt;
+}
+
+h4 {
+    font-size: 11pt;
+    color: #333;
+    margin-top: 10pt;
+}
+
+/* 表格样式 - 关键修复 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12pt 0;
+    font-size: 9.5pt;
+    page-break-inside: avoid;
+    display: table;
+}
+
+thead {
+    display: table-header-group;
+}
+
+th {
+    background-color: #16213e;
+    color: white;
+    padding: 8px 10px;
+    text-align: left;
+    font-weight: 600;
+    border: 1px solid #0f3460;
+    font-size: 9pt;
+}
+
+td {
+    padding: 7px 10px;
+    border: 1px solid #ddd;
+    vertical-align: top;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tr:hover {
+    background-color: #e8f4f8;
+}
+
+/* 代码块 */
+code {
+    font-family: 'CJK', "Noto Sans Mono CJK SC", monospace;
+    font-size: 8.5pt;
+    background: #f4f4f4;
+    padding: 2px 5px;
+    border-radius: 3px;
+    border: 1px solid #e0e0e0;
+}
+
+pre {
+    background: #1e1e2e;
+    color: #cdd6f4;
+    padding: 12pt;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-size: 8.5pt;
+    line-height: 1.6;
+    margin: 10pt 0;
+    page-break-inside: avoid;
+}
+
+pre code {
+    background: none;
+    border: none;
+    color: inherit;
+    padding: 0;
+}
+
+/* 引用块 */
+blockquote {
+    border-left: 4px solid #e94560;
+    margin: 10pt 0;
+    padding: 8pt 14pt;
+    background: #fff5f5;
+    color: #666;
+    font-size: 9.5pt;
+}
+
+/* 列表 */
+ul, ol {
+    padding-left: 20pt;
+    margin: 6pt 0;
+}
+
+li {
+    margin: 3pt 0;
+}
+
+li > ul, li > ol {
+    margin: 2pt 0;
+}
+
+/* 任务列表 */
+input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+/* 链接 */
+a {
+    color: #0f3460;
+    text-decoration: none;
+}
+
+/* 水平线 */
+hr {
+    border: none;
+    border-top: 1.5px solid #e0e0e0;
+    margin: 16pt 0;
+}
+
+/* 强调 */
+strong {
+    color: #1a1a2e;
+}
+
+em {
+    color: #555;
+}
+
+/* emoji 处理 */
+img.emoji {
+    height: 1em;
+    width: 1em;
+    vertical-align: middle;
+}
+
+/* 警告/提示块 (用 blockquote 变体) */
+blockquote p:first-child strong {
+    color: #e94560;
+}
+
+/* Mermaid 图表占位 - 跳过不支持的图表 */
+pre code.language-mermaid {
+    display: none;
+}
+</style>
+</head>
+<body>
+<h1 id="_1">菲律宾市场选品分析 — 正式项目报告</h1>
+<p><strong>项目名称</strong>：Philippines Market Selection Analysis 2026<br />
+<strong>报告日期</strong>：2026年6月3日<br />
+<strong>目标市场</strong>：Philippines（菲律宾）<br />
+<strong>报告版本</strong>：v1.0 Final<br />
+<strong>编制人</strong>：Emma XIE | 普罗米修斯<br />
+<strong>审核状态</strong>：✅ 已完成内部评审  </p>
+<hr />
+<h2 id="_2">📋 目录</h2>
+<ol>
+<li><a href="#1-执行摘要">执行摘要</a></li>
+<li><a href="#2-市场概览">市场概览</a></li>
+<li><a href="#3-品类矩阵">品类矩阵</a></li>
+<li><a href="#4-搜索趋势">搜索趋势</a></li>
+<li><a href="#5-舆情分析">舆情分析</a></li>
+<li><a href="#6-竞品分析">竞品分析</a></li>
+<li><a href="#7-用户洞察">用户洞察</a></li>
+<li><a href="#8-top-10-选品清单">Top 10 选品清单</a></li>
+<li><a href="#9-成本模型">成本模型</a></li>
+<li><a href="#10-合规清单">合规清单</a></li>
+<li><a href="#11-最终决策建议">最终决策建议</a></li>
+<li><a href="#12-附录">附录</a></li>
+</ol>
+<hr />
+<h2 id="1">1. 执行摘要</h2>
+<h3 id="_3">核心结论</h3>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>结论</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>市场吸引力</strong></td>
+<td>⭐⭐⭐⭐（4/5）— 东南亚第四大电商市场，+17%增速</td>
+</tr>
+<tr>
+<td><strong>推荐进入</strong></td>
+<td>✅ <strong>建议进入</strong> — 综合评估为正</td>
+</tr>
+<tr>
+<td><strong>首选平台</strong></td>
+<td>Shopee（流量最大）+ TikTok Shop（增长最快）</td>
+</tr>
+<tr>
+<td><strong>首选品类</strong></td>
+<td>美妆护肤、消费电子配件、健康保健</td>
+</tr>
+<tr>
+<td><strong>预计投资</strong></td>
+<td>一次性 $9,400 + 月运营 $2,900</td>
+</tr>
+<tr>
+<td><strong>投资回收期</strong></td>
+<td>5-6个月</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_4">关键数据一览</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电商市场规模</td>
+<td>$385亿（2026）</td>
+</tr>
+<tr>
+<td>增速</td>
+<td>+17% YoY</td>
+</tr>
+<tr>
+<td>互联网用户</td>
+<td>9,800万（渗透率83.8%）</td>
+</tr>
+<tr>
+<td>社交媒体用户</td>
+<td>9,580万（渗透率81.9%）</td>
+</tr>
+<tr>
+<td>Top 10 综合毛利率</td>
+<td>29-53%</td>
+</tr>
+<tr>
+<td>Top 10 综合净利率</td>
+<td>10-28%</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="2">2. 市场概览</h2>
+<h3 id="21">2.1 电商市场规模</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>数值</th>
+<th>同比</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026年市场规模</td>
+<td>PHP 2.15万亿（~$385亿）</td>
+<td>+17%</td>
+</tr>
+<tr>
+<td>东南亚排名</td>
+<td>第4位</td>
+<td>—</td>
+</tr>
+<tr>
+<td>跨境进口规模</td>
+<td>~$65亿</td>
+<td>+20%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22">2.2 平台格局</h3>
+<table>
+<thead>
+<tr>
+<th>平台</th>
+<th>市场份额</th>
+<th>GMV</th>
+<th>增速</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shopee</td>
+<td>~49%</td>
+<td>~$19亿</td>
+<td>+15%</td>
+</tr>
+<tr>
+<td>Lazada</td>
+<td>~30%</td>
+<td>~$11.5亿</td>
+<td>+12%</td>
+</tr>
+<tr>
+<td>TikTok Shop</td>
+<td>~15%</td>
+<td>~$5.7亿</td>
+<td>+85%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23">2.3 数字基础设施</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>总人口</td>
+<td>1.17亿</td>
+</tr>
+<tr>
+<td>互联网用户</td>
+<td>9,800万（83.8%）</td>
+</tr>
+<tr>
+<td>社交媒体用户</td>
+<td>9,580万（81.9%）</td>
+</tr>
+<tr>
+<td>移动下载速度</td>
+<td>59.64 Mbps</td>
+</tr>
+<tr>
+<td>中位年龄</td>
+<td>26.1岁</td>
+</tr>
+</tbody>
+</table>
+<h3 id="24">2.4 政策环境</h3>
+<ul>
+<li><strong>BOC CAO 01-2025</strong>：跨境电商清关新规，正规报关</li>
+<li><strong>VAT</strong>：12%</li>
+<li><strong>进口关税</strong>：0-30%（按HS Code）</li>
+<li><strong>FDA注册</strong>：化妆品/保健品强制</li>
+</ul>
+<p><em>（详细市场分析见 Step 1 报告：philippines-market-overview-2026-06-03.md）</em></p>
+<hr />
+<h2 id="3">3. 品类矩阵</h2>
+<h3 id="31">3.1 品类优先级评分</h3>
+<table>
+<thead>
+<tr>
+<th>品类</th>
+<th>综合评分</th>
+<th>优先级</th>
+<th>核心结论</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>美妆护肤</td>
+<td>8.3</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>高需求、高毛利、跨境优势</td>
+</tr>
+<tr>
+<td>时尚服饰</td>
+<td>8.1</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>高频消费、社交驱动</td>
+</tr>
+<tr>
+<td>消费电子配件</td>
+<td>7.8</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>供应链绝对优势</td>
+</tr>
+<tr>
+<td>母婴用品</td>
+<td>7.4</td>
+<td>⭐⭐⭐⭐</td>
+<td>刚需、复购高</td>
+</tr>
+<tr>
+<td>健康保健</td>
+<td>7.4</td>
+<td>⭐⭐⭐⭐</td>
+<td>蓝海、+30%增速</td>
+</tr>
+<tr>
+<td>家居收纳</td>
+<td>6.8</td>
+<td>⭐⭐⭐⭐</td>
+<td>实用性强</td>
+</tr>
+<tr>
+<td>运动户外</td>
+<td>6.8</td>
+<td>⭐⭐⭐⭐</td>
+<td>+25%增速</td>
+</tr>
+<tr>
+<td>宠物用品</td>
+<td>6.7</td>
+<td>⭐⭐⭐⭐</td>
+<td>蓝海、+35%增速</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32">3.2 蓝海品类</h3>
+<ol>
+<li><strong>宠物用品</strong>：+35%增速，极低竞争</li>
+<li><strong>家居收纳</strong>：+18%增速，退货率低</li>
+<li><strong>运动户外</strong>：+25%增速，竞争中等</li>
+</ol>
+<p><em>（详细品类分析见 Step 2 报告：philippines-category-matrix-2026-06-03.md）</em></p>
+<hr />
+<h2 id="4">4. 搜索趋势</h2>
+<h3 id="41">4.1 品类搜索指数</h3>
+<table>
+<thead>
+<tr>
+<th>品类</th>
+<th>6月搜索指数</th>
+<th>环比</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>时尚服饰</td>
+<td>152</td>
+<td>+52%</td>
+</tr>
+<tr>
+<td>美妆护肤</td>
+<td>128</td>
+<td>+28%</td>
+</tr>
+<tr>
+<td>运动户外</td>
+<td>115</td>
+<td>+15%</td>
+</tr>
+<tr>
+<td>消费电子</td>
+<td>118</td>
+<td>+18%</td>
+</tr>
+<tr>
+<td>健康保健</td>
+<td>112</td>
+<td>+12%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42">4.2 高频搜索词</h3>
+<ul>
+<li>美妆：sunscreen、skin whitening、lip tint</li>
+<li>电子：phone case、power bank、earphones</li>
+<li>时尚：dress for women、T-shirt、shoes</li>
+</ul>
+<h3 id="43">4.3 意图分布</h3>
+<table>
+<thead>
+<tr>
+<th>意图</th>
+<th>占比</th>
+<th>转化率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>交易型</td>
+<td>45%</td>
+<td>3-5%</td>
+</tr>
+<tr>
+<td>产品研究型</td>
+<td>25%</td>
+<td>1.5-3%</td>
+</tr>
+<tr>
+<td>信息型</td>
+<td>15%</td>
+<td>0.5-1%</td>
+</tr>
+<tr>
+<td>品牌型</td>
+<td>10%</td>
+<td>4-6%</td>
+</tr>
+</tbody>
+</table>
+<p><em>（详细搜索分析见 Step 3 报告：philippines-search-trends-2026-06-03.md）</em></p>
+<hr />
+<h2 id="5">5. 舆情分析</h2>
+<h3 id="51">5.1 平台格局</h3>
+<table>
+<thead>
+<tr>
+<th>平台</th>
+<th>用户数</th>
+<th>电商相关性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Facebook</td>
+<td>8,500万</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>TikTok</td>
+<td>5,200万</td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>YouTube</td>
+<td>5,960万</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>Instagram</td>
+<td>2,800万</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-top-5">5.2 消费者痛点（全品类 TOP 5）</h3>
+<ol>
+<li>假货问题（fake/counterfeit）</li>
+<li>尺码不准（wrong size）</li>
+<li>物流慢（slow delivery）</li>
+<li>质量差（poor quality）</li>
+<li>描述不符（not as described）</li>
+</ol>
+<h3 id="53">5.3 竞品营销话术</h3>
+<ul>
+<li><strong>Innisfree</strong>："Natural beauty from Jeju Island"</li>
+<li><strong>Sunnies Face</strong>："Clean beauty for every Filipina"</li>
+<li><strong>完美日记/花西子</strong>：平价 + 中国风</li>
+</ul>
+<p><em>（详细舆情分析见 Step 4 报告：philippines-sentiment-analysis-2026-06-03.md）</em></p>
+<hr />
+<h2 id="6">6. 竞品分析</h2>
+<h3 id="61">6.1 品类竞争强度</h3>
+<table>
+<thead>
+<tr>
+<th>品类</th>
+<th>竞争强度</th>
+<th>CR5</th>
+<th>新进入者机会</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>时尚服饰</td>
+<td>🔴 高</td>
+<td>55%</td>
+<td>低</td>
+</tr>
+<tr>
+<td>美妆护肤</td>
+<td>🟡 中高</td>
+<td>45%</td>
+<td>中</td>
+</tr>
+<tr>
+<td>消费电子配件</td>
+<td>🟡 中</td>
+<td>40%</td>
+<td>中高</td>
+</tr>
+<tr>
+<td>母婴用品</td>
+<td>🟡 中</td>
+<td>50%</td>
+<td>中</td>
+</tr>
+<tr>
+<td>健康保健</td>
+<td>🟢 中低</td>
+<td>35%</td>
+<td><strong>高（蓝海）</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="62">6.2 差异化策略</h3>
+<table>
+<thead>
+<tr>
+<th>品类</th>
+<th>推荐策略</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>美妆护肤</td>
+<td>平价 K-Beauty 替代品</td>
+</tr>
+<tr>
+<td>电子配件</td>
+<td>性价比品牌化</td>
+</tr>
+<tr>
+<td>健康保健</td>
+<td>草药/天然概念</td>
+</tr>
+<tr>
+<td>母婴用品</td>
+<td>安全+性价比</td>
+</tr>
+<tr>
+<td>时尚服饰</td>
+<td>本地化尺码</td>
+</tr>
+</tbody>
+</table>
+<p><em>（详细竞品分析见 Step 5 报告：philippines-competitor-matrix-2026-06-03.md）</em></p>
+<hr />
+<h2 id="7">7. 用户洞察</h2>
+<h3 id="71">7.1 用户画像</h3>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>数据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>核心年龄</td>
+<td>18-34岁（30.1%）</td>
+</tr>
+<tr>
+<td>性别</td>
+<td>女性 55%</td>
+</tr>
+<tr>
+<td>月收入</td>
+<td>$270-630</td>
+</tr>
+<tr>
+<td>移动端</td>
+<td>85%+</td>
+</tr>
+<tr>
+<td>首选支付</td>
+<td>GCash 45%、COD 25%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="72">7.2 需求优先级</h3>
+<ol>
+<li>价格实惠（9.5/10）</li>
+<li>正品保证（9/10）</li>
+<li>物流快速（8.5/10）</li>
+<li>产品质量（8.5/10）</li>
+<li>尺码准确（8/10）</li>
+</ol>
+<h3 id="73">7.3 决策流程</h3>
+<pre><code>社交发现 → 查看评价 → 比价 → 信任建立 → 购买 → 收货体验 → 评价/复购
+</code></pre>
+<p><em>（详细用户洞察见 Step 6 报告：philippines-user-insights-2026-06-03.md）</em></p>
+<hr />
+<h2 id="8-top-10">8. Top 10 选品清单</h2>
+<h3 id="81">8.1 最终清单</h3>
+<table>
+<thead>
+<tr>
+<th>排名</th>
+<th>产品</th>
+<th>品类</th>
+<th>预估毛利率</th>
+<th>净利率</th>
+<th>风险</th>
+<th>进入时间</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#1</td>
+<td>手机壳（多型号）</td>
+<td>电子配件</td>
+<td>46.6%</td>
+<td>18.0%</td>
+<td>🟢 低</td>
+<td>立即</td>
+</tr>
+<tr>
+<td>#2</td>
+<td>防晒霜 SPF50+</td>
+<td>美妆</td>
+<td>42.0%</td>
+<td>18.0%</td>
+<td>🔴 高</td>
+<td>Q3</td>
+</tr>
+<tr>
+<td>#3</td>
+<td>美白精华液</td>
+<td>美妆</td>
+<td>46.3%</td>
+<td>22.0%</td>
+<td>🔴 高</td>
+<td>Q4</td>
+</tr>
+<tr>
+<td>#4</td>
+<td>TWS蓝牙耳机</td>
+<td>电子</td>
+<td>29.0%</td>
+<td>12.0%</td>
+<td>🟡 中</td>
+<td>立即</td>
+</tr>
+<tr>
+<td>#5</td>
+<td>维C咀嚼片</td>
+<td>保健</td>
+<td>52.6%</td>
+<td>28.0%</td>
+<td>🔴 高</td>
+<td>Q4</td>
+</tr>
+<tr>
+<td>#6</td>
+<td>瑜伽垫加厚款</td>
+<td>运动</td>
+<td>42.2%</td>
+<td>18.0%</td>
+<td>🟢 低</td>
+<td>立即</td>
+</tr>
+<tr>
+<td>#7</td>
+<td>收纳盒套装</td>
+<td>家居</td>
+<td>40.0%</td>
+<td>18.0%</td>
+<td>🟢 低</td>
+<td>立即</td>
+</tr>
+<tr>
+<td>#8</td>
+<td>婴儿连体衣</td>
+<td>母婴</td>
+<td>30.9%</td>
+<td>12.0%</td>
+<td>🟡 中</td>
+<td>Q3</td>
+</tr>
+<tr>
+<td>#9</td>
+<td>连衣裙夏季款</td>
+<td>服饰</td>
+<td>31.7%</td>
+<td>10.0%</td>
+<td>🟡 中</td>
+<td>立即</td>
+</tr>
+<tr>
+<td>#10</td>
+<td>宠物牵引绳套装</td>
+<td>宠物</td>
+<td>52.7%</td>
+<td>28.0%</td>
+<td>🟢 低</td>
+<td>立即</td>
+</tr>
+</tbody>
+</table>
+<h3 id="82">8.2 入选理由总结</h3>
+<ul>
+<li><strong>全部满足</strong>：月搜索量 &gt; 5,000、毛利率 &gt; 25%、合规风险可控</li>
+<li><strong>高优先级</strong>：手机壳（超高流量）、防晒霜（刚需）、高蓝海品类</li>
+<li><strong>高风险高回报</strong>：美白精华、维C（需FDA，但毛利最高）</li>
+<li><strong>低风险入门</strong>：收纳盒、瑜伽垫、宠物用品（零门槛）</li>
+</ul>
+<p><em>（详细选品分析见 Step 7 报告：philippines-top10-selection-2026-06-03.md）</em></p>
+<hr />
+<h2 id="9">9. 成本模型</h2>
+<h3 id="91-12">9.1 成本构成（12项）</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>成本项</th>
+<th>占比区间</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>采购成本</td>
+<td>30-45%</td>
+</tr>
+<tr>
+<td>2</td>
+<td>头程物流</td>
+<td>3-8%</td>
+</tr>
+<tr>
+<td>3</td>
+<td>进口关税</td>
+<td>0-15%</td>
+</tr>
+<tr>
+<td>4</td>
+<td>进口VAT（12%）</td>
+<td>5-8%</td>
+</tr>
+<tr>
+<td>5</td>
+<td>清关费用</td>
+<td>1-2%</td>
+</tr>
+<tr>
+<td>6</td>
+<td>平台佣金</td>
+<td>3-6%</td>
+</tr>
+<tr>
+<td>7</td>
+<td>支付手续费</td>
+<td>1-3%</td>
+</tr>
+<tr>
+<td>8</td>
+<td>广告费用</td>
+<td>10-20%</td>
+</tr>
+<tr>
+<td>9</td>
+<td>退货损耗</td>
+<td>2-5%</td>
+</tr>
+<tr>
+<td>10</td>
+<td>汇率波动</td>
+<td>1-2%</td>
+</tr>
+<tr>
+<td>11</td>
+<td>仓储费</td>
+<td>1-3%</td>
+</tr>
+<tr>
+<td>12</td>
+<td>客服成本</td>
+<td>1-2%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="92-top-10">9.2 Top 10 毛利汇总</h3>
+<table>
+<thead>
+<tr>
+<th>产品</th>
+<th>采购成本</th>
+<th>总成本</th>
+<th>建议售价</th>
+<th>毛利率</th>
+<th>净利率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>手机壳</td>
+<td>$0.50</td>
+<td>$2.22</td>
+<td>$4.15</td>
+<td>46.6%</td>
+<td>18.0%</td>
+</tr>
+<tr>
+<td>防晒霜</td>
+<td>$1.80</td>
+<td>$5.38</td>
+<td>$9.25</td>
+<td>42.0%</td>
+<td>18.0%</td>
+</tr>
+<tr>
+<td>美白精华</td>
+<td>$2.00</td>
+<td>$6.17</td>
+<td>$11.50</td>
+<td>46.3%</td>
+<td>22.0%</td>
+</tr>
+<tr>
+<td>TWS耳机</td>
+<td>$3.50</td>
+<td>$7.81</td>
+<td>$11.00</td>
+<td>29.0%</td>
+<td>12.0%</td>
+</tr>
+<tr>
+<td>维C咀嚼片</td>
+<td>$1.80</td>
+<td>$4.50</td>
+<td>$9.50</td>
+<td>52.6%</td>
+<td>28.0%</td>
+</tr>
+<tr>
+<td>瑜伽垫</td>
+<td>$2.50</td>
+<td>$5.20</td>
+<td>$9.00</td>
+<td>42.2%</td>
+<td>18.0%</td>
+</tr>
+<tr>
+<td>收纳盒</td>
+<td>$1.80</td>
+<td>$4.20</td>
+<td>$7.00</td>
+<td>40.0%</td>
+<td>18.0%</td>
+</tr>
+<tr>
+<td>婴儿连体衣</td>
+<td>$1.20</td>
+<td>$3.80</td>
+<td>$5.50</td>
+<td>30.9%</td>
+<td>12.0%</td>
+</tr>
+<tr>
+<td>连衣裙</td>
+<td>$3.00</td>
+<td>$8.20</td>
+<td>$12.00</td>
+<td>31.7%</td>
+<td>10.0%</td>
+</tr>
+<tr>
+<td>宠物牵引绳</td>
+<td>$1.00</td>
+<td>$2.60</td>
+<td>$5.50</td>
+<td>52.7%</td>
+<td>28.0%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="93">9.3 盈亏平衡</h3>
+<ul>
+<li><strong>投资回收期</strong>：5-6个月</li>
+<li><strong>月度盈亏平衡销量</strong>：80-206件/产品</li>
+<li><strong>6个月累计现金流</strong>：+$10,600</li>
+</ul>
+<p><em>（详细成本模型见 Step 8 报告：philippines-cost-model-2026-06-03.md）</em></p>
+<hr />
+<h2 id="10">10. 合规清单</h2>
+<h3 id="101">10.1 认证要求汇总</h3>
+<table>
+<thead>
+<tr>
+<th>产品</th>
+<th>核心认证</th>
+<th>费用</th>
+<th>周期</th>
+<th>风险</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>防晒霜</td>
+<td>FDA</td>
+<td>$500</td>
+<td>4-8周</td>
+<td>🔴 高</td>
+</tr>
+<tr>
+<td>美白精华</td>
+<td>FDA</td>
+<td>$1,500</td>
+<td>8-16周</td>
+<td>🔴 高</td>
+</tr>
+<tr>
+<td>维C咀嚼片</td>
+<td>FDA + GMP</td>
+<td>$2,000</td>
+<td>8-16周</td>
+<td>🔴 高</td>
+</tr>
+<tr>
+<td>TWS耳机</td>
+<td>NTC</td>
+<td>$300</td>
+<td>2-4周</td>
+<td>🟡 中</td>
+</tr>
+<tr>
+<td>婴儿连体衣</td>
+<td>BPS</td>
+<td>$500</td>
+<td>6-10周</td>
+<td>🟡 中</td>
+</tr>
+<tr>
+<td>其他6个产品</td>
+<td>无</td>
+<td>$0</td>
+<td>0</td>
+<td>🟢 低</td>
+</tr>
+</tbody>
+</table>
+<h3 id="102">10.2 合规预算</h3>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>费用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FDA注册（3个产品）</td>
+<td>$4,000</td>
+</tr>
+<tr>
+<td>BPS认证（1个产品）</td>
+<td>$500</td>
+</tr>
+<tr>
+<td>NTC认证（1个产品）</td>
+<td>$300</td>
+</tr>
+<tr>
+<td>标签设计/审核</td>
+<td>$500</td>
+</tr>
+<tr>
+<td>进口商资质</td>
+<td>$500</td>
+</tr>
+<tr>
+<td>合规代理年费</td>
+<td>$1,200</td>
+</tr>
+<tr>
+<td><strong>总计</strong></td>
+<td><strong>$7,000</strong></td>
+</tr>
+</tbody>
+</table>
+<p><em>（详细合规清单见 Step 9 报告：philippines-compliance-checklist-2026-06-03.md）</em></p>
+<hr />
+<h2 id="11">11. 最终决策建议</h2>
+<h3 id="111">11.1 进入建议：✅ 进入菲律宾市场</h3>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>评分</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>市场吸引力</td>
+<td>⭐⭐⭐⭐</td>
+<td>$385亿，+17%增速</td>
+</tr>
+<tr>
+<td>竞争强度</td>
+<td>⭐⭐⭐</td>
+<td>中等，有差异化空间</td>
+</tr>
+<tr>
+<td>进入门槛</td>
+<td>⭐⭐⭐</td>
+<td>合规成本可控</td>
+</tr>
+<tr>
+<td>利润潜力</td>
+<td>⭐⭐⭐⭐</td>
+<td>毛利率 29-53%</td>
+</tr>
+<tr>
+<td>风险水平</td>
+<td>⭐⭐⭐</td>
+<td>可控</td>
+</tr>
+</tbody>
+</table>
+<h3 id="112">11.2 进入策略</h3>
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>时间</th>
+<th>行动</th>
+<th>KPI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Phase 1</strong></td>
+<td>6月</td>
+<td>上架4个低风险SKU</td>
+<td>月销&gt;200件</td>
+</tr>
+<tr>
+<td><strong>Phase 2</strong></td>
+<td>7月</td>
+<td>上架2个中等风险SKU + FDA申请</td>
+<td>月销&gt;500件</td>
+</tr>
+<tr>
+<td><strong>Phase 3</strong></td>
+<td>8-9月</td>
+<td>获得认证，上架剩余SKU</td>
+<td>月销&gt;1,000件</td>
+</tr>
+<tr>
+<td><strong>Phase 4</strong></td>
+<td>10-12月</td>
+<td>大促冲刺 + 优化</td>
+<td>月销&gt;5,000件</td>
+</tr>
+</tbody>
+</table>
+<h3 id="113">11.3 投资预算</h3>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>费用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>一次性投入（认证+首批货+店铺）</td>
+<td>$9,400</td>
+</tr>
+<tr>
+<td>月运营成本</td>
+<td>$2,900</td>
+</tr>
+<tr>
+<td>6个月总预算</td>
+<td>$26,800</td>
+</tr>
+<tr>
+<td>6个月预期收入</td>
+<td>$56,000</td>
+</tr>
+<tr>
+<td><strong>6个月预期净利</strong></td>
+<td><strong>+$10,600</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="114">11.4 风险红线</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>红线</th>
+<th>当前基线</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>退货率</td>
+<td>&gt;15%</td>
+<td>预计5-10%</td>
+</tr>
+<tr>
+<td>ACOS</td>
+<td>&gt;毛利率70%</td>
+<td>预计15-20%</td>
+</tr>
+<tr>
+<td>库存周转</td>
+<td>&gt;90天</td>
+<td>预计45-60天</td>
+</tr>
+<tr>
+<td>差评率</td>
+<td>&gt;10%</td>
+<td>预计3-5%</td>
+</tr>
+<tr>
+<td>现金流</td>
+<td>&lt;3个月</td>
+<td>$9,400储备</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="12">12. 附录</h2>
+<h3 id="121">12.1 报告文件清单</h3>
+<table>
+<thead>
+<tr>
+<th>步骤</th>
+<th>文件名</th>
+<th>路径</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Step 1</td>
+<td>philippines-market-overview-2026-06-03.md</td>
+<td>reports/</td>
+</tr>
+<tr>
+<td>Step 2</td>
+<td>philippines-category-matrix-2026-06-03.md</td>
+<td>reports/</td>
+</tr>
+<tr>
+<td>Step 3</td>
+<td>philippines-search-trends-2026-06-03.md</td>
+<td>reports/</td>
+</tr>
+<tr>
+<td>Step 4</td>
+<td>philippines-sentiment-analysis-2026-06-03.md</td>
+<td>reports/</td>
+</tr>
+<tr>
+<td>Step 5</td>
+<td>philippines-competitor-matrix-2026-06-03.md</td>
+<td>reports/</td>
+</tr>
+<tr>
+<td>Step 6</td>
+<td>philippines-user-insights-2026-06-03.md</td>
+<td>reports/</td>
+</tr>
+<tr>
+<td>Step 7</td>
+<td>philippines-top10-selection-2026-06-03.md</td>
+<td>reports/</td>
+</tr>
+<tr>
+<td>Step 8</td>
+<td>philippines-cost-model-2026-06-03.md</td>
+<td>reports/</td>
+</tr>
+<tr>
+<td>Step 9</td>
+<td>philippines-compliance-checklist-2026-06-03.md</td>
+<td>reports/</td>
+</tr>
+<tr>
+<td>Step 10</td>
+<td>philippines-final-selection-2026-06-03.md</td>
+<td>reports/</td>
+</tr>
+<tr>
+<td>Step 11</td>
+<td>philippines-formal-project-report-2026-06-03.md + .pdf</td>
+<td>reports/</td>
+</tr>
+</tbody>
+</table>
+<h3 id="122">12.2 数据来源</h3>
+<ul>
+<li>DataReportal Digital 2026: The Philippines</li>
+<li>World Bank Philippines Overview 2024-2025</li>
+<li>CloudEcommerce / Momentum Works SEA Ecommerce Report 2025</li>
+<li>BSP（菲律宾央行）支付数据</li>
+<li>BOC（菲律宾海关）CAO 01-2025</li>
+<li>Ookla Global Speed Index</li>
+<li>SEMrush Traffic Analytics</li>
+</ul>
+<h3 id="123">12.3 方法论声明</h3>
+<p>⚠️ <strong>重要声明</strong>：本报告在 cron 隔离 session 中执行。由于 cron 环境限制：
+- <code>web_search</code> 服务超时不可用
+- <code>openclaw agent</code> CLI 被安全策略拦截（SIGKILL）
+- <code>sessions_send</code> agent-to-agent 通信被拒绝（forbidden）
+- QVeris 工具未安装</p>
+<p>因此，所有分析由 Emma 直接执行（依据 SOUL.md 规则："当且仅当专业 agent 确实无法完成任务时，可以亲自下场补位"）。数据通过 <code>web_fetch</code> 获取公开数据源，结合领域知识完成分析。<strong>建议在 main session 中由专业 Agent 验证关键数据。</strong></p>
+<hr />
+<p><strong>报告编制</strong>：Emma XIE | 普罗米修斯<br />
+<strong>报告日期</strong>：2026年6月3日 10:10 CST<br />
+<strong>报告状态</strong>：✅ Final<br />
+<strong>下一步</strong>：Wiki 归档 + Telegram 投递</p>
+</body>
+</html>

@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>thailand-formal-project-report-2026-06-03</title>
+    <style>
+@page {
+    size: A4;
+    margin: 2cm 2.5cm;
+    @bottom-center {
+        content: counter(page);
+        font-size: 9pt;
+        color: #999;
+    }
+}
+
+/* 强制使用 Noto Sans CJK SC，绕过 Pango 字体匹配的不确定性 */
+@font-face {
+    font-family: 'CJK';
+    src: url('/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'CJK';
+    src: url('/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'CJK';
+    src: url('/usr/share/fonts/opentype/noto/NotoSerifCJK-Regular.ttc') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+body {
+    font-family: 'CJK', 'Noto Sans CJK SC', sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.8;
+    color: #1a1a1a;
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 20pt;
+    color: #1a1a2e;
+    border-bottom: 3px solid #e94560;
+    padding-bottom: 8pt;
+    margin-top: 24pt;
+    page-break-before: always;
+}
+
+h1:first-of-type {
+    page-break-before: avoid;
+}
+
+h2 {
+    font-size: 15pt;
+    color: #16213e;
+    border-bottom: 1.5px solid #0f3460;
+    padding-bottom: 5pt;
+    margin-top: 18pt;
+}
+
+h3 {
+    font-size: 12.5pt;
+    color: #0f3460;
+    margin-top: 14pt;
+}
+
+h4 {
+    font-size: 11pt;
+    color: #333;
+    margin-top: 10pt;
+}
+
+/* 表格样式 - 关键修复 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12pt 0;
+    font-size: 9.5pt;
+    page-break-inside: avoid;
+    display: table;
+}
+
+thead {
+    display: table-header-group;
+}
+
+th {
+    background-color: #16213e;
+    color: white;
+    padding: 8px 10px;
+    text-align: left;
+    font-weight: 600;
+    border: 1px solid #0f3460;
+    font-size: 9pt;
+}
+
+td {
+    padding: 7px 10px;
+    border: 1px solid #ddd;
+    vertical-align: top;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tr:hover {
+    background-color: #e8f4f8;
+}
+
+/* 代码块 */
+code {
+    font-family: 'CJK', "Noto Sans Mono CJK SC", monospace;
+    font-size: 8.5pt;
+    background: #f4f4f4;
+    padding: 2px 5px;
+    border-radius: 3px;
+    border: 1px solid #e0e0e0;
+}
+
+pre {
+    background: #1e1e2e;
+    color: #cdd6f4;
+    padding: 12pt;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-size: 8.5pt;
+    line-height: 1.6;
+    margin: 10pt 0;
+    page-break-inside: avoid;
+}
+
+pre code {
+    background: none;
+    border: none;
+    color: inherit;
+    padding: 0;
+}
+
+/* 引用块 */
+blockquote {
+    border-left: 4px solid #e94560;
+    margin: 10pt 0;
+    padding: 8pt 14pt;
+    background: #fff5f5;
+    color: #666;
+    font-size: 9.5pt;
+}
+
+/* 列表 */
+ul, ol {
+    padding-left: 20pt;
+    margin: 6pt 0;
+}
+
+li {
+    margin: 3pt 0;
+}
+
+li > ul, li > ol {
+    margin: 2pt 0;
+}
+
+/* 任务列表 */
+input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+/* 链接 */
+a {
+    color: #0f3460;
+    text-decoration: none;
+}
+
+/* 水平线 */
+hr {
+    border: none;
+    border-top: 1.5px solid #e0e0e0;
+    margin: 16pt 0;
+}
+
+/* 强调 */
+strong {
+    color: #1a1a2e;
+}
+
+em {
+    color: #555;
+}
+
+/* emoji 处理 */
+img.emoji {
+    height: 1em;
+    width: 1em;
+    vertical-align: middle;
+}
+
+/* 警告/提示块 (用 blockquote 变体) */
+blockquote p:first-child strong {
+    color: #e94560;
+}
+
+/* Mermaid 图表占位 - 跳过不支持的图表 */
+pre code.language-mermaid {
+    display: none;
+}
+</style>
+</head>
+<body>
+<h1 id="_1">泰国跨境电商选品分析报告</h1>
+<blockquote>
+<p><strong>项目名称</strong>: Thailand Cross-Border E-Commerce Product Selection Analysis<br />
+<strong>执行日期</strong>: 2026-06-03<br />
+<strong>目标市场</strong>: Thailand<br />
+<strong>Orchestrator</strong>: Emma XIE (普罗米修斯)<br />
+<strong>数据来源</strong>: Momentum Works 2025, PCMI, Shopdora, TISI, Thai FDA, 各平台公开数据</p>
+</blockquote>
+<hr />
+<h2 id="_2">目录</h2>
+<ol>
+<li><a href="#一执行摘要">执行摘要</a></li>
+<li><a href="#二市场宏观画像">市场宏观画像</a></li>
+<li><a href="#三品类机会矩阵">品类机会矩阵</a></li>
+<li><a href="#四搜索热点分析">搜索热点分析</a></li>
+<li><a href="#五舆情与竞品分析">舆情与竞品分析</a></li>
+<li><a href="#六用户需求洞察">用户需求洞察</a></li>
+<li><a href="#七top-10-选品清单">Top 10 选品清单</a></li>
+<li><a href="#八全成本模型">全成本模型</a></li>
+<li><a href="#九合规检查清单">合规检查清单</a></li>
+<li><a href="#十综合评审与决策">综合评审与决策</a></li>
+<li><a href="#十一附录">附录</a></li>
+</ol>
+<hr />
+<h2 id="_3">一、执行摘要</h2>
+<h3 id="11">1.1 核心发现</h3>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>关键数据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>市场规模</td>
+<td>2025年GMV $35.5B，同比增速 <strong>51.8%</strong>（东南亚最快）</td>
+</tr>
+<tr>
+<td>平台格局</td>
+<td>Shopee 50% + Lazada 30% + TikTok Shop 21%（三强垄断98.8%）</td>
+</tr>
+<tr>
+<td>推荐品类</td>
+<td>家居收纳、LED照明、宠物用品</td>
+</tr>
+<tr>
+<td>首选SKU</td>
+<td>真空压缩袋、衣柜分层架、厨房收纳架、冰箱收纳盒</td>
+</tr>
+<tr>
+<td>关键门槛</td>
+<td>TIS认证（3-6个月）、FDA备案（2-4个月）</td>
+</tr>
+<tr>
+<td>初期投入</td>
+<td>约27,000 CNY（$3,800 USD）</td>
+</tr>
+<tr>
+<td>预期ROI</td>
+<td>6个月33%-200%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="12">1.2 进入建议</h3>
+<blockquote>
+<p><strong>推荐以"先易后难"策略进入泰国市场</strong>：
+- <strong>第一阶段（0-3月）</strong>: 4个无/低认证门槛SKU快速上线，验证市场
+- <strong>第二阶段（3-6月）</strong>: 推进TIS认证，上线LED照明品类
+- <strong>第三阶段（6-12月）</strong>: FDA备案，布局宠物用品品类</p>
+</blockquote>
+<hr />
+<h2 id="_4">二、市场宏观画像</h2>
+<h3 id="21">2.1 市场规模与增长</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>数值</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2025年GMV</td>
+<td><strong>$35.5 billion</strong></td>
+<td>Momentum Works 2025</td>
+</tr>
+<tr>
+<td>2025年同比增速</td>
+<td><strong>51.8%</strong>（东南亚最快）</td>
+<td>Momentum Works 2025</td>
+</tr>
+<tr>
+<td>2027年预测规模</td>
+<td>$58.5 billion</td>
+<td>PCMI</td>
+</tr>
+<tr>
+<td>CAGR (2024-2027)</td>
+<td><strong>15%</strong></td>
+<td>PCMI</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22">2.2 平台格局</h3>
+<table>
+<thead>
+<tr>
+<th>平台</th>
+<th>市场份额</th>
+<th>GMV (约)</th>
+<th>策略定位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Shopee</strong></td>
+<td>~50%</td>
+<td>~1.6万亿 THB</td>
+<td>市场领导者，全品类覆盖</td>
+</tr>
+<tr>
+<td><strong>Lazada</strong></td>
+<td>~30%</td>
+<td>~6600亿 THB</td>
+<td>高端品牌导向</td>
+</tr>
+<tr>
+<td><strong>TikTok Shop</strong></td>
+<td>~21%</td>
+<td>~2800亿 THB</td>
+<td>内容驱动，"购物娱乐"</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23">2.3 消费者画像</h3>
+<ul>
+<li>在线购物者: 4060万 (2023)</li>
+<li>人均电商消费: $289/年</li>
+<li>移动端购物比例: <strong>80%</strong></li>
+<li>偏好线上购物: 70%</li>
+<li>月均至少网购一次: 76%</li>
+</ul>
+<h3 id="24">2.4 支付方式</h3>
+<table>
+<thead>
+<tr>
+<th>支付方式</th>
+<th>占比</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>银行转账</td>
+<td>40%</td>
+</tr>
+<tr>
+<td>数字钱包</td>
+<td>25%</td>
+</tr>
+<tr>
+<td>信用卡</td>
+<td>19%</td>
+</tr>
+<tr>
+<td>COD</td>
+<td>10%（预计2028年降至5%）</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_5">三、品类机会矩阵</h2>
+<h3 id="31-12">3.1 12个品类优先级评分</h3>
+<table>
+<thead>
+<tr>
+<th>排名</th>
+<th>品类</th>
+<th>需求热度</th>
+<th>竞争强度</th>
+<th>潜力评分</th>
+<th>蓝海指数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>家居收纳与整理</td>
+<td>9</td>
+<td>5</td>
+<td><strong>8.5</strong></td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>2</td>
+<td>LED照明与家居改善</td>
+<td>8</td>
+<td>4</td>
+<td><strong>8.0</strong></td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>3</td>
+<td>宠物用品（猫狗消耗品）</td>
+<td>8</td>
+<td>5</td>
+<td><strong>7.5</strong></td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>4</td>
+<td>手机配件与屏幕保护</td>
+<td>9</td>
+<td>8</td>
+<td><strong>6.5</strong></td>
+<td>⭐⭐⭐</td>
+</tr>
+<tr>
+<td>5</td>
+<td>个人护理与美妆配饰</td>
+<td>7</td>
+<td>6</td>
+<td><strong>6.5</strong></td>
+<td>⭐⭐⭐</td>
+</tr>
+<tr>
+<td>6</td>
+<td>旅行与日常便携用品</td>
+<td>7</td>
+<td>4</td>
+<td><strong>7.0</strong></td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>7</td>
+<td>小家电</td>
+<td>8</td>
+<td>6</td>
+<td><strong>7.0</strong></td>
+<td>⭐⭐⭐</td>
+</tr>
+<tr>
+<td>8</td>
+<td>时尚服饰与配饰</td>
+<td>9</td>
+<td>9</td>
+<td><strong>5.0</strong></td>
+<td>⭐⭐</td>
+</tr>
+<tr>
+<td>9</td>
+<td>食品与饮料</td>
+<td>7</td>
+<td>7</td>
+<td><strong>5.0</strong></td>
+<td>⭐⭐</td>
+</tr>
+<tr>
+<td>10</td>
+<td>母婴产品</td>
+<td>6</td>
+<td>5</td>
+<td><strong>6.0</strong></td>
+<td>⭐⭐⭐</td>
+</tr>
+<tr>
+<td>11</td>
+<td>消费电子</td>
+<td>8</td>
+<td>8</td>
+<td><strong>5.0</strong></td>
+<td>⭐⭐</td>
+</tr>
+<tr>
+<td>12</td>
+<td>家具与家居电器</td>
+<td>5</td>
+<td>4</td>
+<td><strong>5.5</strong></td>
+<td>⭐⭐⭐</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32">3.2 泰国特有消费特征</h3>
+<ol>
+<li><strong>租房文化盛行</strong> → 可拆卸、便携式家居产品需求高</li>
+<li><strong>热带气候</strong> → 防晒、驱蚊、降温类产品需求持续</li>
+<li><strong>宠物经济崛起</strong> → 猫主人比例高，猫粮/猫砂/猫玩具需求旺盛</li>
+<li><strong>通勤文化</strong> → 便携水杯、收纳包、车载用品需求大</li>
+</ol>
+<hr />
+<h2 id="_6">四、搜索热点分析</h2>
+<h3 id="41-shopee-thailand-20262">4.1 Shopee Thailand 热门关键词（2026年2月）</h3>
+<table>
+<thead>
+<tr>
+<th>排名</th>
+<th>泰语关键词</th>
+<th>英文翻译</th>
+<th>品类</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>รองเท้าแตะผู้หญิง</td>
+<td>Women's Sandals</td>
+<td>时尚鞋履</td>
+</tr>
+<tr>
+<td>2</td>
+<td>เสื้อ</td>
+<td>Shirt</td>
+<td>时尚服装</td>
+</tr>
+<tr>
+<td>3</td>
+<td>ของขวัญวาเลนไทน์</td>
+<td>Valentine's Day Gift</td>
+<td>礼品</td>
+</tr>
+<tr>
+<td>4</td>
+<td>รองเท้า</td>
+<td>Shoes</td>
+<td>鞋履</td>
+</tr>
+<tr>
+<td>5</td>
+<td>เก้าอี้แคมป์ปิ้ง</td>
+<td>Camping Chair</td>
+<td>家居/户外</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42">4.2 搜索意图分布</h3>
+<table>
+<thead>
+<tr>
+<th>意图类型</th>
+<th>占比</th>
+<th>典型搜索词</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>品牌/型号导向</td>
+<td>35%</td>
+<td>"iPhone15 case"</td>
+</tr>
+<tr>
+<td>功能导向</td>
+<td>25%</td>
+<td>"LEDประหยัดไฟ"</td>
+</tr>
+<tr>
+<td>价格导向</td>
+<td>20%</td>
+<td>"ราคาถูก"</td>
+</tr>
+<tr>
+<td>场景导向</td>
+<td>15%</td>
+<td>"ของใช้หอพัก"</td>
+</tr>
+<tr>
+<td>礼品导向</td>
+<td>5%</td>
+<td>"ของขวัญวาเลนไทน์"</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_7">五、舆情与竞品分析</h2>
+<h3 id="51">5.1 消费者核心痛点</h3>
+<table>
+<thead>
+<tr>
+<th>痛点</th>
+<th>涉及品类</th>
+<th>严重程度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LED灯寿命短（高温高湿环境）</td>
+<td>LED照明</td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>塑料收纳易碎</td>
+<td>家居收纳</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>假货/仿品泛滥</td>
+<td>消费电子</td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>跨境物流时效长</td>
+<td>全品类</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>COD退货率高</td>
+<td>全品类</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-led">5.2 LED照明品类竞品分析</h3>
+<table>
+<thead>
+<tr>
+<th>竞品SKU</th>
+<th>价格(THB)</th>
+<th>评分</th>
+<th>差评率</th>
+<th>主要劣势</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>USB充电台灯</td>
+<td>149-299</td>
+<td>4.2</td>
+<td>8.5%</td>
+<td>寿命短(3-6月)</td>
+</tr>
+<tr>
+<td>LED球泡灯(10W)</td>
+<td>49-99</td>
+<td>4.1</td>
+<td>9.2%</td>
+<td>光衰快、色温不准</td>
+</tr>
+<tr>
+<td>LED灯带(5米)</td>
+<td>199-399</td>
+<td>4.3</td>
+<td>7.2%</td>
+<td>控制器易坏</td>
+</tr>
+</tbody>
+</table>
+<p><strong>机会</strong>: TIS认证产品极少，是差异化突破口。</p>
+<h3 id="53">5.3 宠物用品竞品分析</h3>
+<table>
+<thead>
+<tr>
+<th>竞品SKU</th>
+<th>价格(THB)</th>
+<th>评分</th>
+<th>差评率</th>
+<th>主要劣势</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>猫粮(2kg)</td>
+<td>299-499</td>
+<td>4.6</td>
+<td>3.5%</td>
+<td>需FDA认证</td>
+</tr>
+<tr>
+<td>猫砂(6L)</td>
+<td>149-259</td>
+<td>4.5</td>
+<td>4.2%</td>
+<td>粉尘大</td>
+</tr>
+<tr>
+<td>猫零食</td>
+<td>59-129</td>
+<td>4.7</td>
+<td>2.8%</td>
+<td>成分不透明</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_8">六、用户需求洞察</h2>
+<h3 id="61">6.1 核心用户群体</h3>
+<table>
+<thead>
+<tr>
+<th>用户群</th>
+<th>占比</th>
+<th>偏好品类</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>租房年轻人</td>
+<td>35%</td>
+<td>收纳、LED照明、手机配件</td>
+</tr>
+<tr>
+<td>家庭主妇</td>
+<td>25%</td>
+<td>家居收纳、厨房用品</td>
+</tr>
+<tr>
+<td>宠物主人</td>
+<td>20%</td>
+<td>宠物食品、宠物用品</td>
+</tr>
+<tr>
+<td>学生群体</td>
+<td>15%</td>
+<td>时尚配饰、手机配件</td>
+</tr>
+</tbody>
+</table>
+<h3 id="62">6.2 未被满足的需求（蓝海机会）</h3>
+<table>
+<thead>
+<tr>
+<th>需求缺口</th>
+<th>机会品类</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>泰国气候专用LED（高温高湿环境下寿命长）</td>
+<td>LED照明</td>
+</tr>
+<tr>
+<td>加厚防碎收纳</td>
+<td>家居收纳</td>
+</tr>
+<tr>
+<td>泰语标签宠物食品</td>
+<td>宠物用品</td>
+</tr>
+<tr>
+<td>TIS认证LED（建立信任壁垒）</td>
+<td>LED照明</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="top-10">七、Top 10 选品清单</h2>
+<table>
+<thead>
+<tr>
+<th>排名</th>
+<th>SKU</th>
+<th>月搜索量</th>
+<th>毛利率</th>
+<th>合规风险</th>
+<th>推荐优先级</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🥇</td>
+<td>TIS认证LED球泡灯（10W）</td>
+<td>~15,000+</td>
+<td>35%</td>
+<td>🔴高</td>
+<td>P1</td>
+</tr>
+<tr>
+<td>🥈</td>
+<td>加厚真空压缩袋套装（6-8件）</td>
+<td>~12,000+</td>
+<td>32%</td>
+<td>🟢低</td>
+<td><strong>P0</strong></td>
+</tr>
+<tr>
+<td>🥉</td>
+<td>食品级冰箱收纳盒套装（4-6件）</td>
+<td>~10,000+</td>
+<td>30%</td>
+<td>🟡中</td>
+<td>P1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>USB充电LED台灯</td>
+<td>~8,000+</td>
+<td>28%</td>
+<td>🔴高</td>
+<td>P1</td>
+</tr>
+<tr>
+<td>5</td>
+<td>猫零食混合装</td>
+<td>~15,000+</td>
+<td>25%</td>
+<td>🔴高</td>
+<td>暂缓</td>
+</tr>
+<tr>
+<td>6</td>
+<td>衣柜分层架（免安装）</td>
+<td>~6,000+</td>
+<td>28%</td>
+<td>🟢低</td>
+<td><strong>P0</strong></td>
+</tr>
+<tr>
+<td>7</td>
+<td>LED灯带（5米，IP65）</td>
+<td>~7,000+</td>
+<td>30%</td>
+<td>🔴高</td>
+<td>P1</td>
+</tr>
+<tr>
+<td>8</td>
+<td>厨房收纳架（不锈钢）</td>
+<td>~5,000+</td>
+<td>26%</td>
+<td>🟢低</td>
+<td><strong>P0</strong></td>
+</tr>
+<tr>
+<td>9</td>
+<td>宠物清洁湿巾</td>
+<td>~6,000+</td>
+<td>28%</td>
+<td>🟡中</td>
+<td>P2</td>
+</tr>
+<tr>
+<td>10</td>
+<td>太阳能庭院灯</td>
+<td>~4,000+</td>
+<td>32%</td>
+<td>🔴高</td>
+<td>P2</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_9">八、全成本模型</h2>
+<h3 id="81-2026">8.1 平台费率（2026年最新）</h3>
+<table>
+<thead>
+<tr>
+<th>费用项</th>
+<th>Shopee</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>平台佣金</td>
+<td>5-6%</td>
+<td>按品类浮动</td>
+</tr>
+<tr>
+<td>交易手续费</td>
+<td>2%</td>
+<td>每笔订单</td>
+</tr>
+<tr>
+<td>技术服务费</td>
+<td>5%（2026新增）</td>
+<td>Shopee新增</td>
+</tr>
+<tr>
+<td>每单基础设施费</td>
+<td>1 THB</td>
+<td>Shopee 2026新增</td>
+</tr>
+<tr>
+<td><strong>综合费率</strong></td>
+<td><strong>约14-15%</strong></td>
+<td>含所有费用</td>
+</tr>
+</tbody>
+</table>
+<h3 id="82-sku-2">8.2 SKU #2 真空压缩袋成本模型</h3>
+<table>
+<thead>
+<tr>
+<th>成本项</th>
+<th>金额(CNY)</th>
+<th>金额(THB)</th>
+<th>占比</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>采购成本</td>
+<td>8.0</td>
+<td>40.0</td>
+<td>21%</td>
+</tr>
+<tr>
+<td>头程物流</td>
+<td>3.0</td>
+<td>15.0</td>
+<td>8%</td>
+</tr>
+<tr>
+<td>包装</td>
+<td>1.0</td>
+<td>5.0</td>
+<td>3%</td>
+</tr>
+<tr>
+<td>平台费用</td>
+<td>5.5</td>
+<td>27.5</td>
+<td>15%</td>
+</tr>
+<tr>
+<td>广告费</td>
+<td>5.0</td>
+<td>25.0</td>
+<td>13%</td>
+</tr>
+<tr>
+<td>退货损耗</td>
+<td>1.0</td>
+<td>5.0</td>
+<td>3%</td>
+</tr>
+<tr>
+<td>汇率缓冲</td>
+<td>1.0</td>
+<td>5.0</td>
+<td>3%</td>
+</tr>
+<tr>
+<td><strong>总成本</strong></td>
+<td><strong>24.5</strong></td>
+<td><strong>122.5</strong></td>
+<td><strong>65%</strong></td>
+</tr>
+<tr>
+<td>建议售价</td>
+<td>—</td>
+<td><strong>189-359</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>净利率</strong></td>
+<td>—</td>
+<td><strong>20-30%</strong></td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_10">九、合规检查清单</h2>
+<h3 id="91">9.1 主要监管机构</h3>
+<table>
+<thead>
+<tr>
+<th>机构</th>
+<th>管辖范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TISI</strong></td>
+<td>工业产品安全标准（电器、建材等）</td>
+</tr>
+<tr>
+<td><strong>Thai FDA</strong></td>
+<td>食品、药品、化妆品、宠物食品</td>
+</tr>
+<tr>
+<td><strong>NBTC</strong></td>
+<td>电信设备、无线电产品</td>
+</tr>
+</tbody>
+</table>
+<h3 id="92">9.2 合规优先级</h3>
+<table>
+<thead>
+<tr>
+<th>优先级</th>
+<th>SKU</th>
+<th>认证要求</th>
+<th>建议行动</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>P0</strong></td>
+<td>#2, #6, #8</td>
+<td>无强制认证</td>
+<td>✅ 立即启动</td>
+</tr>
+<tr>
+<td><strong>P1</strong></td>
+<td>#3, #9</td>
+<td>检测/FDA备案</td>
+<td>⚠️ 同步启动</td>
+</tr>
+<tr>
+<td><strong>P2</strong></td>
+<td>#1, #4, #7, #10</td>
+<td>TIS认证（3-6月）</td>
+<td>⚠️ 提前启动</td>
+</tr>
+<tr>
+<td><strong>暂缓</strong></td>
+<td>#5</td>
+<td>FDA注册（6-12月）</td>
+<td>❌ 后期布局</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_11">十、综合评审与决策</h2>
+<h3 id="101">10.1 最终进入建议</h3>
+<h4 id="0-3">🚀 第一阶段（0-3个月）：无/低认证门槛品类</h4>
+<table>
+<thead>
+<tr>
+<th>SKU</th>
+<th>品类</th>
+<th>建议售价(THB)</th>
+<th>预估净利率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#2</td>
+<td>加厚真空压缩袋套装</td>
+<td>189-359</td>
+<td>20-30%</td>
+</tr>
+<tr>
+<td>#6</td>
+<td>衣柜分层架（免安装）</td>
+<td>149-299</td>
+<td>20-30%</td>
+</tr>
+<tr>
+<td>#8</td>
+<td>厨房收纳架（不锈钢）</td>
+<td>359-599</td>
+<td>15-25%</td>
+</tr>
+<tr>
+<td>#3</td>
+<td>食品级冰箱收纳盒套装</td>
+<td>199-399</td>
+<td>20-35%</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-6tis">⏳ 第二阶段（3-6个月）：TIS认证推进中</h4>
+<table>
+<thead>
+<tr>
+<th>SKU</th>
+<th>品类</th>
+<th>预计上线时间</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#1</td>
+<td>TIS认证LED球泡灯</td>
+<td>第4-6个月</td>
+</tr>
+<tr>
+<td>#4</td>
+<td>USB充电LED台灯</td>
+<td>第4-6个月</td>
+</tr>
+<tr>
+<td>#7</td>
+<td>LED灯带（IP65）</td>
+<td>第4-6个月</td>
+</tr>
+</tbody>
+</table>
+<h4 id="6-12fda">📋 第三阶段（6-12个月）：FDA备案 + 高价值品类</h4>
+<table>
+<thead>
+<tr>
+<th>SKU</th>
+<th>品类</th>
+<th>预计上线时间</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#9</td>
+<td>宠物清洁湿巾</td>
+<td>第6-8个月</td>
+</tr>
+<tr>
+<td>#10</td>
+<td>太阳能庭院灯</td>
+<td>第6-9个月</td>
+</tr>
+<tr>
+<td>#5</td>
+<td>猫零食</td>
+<td>第12个月+</td>
+</tr>
+</tbody>
+</table>
+<h3 id="102">10.2 投入预算（第一阶段）</h3>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>金额(CNY)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>首批库存（4 SKU × 200件）</td>
+<td>15,000</td>
+</tr>
+<tr>
+<td>头程物流</td>
+<td>3,000</td>
+</tr>
+<tr>
+<td>包装与设计</td>
+<td>2,000</td>
+</tr>
+<tr>
+<td>广告启动资金</td>
+<td>5,000</td>
+</tr>
+<tr>
+<td>运营杂费</td>
+<td>2,000</td>
+</tr>
+<tr>
+<td><strong>总计</strong></td>
+<td><strong>27,000</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="103-6">10.3 预期收益（6个月）</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>保守估计</th>
+<th>中性估计</th>
+<th>乐观估计</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>6个月累计净利润(CNY)</td>
+<td>9,000</td>
+<td>24,000</td>
+<td>54,000</td>
+</tr>
+<tr>
+<td>ROI</td>
+<td>33%</td>
+<td>89%</td>
+<td>200%</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_12">十一、附录</h2>
+<h3 id="111">11.1 数据来源清单</h3>
+<table>
+<thead>
+<tr>
+<th>来源</th>
+<th>数据类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Momentum Works 2025</td>
+<td>市场规模、增速、平台份额</td>
+</tr>
+<tr>
+<td>PCMI E-commerce Data Library</td>
+<td>消费者画像、支付方式、品类偏好</td>
+</tr>
+<tr>
+<td>Shopdora</td>
+<td>Shopee关键词、品类销售数据</td>
+</tr>
+<tr>
+<td>TISI官网</td>
+<td>认证要求、标准、费用</td>
+</tr>
+<tr>
+<td>Thai FDA</td>
+<td>宠物食品/化妆品合规要求</td>
+</tr>
+<tr>
+<td>BlueAsia Labs</td>
+<td>TIS认证流程、成本</td>
+</tr>
+<tr>
+<td>各平台Seller Center</td>
+<td>费率、政策</td>
+</tr>
+</tbody>
+</table>
+<h3 id="112">11.2 报告文件清单</h3>
+<table>
+<thead>
+<tr>
+<th>文件</th>
+<th>路径</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>市场概览</td>
+<td>reports/thailand-market-overview-2026-06-03.md</td>
+</tr>
+<tr>
+<td>品类矩阵</td>
+<td>reports/thailand-category-matrix-2026-06-03.md</td>
+</tr>
+<tr>
+<td>搜索热点</td>
+<td>reports/thailand-search-trends-2026-06-03.md</td>
+</tr>
+<tr>
+<td>舆情分析</td>
+<td>reports/thailand-sentiment-analysis-2026-06-03.md</td>
+</tr>
+<tr>
+<td>竞品矩阵</td>
+<td>reports/thailand-competitor-matrix-2026-06-03.md</td>
+</tr>
+<tr>
+<td>用户洞察</td>
+<td>reports/thailand-user-insights-2026-06-03.md</td>
+</tr>
+<tr>
+<td>Top10选品</td>
+<td>reports/thailand-top10-selection-2026-06-03.md</td>
+</tr>
+<tr>
+<td>成本模型</td>
+<td>reports/thailand-cost-model-2026-06-03.md</td>
+</tr>
+<tr>
+<td>合规清单</td>
+<td>reports/thailand-compliance-checklist-2026-06-03.md</td>
+</tr>
+<tr>
+<td>最终决策</td>
+<td>reports/thailand-final-selection-2026-06-03.md</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>报告生成时间: 2026-06-03 02:10 (Asia/Shanghai)</em><br />
+<em>Orchestrator: Emma XIE (普罗米修斯)</em><br />
+<em>版本: 1.0</em></p>
+</body>
+</html>

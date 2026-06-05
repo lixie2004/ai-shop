@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>indonesia-formal-project-report-2026-06-03</title>
+    <style>
+@page {
+    size: A4;
+    margin: 2cm 2.5cm;
+    @bottom-center {
+        content: counter(page);
+        font-size: 9pt;
+        color: #999;
+    }
+}
+
+/* 强制使用 Noto Sans CJK SC，绕过 Pango 字体匹配的不确定性 */
+@font-face {
+    font-family: 'CJK';
+    src: url('/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'CJK';
+    src: url('/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'CJK';
+    src: url('/usr/share/fonts/opentype/noto/NotoSerifCJK-Regular.ttc') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+body {
+    font-family: 'CJK', 'Noto Sans CJK SC', sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.8;
+    color: #1a1a1a;
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 20pt;
+    color: #1a1a2e;
+    border-bottom: 3px solid #e94560;
+    padding-bottom: 8pt;
+    margin-top: 24pt;
+    page-break-before: always;
+}
+
+h1:first-of-type {
+    page-break-before: avoid;
+}
+
+h2 {
+    font-size: 15pt;
+    color: #16213e;
+    border-bottom: 1.5px solid #0f3460;
+    padding-bottom: 5pt;
+    margin-top: 18pt;
+}
+
+h3 {
+    font-size: 12.5pt;
+    color: #0f3460;
+    margin-top: 14pt;
+}
+
+h4 {
+    font-size: 11pt;
+    color: #333;
+    margin-top: 10pt;
+}
+
+/* 表格样式 - 关键修复 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12pt 0;
+    font-size: 9.5pt;
+    page-break-inside: avoid;
+    display: table;
+}
+
+thead {
+    display: table-header-group;
+}
+
+th {
+    background-color: #16213e;
+    color: white;
+    padding: 8px 10px;
+    text-align: left;
+    font-weight: 600;
+    border: 1px solid #0f3460;
+    font-size: 9pt;
+}
+
+td {
+    padding: 7px 10px;
+    border: 1px solid #ddd;
+    vertical-align: top;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tr:hover {
+    background-color: #e8f4f8;
+}
+
+/* 代码块 */
+code {
+    font-family: 'CJK', "Noto Sans Mono CJK SC", monospace;
+    font-size: 8.5pt;
+    background: #f4f4f4;
+    padding: 2px 5px;
+    border-radius: 3px;
+    border: 1px solid #e0e0e0;
+}
+
+pre {
+    background: #1e1e2e;
+    color: #cdd6f4;
+    padding: 12pt;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-size: 8.5pt;
+    line-height: 1.6;
+    margin: 10pt 0;
+    page-break-inside: avoid;
+}
+
+pre code {
+    background: none;
+    border: none;
+    color: inherit;
+    padding: 0;
+}
+
+/* 引用块 */
+blockquote {
+    border-left: 4px solid #e94560;
+    margin: 10pt 0;
+    padding: 8pt 14pt;
+    background: #fff5f5;
+    color: #666;
+    font-size: 9.5pt;
+}
+
+/* 列表 */
+ul, ol {
+    padding-left: 20pt;
+    margin: 6pt 0;
+}
+
+li {
+    margin: 3pt 0;
+}
+
+li > ul, li > ol {
+    margin: 2pt 0;
+}
+
+/* 任务列表 */
+input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+/* 链接 */
+a {
+    color: #0f3460;
+    text-decoration: none;
+}
+
+/* 水平线 */
+hr {
+    border: none;
+    border-top: 1.5px solid #e0e0e0;
+    margin: 16pt 0;
+}
+
+/* 强调 */
+strong {
+    color: #1a1a2e;
+}
+
+em {
+    color: #555;
+}
+
+/* emoji 处理 */
+img.emoji {
+    height: 1em;
+    width: 1em;
+    vertical-align: middle;
+}
+
+/* 警告/提示块 (用 blockquote 变体) */
+blockquote p:first-child strong {
+    color: #e94560;
+}
+
+/* Mermaid 图表占位 - 跳过不支持的图表 */
+pre code.language-mermaid {
+    display: none;
+}
+</style>
+</head>
+<body>
+<h1 id="_1">印度尼西亚市场选品调查正式项目报告</h1>
+<blockquote>
+<p><strong>报告编号</strong>: SEA-INDO-2026-06-03<br />
+<strong>项目</strong>: 印度尼西亚跨境电商选品调查<br />
+<strong>执行期</strong>: 2026-06-03<br />
+<strong>报告人</strong>: Emma XIE (Orchestrator)<br />
+<strong>报告状态</strong>: ✅ 最终版本</p>
+</blockquote>
+<hr />
+<h2 id="_2">目录</h2>
+<ol>
+<li><a href="#执行摘要">执行摘要</a></li>
+<li><a href="#一-市场概览">市场概览</a></li>
+<li><a href="#二-品类机会矩阵">品类机会矩阵</a></li>
+<li><a href="#三-搜索热点分析">搜索热点分析</a></li>
+<li><a href="#四-舆情分析">舆情分析</a></li>
+<li><a href="#五-竞品矩阵">竞品矩阵</a></li>
+<li><a href="#六-用户需求洞察">用户需求洞察</a></li>
+<li><a href="#七-top-10-选品清单">Top 10 选品清单</a></li>
+<li><a href="#八-成本模型">成本模型</a></li>
+<li><a href="#九-合规检查清单">合规检查清单</a></li>
+<li><a href="#十-最终决策建议">最终决策建议</a></li>
+<li><a href="#十一-风险监控计划">风险监控计划</a></li>
+<li><a href="#附录">附录</a></li>
+</ol>
+<hr />
+<h2 id="_3">执行摘要</h2>
+<p>印度尼西亚是东南亚最大的数字经济体，2026年电商GMV预计达 <strong>$104.21亿</strong>，年增速15.3%。拥有2.86亿人口和80.5%的互联网渗透率，是全球第10大电商市场。</p>
+<p>本报告通过11步完整分析流程，从宏观市场到微观选品，最终筛选出 <strong>Top 10 SKU</strong> 作为第一批进入印尼市场的核心产品。其中 <strong>4个SKU可立即进入</strong>（无需认证或低门槛），<strong>6个SKU需3-6个月认证准备期</strong>。</p>
+<p><strong>核心建议</strong>: 以美妆个护、家居生活、宠物用品为立即切入点，同步启动美妆/营养品/电子品类的认证工作，形成"快速盈利+中长期布局"的组合策略。预计12个月回本年ROI 30-150%。</p>
+<hr />
+<h2 id="_4">一、市场概览</h2>
+<h3 id="11">1.1 关键数据</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>数值</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>人口</td>
+<td>2.86亿</td>
+<td>UN 2025</td>
+</tr>
+<tr>
+<td>中位年龄</td>
+<td>30.4岁</td>
+<td>UN 2025</td>
+</tr>
+<tr>
+<td>互联网渗透率</td>
+<td>80.5%</td>
+<td>DataReportal 2026</td>
+</tr>
+<tr>
+<td>互联网用户</td>
+<td>2.30亿</td>
+<td>DataReportal 2026</td>
+</tr>
+<tr>
+<td>电商GMV (2026)</td>
+<td>$104.21亿</td>
+<td>Mordor Intelligence</td>
+</tr>
+<tr>
+<td>电商增速</td>
+<td>15.3% CAGR</td>
+<td>Mordor Intelligence</td>
+</tr>
+<tr>
+<td>网购用户</td>
+<td>6,570万</td>
+<td>DataReportal 2024</td>
+</tr>
+<tr>
+<td>人均年消费</td>
+<td>$765</td>
+<td>DataReportal 2024</td>
+</tr>
+<tr>
+<td>数字经济占GDP</td>
+<td>~10%</td>
+<td>Digitalinasia 2026</td>
+</tr>
+</tbody>
+</table>
+<h3 id="12">1.2 平台格局</h3>
+<table>
+<thead>
+<tr>
+<th>平台</th>
+<th>GMV份额</th>
+<th>态势</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shopee</td>
+<td>52%</td>
+<td>💚 稳固领先</td>
+</tr>
+<tr>
+<td>Tokopedia+TikTok Shop</td>
+<td>38%</td>
+<td>🔥 快速增长</td>
+</tr>
+<tr>
+<td>Lazada</td>
+<td>6%</td>
+<td>🟡 稳态盈利</td>
+</tr>
+<tr>
+<td>Blibli</td>
+<td>3%</td>
+<td>🟡 利基</td>
+</tr>
+<tr>
+<td>其他</td>
+<td>~1%</td>
+<td>🔵 长尾</td>
+</tr>
+</tbody>
+</table>
+<h3 id="13">1.3 核心消费特征</h3>
+<ul>
+<li><strong>移动优先</strong>: 86.8% Android, 95%+手机购物</li>
+<li><strong>直播购物</strong>: 60%买家参与, 转化率3倍于目录购物</li>
+<li><strong>支付</strong>: 数字钱包40.6%, BNPL 27.1%增速</li>
+<li><strong>驱动因素</strong>: 免运费(53%) &gt; 用户评价(51%) &gt; 折扣(48%)</li>
+<li><strong>时段</strong>: 18:00-21:00高峰(35%)</li>
+</ul>
+<hr />
+<h2 id="_5">二、品类机会矩阵</h2>
+<h3 id="21">2.1 优先级总评</h3>
+<table>
+<thead>
+<tr>
+<th>品类</th>
+<th>综合评分</th>
+<th>优先级</th>
+<th>核心结论</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>美妆个护</td>
+<td>40</td>
+<td>🥇 P1</td>
+<td>Halal认证+跨境供应链优势</td>
+</tr>
+<tr>
+<td>时尚服饰</td>
+<td>37</td>
+<td>🥇 P1</td>
+<td>全球最大穆斯林时装市场</td>
+</tr>
+<tr>
+<td>母婴用品</td>
+<td>35</td>
+<td>🥇 P1</td>
+<td>安全认证=入场券</td>
+</tr>
+<tr>
+<td>消费电子配件</td>
+<td>35</td>
+<td>🥈 P2</td>
+<td>量大但利润薄</td>
+</tr>
+<tr>
+<td>健康营养品</td>
+<td>35</td>
+<td>🥈 P2</td>
+<td>增速最快但认证复杂</td>
+</tr>
+<tr>
+<td>宠物用品</td>
+<td>32</td>
+<td>🥈 P2</td>
+<td>最高增速+最低竞争</td>
+</tr>
+<tr>
+<td>食品饮料</td>
+<td>35</td>
+<td>🥉 P3</td>
+<td>跨境门槛过高</td>
+</tr>
+<tr>
+<td>运动户外</td>
+<td>30</td>
+<td>🥉 P3</td>
+<td>中等机会</td>
+</tr>
+<tr>
+<td>玩具与爱好</td>
+<td>31</td>
+<td>🥉 P3</td>
+<td>季节性驱动</td>
+</tr>
+<tr>
+<td>汽车配件</td>
+<td>28</td>
+<td>🟦 P4</td>
+<td>利基市场</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22">2.2 关键趋势</h3>
+<ol>
+<li>直播购物 → 20% of GMV (2025)</li>
+<li>社交商务 → $50亿市场</li>
+<li>清真经济 → 从食品延伸到美妆/时尚</li>
+<li>男士护肤 → +180%搜索增速</li>
+<li>宠物经济 → +25-30%增速</li>
+</ol>
+<hr />
+<h2 id="_6">三、搜索热点分析</h2>
+<h3 id="31">3.1 美妆个护高频搜索词</h3>
+<ul>
+<li>skincare, serum wajah, sunscreen, halal skincare, korea skincare</li>
+<li>高频修饰词: murah(便宜), original(正品), halal, BPOM, best seller</li>
+<li>跨境机会词: original skincare korea, halal nail polish, skincare for hijab girl</li>
+</ul>
+<h3 id="32">3.2 时尚服饰高频搜索词</h3>
+<ul>
+<li>hijab, baju muslim, gamis, outfit hari ini, fashion korea</li>
+<li>跨境机会词: muslim fashion from Turkey, modest wear modern</li>
+</ul>
+<h3 id="33">3.3 上升趋势词</h3>
+<ul>
+<li>skincare routine viral (+180%), clean beauty (+150%), sustainable fashion (+100%)</li>
+<li>Muslim fashion modest (+120%), smart home (+90%), K-beauty Indonesia (+80%)</li>
+</ul>
+<hr />
+<h2 id="_7">四、舆情分析</h2>
+<h3 id="41-7">4.1 核心消费者痛点（7个）</h3>
+<ol>
+<li><strong>正品信任危机</strong> 🔴 — 51%依赖评价, 假货搜索高频</li>
+<li><strong>物流时效与成本</strong> 🟡 — 53%因免运费购买, 外岛3-7天</li>
+<li><strong>退货流程复杂</strong> 🟡 — COD退货率2.5-3倍于预付</li>
+<li><strong>产品质量不稳定</strong> 🟡 — 差评35%为质量问题</li>
+<li><strong>售后响应慢</strong> 🟡 — 跨境客服时差+语言障碍</li>
+<li><strong>支付安全顾虑</strong> 🟢 — 25%仍用COD</li>
+<li><strong>产品信息不透明</strong> 🟡 — 25%+差评"与描述不符"</li>
+</ol>
+<h3 id="42">4.2 竞品话术标杆</h3>
+<ul>
+<li><strong>Wardah</strong>: "Halal Certified + BPOM Approved + Proudly Indonesian"</li>
+<li><strong>Somethinc</strong>: "Clean Beauty + Dermatologically Tested"</li>
+<li><strong>Skintific</strong>: "Dermatologist Recommended + Bundle Savings" → 2024 Q1 IDR 700亿</li>
+</ul>
+<hr />
+<h2 id="_8">五、竞品矩阵</h2>
+<h3 id="51-5">5.1 美妆个护（每个品类≥5个竞品）</h3>
+<table>
+<thead>
+<tr>
+<th>品牌</th>
+<th>价格带(USD)</th>
+<th>月销量</th>
+<th>评分</th>
+<th>差评率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wardah UV Shield</td>
+<td>$1.6-2.9</td>
+<td>50,000+</td>
+<td>4.8</td>
+<td>3%</td>
+</tr>
+<tr>
+<td>Somethinc Glow Drops</td>
+<td>$5.5-7.8</td>
+<td>30,000+</td>
+<td>4.7</td>
+<td>4%</td>
+</tr>
+<tr>
+<td>Scarlett Whitening</td>
+<td>$2.3-3.6</td>
+<td>40,000+</td>
+<td>4.6</td>
+<td>5%</td>
+</tr>
+<tr>
+<td>Skintific 5X AHA</td>
+<td>$4.9-6.2</td>
+<td>25,000+</td>
+<td>4.8</td>
+<td>3%</td>
+</tr>
+<tr>
+<td>The Originote Hyalucera</td>
+<td>$2.9-4.2</td>
+<td>35,000+</td>
+<td>4.7</td>
+<td>4%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52">5.2 时尚/家居/母婴竞品数据详见竞品矩阵报告</h3>
+<hr />
+<h2 id="_9">六、用户需求洞察</h2>
+<h3 id="61">6.1 四大用户画像</h3>
+<ol>
+<li><strong>都市穆斯林女性(25-35)</strong>: 35%消费主力, 清真认证驱动, $326-978/月</li>
+<li><strong>年轻潮流男性(18-30)</strong>: 20%, TikTok种草, 潮流&gt;价格</li>
+<li><strong>新手父母(28-40)</strong>: 18%, 安全&gt;价格, 愿付溢价</li>
+<li><strong>小镇消费者(20-40)</strong>: 27%, 价格极度敏感, 二三线增速最快</li>
+</ol>
+<h3 id="62">6.2 需求优先级</h3>
+<ul>
+<li><strong>基本需求</strong>: 正品保证 &gt; 免运费 &gt; 安全支付</li>
+<li><strong>期望需求</strong>: 快速配送 &gt; 无忧退货 &gt; 实时客服</li>
+<li><strong>兴奋需求</strong>: AR试用 &gt; 订阅制 &gt; 个性化推荐</li>
+</ul>
+<hr />
+<h2 id="top-10">七、Top 10 选品清单</h2>
+<h3 id="71">7.1 最终清单</h3>
+<table>
+<thead>
+<tr>
+<th>排名</th>
+<th>产品</th>
+<th>品类</th>
+<th>目标价(USD)</th>
+<th>毛利率</th>
+<th>月搜索</th>
+<th>入选理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Halal Sunscreen SPF50</td>
+<td>美妆</td>
+<td>$3-6</td>
+<td>55-65%</td>
+<td>50K+</td>
+<td>防晒刚需+Halal差异化</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Collagen Drink Supplement</td>
+<td>健康</td>
+<td>$8-15</td>
+<td>60-70%</td>
+<td>30K+</td>
+<td>TikTok爆款+美容内调</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Premium Hijab Instant</td>
+<td>时尚</td>
+<td>$5-12</td>
+<td>50-60%</td>
+<td>80K+</td>
+<td>全球最大穆斯林市场</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Smart Watch Fitness Band</td>
+<td>电子</td>
+<td>$15-30</td>
+<td>45-55%</td>
+<td>40K+</td>
+<td>BNPL推动+健康意识</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Baby Skin Care Set</td>
+<td>母婴</td>
+<td>$10-18</td>
+<td>55-65%</td>
+<td>25K+</td>
+<td>安全认证+订阅复购</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Home Storage Organizer</td>
+<td>家居</td>
+<td>$8-15</td>
+<td>55-65%</td>
+<td>35K+</td>
+<td>城市化+轻小件</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Men's Skincare Set</td>
+<td>美妆</td>
+<td>$7-14</td>
+<td>55-65%</td>
+<td>20K+</td>
+<td>男士护肤蓝海</td>
+</tr>
+<tr>
+<td>8</td>
+<td>LED Ring Light + Stand</td>
+<td>电子</td>
+<td>$12-20</td>
+<td>50-60%</td>
+<td>30K+</td>
+<td>创作者经济</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Pet Grooming Kit</td>
+<td>宠物</td>
+<td>$5-10</td>
+<td>55-65%</td>
+<td>15K+</td>
+<td>低竞争蓝海</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Muslim Prayer Outfit</td>
+<td>时尚</td>
+<td>$10-20</td>
+<td>50-60%</td>
+<td>15K+</td>
+<td>刚需品类</td>
+</tr>
+</tbody>
+</table>
+<p><strong>选品达标率: 10/10 = 100%</strong> ✅</p>
+<hr />
+<h2 id="_10">八、成本模型</h2>
+<h3 id="81-3-hijab">8.1 单品成本结构（示例: #3 Hijab）</h3>
+<table>
+<thead>
+<tr>
+<th>成本项</th>
+<th>USD</th>
+<th>占比</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>采购</td>
+<td>$1.80</td>
+<td>23%</td>
+</tr>
+<tr>
+<td>头程物流</td>
+<td>$0.15</td>
+<td>2%</td>
+</tr>
+<tr>
+<td>进口关税</td>
+<td>$0.30</td>
+<td>4%</td>
+</tr>
+<tr>
+<td>VAT</td>
+<td>$0.27</td>
+<td>3%</td>
+</tr>
+<tr>
+<td>平台佣金</td>
+<td>$0.24</td>
+<td>3%</td>
+</tr>
+<tr>
+<td>尾程配送</td>
+<td>$0.35</td>
+<td>4%</td>
+</tr>
+<tr>
+<td>广告(ACOS 20%)</td>
+<td>$1.60</td>
+<td>20%</td>
+</tr>
+<tr>
+<td>退货(8%)</td>
+<td>$0.64</td>
+<td>8%</td>
+</tr>
+<tr>
+<td><strong>总成本</strong></td>
+<td><strong>$5.87</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>建议售价</strong></td>
+<td><strong>$8.00</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>净利率</strong></td>
+<td><strong>27%</strong></td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h3 id="82-12">8.2 12个月财务预测</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>保守</th>
+<th>中性</th>
+<th>乐观</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>月均GMV</td>
+<td>$25K</td>
+<td>$50K</td>
+<td>$100K</td>
+</tr>
+<tr>
+<td>月均净利</td>
+<td>$2.5K</td>
+<td>$7.5K</td>
+<td>$18K</td>
+</tr>
+<tr>
+<td>年ROI</td>
+<td>30%</td>
+<td>75%</td>
+<td>150%</td>
+</tr>
+<tr>
+<td>回本周期</td>
+<td>8月</td>
+<td>5月</td>
+<td>3月</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_11">九、合规检查清单</h2>
+<h3 id="91">9.1 认证需求汇总</h3>
+<table>
+<thead>
+<tr>
+<th>SKU</th>
+<th>强制认证</th>
+<th>费用</th>
+<th>周期</th>
+<th>风险</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sunscreen</td>
+<td>BPOM+Halal</td>
+<td>$3-5K</td>
+<td>3-6月</td>
+<td>🟡</td>
+</tr>
+<tr>
+<td>Collagen</td>
+<td>BPOM+Halal</td>
+<td>$3-5K</td>
+<td>3-6月</td>
+<td>🟡</td>
+</tr>
+<tr>
+<td>Hijab</td>
+<td>清真标签</td>
+<td>$0.5-1K</td>
+<td>1-2月</td>
+<td>🟢</td>
+</tr>
+<tr>
+<td>Smart Watch</td>
+<td>SDPPI+SNI</td>
+<td>$2-4K</td>
+<td>2-4月</td>
+<td>🟡</td>
+</tr>
+<tr>
+<td>Baby Care</td>
+<td>BPOM+SNI</td>
+<td>$3-6K</td>
+<td>3-6月</td>
+<td>🟡中</td>
+</tr>
+<tr>
+<td>Storage</td>
+<td>SNI(可选)</td>
+<td>$0.5K</td>
+<td>1月</td>
+<td>🟢</td>
+</tr>
+<tr>
+<td>Men Skincare</td>
+<td>BPOM+Halal</td>
+<td>$3-5K</td>
+<td>3-6月</td>
+<td>🟡</td>
+</tr>
+<tr>
+<td>Ring Light</td>
+<td>SDPPI</td>
+<td>$1.5-3K</td>
+<td>2-3月</td>
+<td>🟢</td>
+</tr>
+<tr>
+<td>Pet Kit</td>
+<td>无需</td>
+<td>$0</td>
+<td>—</td>
+<td>🟢</td>
+</tr>
+<tr>
+<td>Prayer Outfit</td>
+<td>清真标签</td>
+<td>$0.5K</td>
+<td>1月</td>
+<td>🟢</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_12">十、最终决策建议</h2>
+<h3 id="101">10.1 进入策略</h3>
+<p><strong>Phase 1（立即进入）</strong>:
+- ✅ #9 Pet Grooming Kit → 综合分8.2, 无认证门槛
+- ✅ #6 Storage Organizer → 8.05分, 轻小件优势
+- ✅ #3 Premium Hijab → 7.95分, 穆斯林市场红利
+- ✅ #10 Prayer Outfit → 7.90分, 刚需品类</p>
+<p><strong>Phase 2（认证后进入）</strong>:
+- ⏳ #7 Men Skincare → 7.80分, BPOM准备中
+- ⏳ #8 LED Ring Light → 7.70分, SDPPI准备中
+- ⏳ #1 Halal Sunscreen → 7.55分, BPOM+Halal准备中
+- ⏳ #2 Collagen Drink → 7.50分, BPOM+Halal准备中
+- ⏳ #4 Smart Watch → 6.85分, SDPPI准备中
+- ⏳ #5 Baby Care Set → 7.20分, BPOM+SNI准备中</p>
+<h3 id="102">10.2 关键里程碑</h3>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>目标</th>
+<th>KPI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Month 1-2</td>
+<td>4个SKU上架</td>
+<td>上架率100%, 月销500</td>
+</tr>
+<tr>
+<td>Month 3-4</td>
+<td>认证推进</td>
+<td>6个SKU认证启动</td>
+</tr>
+<tr>
+<td>Month 5-6</td>
+<td>全部SKU上架</td>
+<td>月销2,000</td>
+</tr>
+<tr>
+<td>Month 7-9</td>
+<td>品牌化运营</td>
+<td>旗舰店+月销5,000</td>
+</tr>
+<tr>
+<td>Month 10-12</td>
+<td>规模扩张</td>
+<td>海外仓+月销10,000</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_13">十一、风险监控计划</h2>
+<h3 id="_14">风险红线</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>阈值</th>
+<th>触发动作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>毛利率</td>
+<td>&lt;15%</td>
+<td>成本审查</td>
+</tr>
+<tr>
+<td>ACOS</td>
+<td>&gt;毛利率80%</td>
+<td>广告优化</td>
+</tr>
+<tr>
+<td>退货率</td>
+<td>&gt;15%</td>
+<td>停售+质量调查</td>
+</tr>
+<tr>
+<td>库存周转</td>
+<td>&gt;90天</td>
+<td>清仓+停补货</td>
+</tr>
+<tr>
+<td>现金流</td>
+<td>&lt;3月运营资金</td>
+<td>缩减开支</td>
+</tr>
+<tr>
+<td>差评率</td>
+<td>&gt;10%</td>
+<td>下架整改</td>
+</tr>
+<tr>
+<td>认证被拒</td>
+<td>任何一次</td>
+<td>暂停+聘请律师</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_15">持续监控</h3>
+<ul>
+<li>周报: ACOS、转化率、退货率</li>
+<li>月报: GMV、毛利、库存周转</li>
+<li>季报: 市场份额、竞品动态、认证进度</li>
+</ul>
+<hr />
+<h2 id="_16">附录</h2>
+<h3 id="_17">数据来源</h3>
+<ul>
+<li>DataReportal Digital 2026: Indonesia</li>
+<li>Mordor Intelligence: Indonesia E-commerce Market 2026</li>
+<li>Digitalinasia: Indonesia Digital Market Overview 2026</li>
+<li>Databoks/Katadata: Shopee Market Share 2025</li>
+<li>Magpie IQ: Platform GMV Data</li>
+<li>Momentum Works: SEA E-commerce 2026</li>
+<li>SellerCraft: Indonesia Digital Retail Outlook</li>
+<li>Indonesia Investments: E-commerce Market Data</li>
+<li>Jakpat: Consumer Behavior Survey</li>
+</ul>
+<h3 id="_18">报告文件清单</h3>
+<table>
+<thead>
+<tr>
+<th>文件名</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>indonesia-market-overview-2026-06-03.md</td>
+<td>Step 1: 宏观市场画像</td>
+</tr>
+<tr>
+<td>indonesia-category-matrix-2026-06-03.md</td>
+<td>Step 2: 品类机会矩阵</td>
+</tr>
+<tr>
+<td>indonesia-search-trends-2026-06-03.md</td>
+<td>Step 3: 搜索热点分析</td>
+</tr>
+<tr>
+<td>indonesia-sentiment-analysis-2026-06-03.md</td>
+<td>Step 4: 舆情分析</td>
+</tr>
+<tr>
+<td>indonesia-competitor-matrix-2026-06-03.md</td>
+<td>Step 5: 竞品矩阵</td>
+</tr>
+<tr>
+<td>indonesia-user-insights-2026-06-03.md</td>
+<td>Step 6: 用户需求洞察</td>
+</tr>
+<tr>
+<td>indonesia-top10-selection-2026-06-03.md</td>
+<td>Step 7: Top 10选品</td>
+</tr>
+<tr>
+<td>indonesia-cost-model-2026-06-03.md</td>
+<td>Step 8: 成本模型</td>
+</tr>
+<tr>
+<td>indonesia-compliance-checklist-2026-06-03.md</td>
+<td>Step 9: 合规清单</td>
+</tr>
+<tr>
+<td>indonesia-final-selection-2026-06-03.md</td>
+<td>Step 10: 综合评审</td>
+</tr>
+<tr>
+<td>indonesia-formal-project-report-2026-06-03.md</td>
+<td>Step 11: 正式报告（本文档）</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>报告完成</strong> | Emma XIE | 2026-06-03 08:35 CST</p>
+</body>
+</html>

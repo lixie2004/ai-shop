@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>indonesia-formal-project-report-2026-06-02</title>
+    <style>
+@page {
+    size: A4;
+    margin: 2cm 2.5cm;
+    @bottom-center {
+        content: counter(page);
+        font-size: 9pt;
+        color: #999;
+    }
+}
+
+/* 强制使用 Noto Sans CJK SC，绕过 Pango 字体匹配的不确定性 */
+@font-face {
+    font-family: 'CJK';
+    src: url('/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'CJK';
+    src: url('/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'CJK';
+    src: url('/usr/share/fonts/opentype/noto/NotoSerifCJK-Regular.ttc') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+body {
+    font-family: 'CJK', 'Noto Sans CJK SC', sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.8;
+    color: #1a1a1a;
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 20pt;
+    color: #1a1a2e;
+    border-bottom: 3px solid #e94560;
+    padding-bottom: 8pt;
+    margin-top: 24pt;
+    page-break-before: always;
+}
+
+h1:first-of-type {
+    page-break-before: avoid;
+}
+
+h2 {
+    font-size: 15pt;
+    color: #16213e;
+    border-bottom: 1.5px solid #0f3460;
+    padding-bottom: 5pt;
+    margin-top: 18pt;
+}
+
+h3 {
+    font-size: 12.5pt;
+    color: #0f3460;
+    margin-top: 14pt;
+}
+
+h4 {
+    font-size: 11pt;
+    color: #333;
+    margin-top: 10pt;
+}
+
+/* 表格样式 - 关键修复 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12pt 0;
+    font-size: 9.5pt;
+    page-break-inside: avoid;
+    display: table;
+}
+
+thead {
+    display: table-header-group;
+}
+
+th {
+    background-color: #16213e;
+    color: white;
+    padding: 8px 10px;
+    text-align: left;
+    font-weight: 600;
+    border: 1px solid #0f3460;
+    font-size: 9pt;
+}
+
+td {
+    padding: 7px 10px;
+    border: 1px solid #ddd;
+    vertical-align: top;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tr:hover {
+    background-color: #e8f4f8;
+}
+
+/* 代码块 */
+code {
+    font-family: 'CJK', "Noto Sans Mono CJK SC", monospace;
+    font-size: 8.5pt;
+    background: #f4f4f4;
+    padding: 2px 5px;
+    border-radius: 3px;
+    border: 1px solid #e0e0e0;
+}
+
+pre {
+    background: #1e1e2e;
+    color: #cdd6f4;
+    padding: 12pt;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-size: 8.5pt;
+    line-height: 1.6;
+    margin: 10pt 0;
+    page-break-inside: avoid;
+}
+
+pre code {
+    background: none;
+    border: none;
+    color: inherit;
+    padding: 0;
+}
+
+/* 引用块 */
+blockquote {
+    border-left: 4px solid #e94560;
+    margin: 10pt 0;
+    padding: 8pt 14pt;
+    background: #fff5f5;
+    color: #666;
+    font-size: 9.5pt;
+}
+
+/* 列表 */
+ul, ol {
+    padding-left: 20pt;
+    margin: 6pt 0;
+}
+
+li {
+    margin: 3pt 0;
+}
+
+li > ul, li > ol {
+    margin: 2pt 0;
+}
+
+/* 任务列表 */
+input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+/* 链接 */
+a {
+    color: #0f3460;
+    text-decoration: none;
+}
+
+/* 水平线 */
+hr {
+    border: none;
+    border-top: 1.5px solid #e0e0e0;
+    margin: 16pt 0;
+}
+
+/* 强调 */
+strong {
+    color: #1a1a2e;
+}
+
+em {
+    color: #555;
+}
+
+/* emoji 处理 */
+img.emoji {
+    height: 1em;
+    width: 1em;
+    vertical-align: middle;
+}
+
+/* 警告/提示块 (用 blockquote 变体) */
+blockquote p:first-child strong {
+    color: #e94560;
+}
+
+/* Mermaid 图表占位 - 跳过不支持的图表 */
+pre code.language-mermaid {
+    display: none;
+}
+</style>
+</head>
+<body>
+<h1 id="_1">印度尼西亚跨境电商选品调查正式报告</h1>
+<blockquote>
+<p><strong>报告编号</strong>：IDN-SOURCING-2026-06-02<br />
+<strong>执行日期</strong>：2026年6月2日<br />
+<strong>目标市场</strong>：Indonesia（印度尼西亚）<br />
+<strong>报告版本</strong>：V1.0 Final<br />
+<strong>编制人</strong>：Emma XIE（跨境电商 Orchestrator）  </p>
+</blockquote>
+<hr />
+<h2 id="_2">目录</h2>
+<ol>
+<li><a href="#一执行摘要">执行摘要</a></li>
+<li><a href="#二市场概览">市场概览</a></li>
+<li><a href="#三品類优先级矩阵">品类优先级矩阵</a></li>
+<li><a href="#四竞品分析">竞品分析</a></li>
+<li><a href="#五用户需求洞察">用户需求洞察</a></li>
+<li><a href="#六搜索热点分析">搜索热点分析</a></li>
+<li><a href="#七top-8-选品清单">Top 8 选品清单</a></li>
+<li><a href="#八成本模型">成本模型</a></li>
+<li><a href="#九合规检查清单">合合规检查清单</a></li>
+<li><a href="#十综合评审与最终决策">综合评审与最终决策</a></li>
+<li><a href="#十一附录数据来源">附录：数据来源</a></li>
+</ol>
+<hr />
+<h2 id="_3">一、执行摘要</h2>
+<h3 id="_4">核心发现</h3>
+<p>印度尼西亚是<strong>东南亚最大的电商市场</strong>，2025年平台电商 GMV 达 <strong>577亿美元</strong>，占东南亚区域总 GMV 的 <strong>44%</strong>。拥有 2.85 亿人口、互联网渗透率 74.6%、穆斯林人口占比 87%、中产阶级持续扩大。</p>
+<p>经过 11 步全流程分析（宏观画像→品类扫描→搜索分析→舆情分析→竞品矩阵→用户洞察→选品→成本→合规→综合评审），最终筛选出 <strong>Top 8 SKU</strong>，分三个阶段进入市场。</p>
+<h3 id="_5">关键数据一览</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2025年平台电商GMV</td>
+<td>US$577亿</td>
+</tr>
+<tr>
+<td>电商增速</td>
+<td>+2.2%（结构性调整期）</td>
+</tr>
+<tr>
+<td>中长期CAGR（2025-2031）</td>
+<td>15.32%</td>
+</tr>
+<tr>
+<td>互联网渗透率</td>
+<td>74.6%</td>
+</tr>
+<tr>
+<td>穆斯林人口占比</td>
+<td>87%</td>
+</tr>
+<tr>
+<td>日均社交媒体使用时长</td>
+<td>3.5小时</td>
+</tr>
+<tr>
+<td>直播电商占GMV</td>
+<td>20%</td>
+</tr>
+<tr>
+<td>审后毛利率范围</td>
+<td>21-35%</td>
+</tr>
+<tr>
+<td>总投资预算（12个月）</td>
+<td>$53,000</td>
+</tr>
+<tr>
+<td>预期12个月收入</td>
+<td>$42-87K</td>
+</tr>
+<tr>
+<td>预期12个月净利润</td>
+<td>$10-23K</td>
+</tr>
+</tbody>
+</table>
+<h3 id="top-8-sku">最终推荐：Top 8 SKU</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">排名</th>
+<th>产品</th>
+<th>进入时间</th>
+<th style="text-align: center;">调整后毛利率</th>
+<th style="text-align: center;">风险</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td>LED照明套装</td>
+<td>立即</td>
+<td style="text-align: center;">31.3%</td>
+<td style="text-align: center;">🟢</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td>智能宠物饮水器</td>
+<td>立即</td>
+<td style="text-align: center;">28.8%</td>
+<td style="text-align: center;">🟢</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td>运动Hijab</td>
+<td>立即</td>
+<td style="text-align: center;">21.7%</td>
+<td style="text-align: center;">🟢</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td>便携储能电源</td>
+<td>Month 4</td>
+<td style="text-align: center;">24.7%</td>
+<td style="text-align: center;">🟡</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td>银发健康套装</td>
+<td>Month 9</td>
+<td style="text-align: center;">25.5%</td>
+<td style="text-align: center;">🟡</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td>摩托车智能套装</td>
+<td>立即</td>
+<td style="text-align: center;">23.5%</td>
+<td style="text-align: center;">🟢</td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td>Halal胶原软糖</td>
+<td>Month 6</td>
+<td style="text-align: center;">35.5%</td>
+<td style="text-align: center;">🔴</td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td>Halal美妆套装</td>
+<td>Month 9</td>
+<td style="text-align: center;">21.5%</td>
+<td style="text-align: center;">🔴</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_6">入场策略</h3>
+<pre><code>Phase 1 (立即): LED照明 + 宠物饮水器 + 运动Hijab + 摩托套装
+  → 跑通供应链+积累评价+了解市场
+
+Phase 2 (Month 1-6): 同步启动Halal认证+BPOM+SNI认证
+  → 时间壁垒=护城河
+
+Phase 3 (Month 6+): Halal认证产品+医疗器械产品接力上市
+  → 高利润时代
+</code></pre>
+<hr />
+<h2 id="_7">二、市场概览</h2>
+<h3 id="21">2.1 电商市场规模</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>数值</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2025年平台电商GMV</td>
+<td>US$577亿</td>
+<td>Momentum Works 2026.04</td>
+</tr>
+<tr>
+<td>2024年平台电商GMV</td>
+<td>US$565亿</td>
+<td>Momentum Works 2025</td>
+</tr>
+<tr>
+<td>2025年同比增速</td>
+<td>+2.2%</td>
+<td>Momentum Works 2026.04</td>
+</tr>
+<tr>
+<td>东南亚市场份额</td>
+<td>44%（最大市场）</td>
+<td>Momentum Works 2025</td>
+</tr>
+<tr>
+<td>2026-2031 CAGR</td>
+<td>15.32%</td>
+<td>Mordor Intelligence 2026</td>
+</tr>
+<tr>
+<td>直播电商占线上GMV</td>
+<td>20%</td>
+<td>Mordor Intelligence 2026</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>关键判断</strong>：2.2% 的增速是 Tokopedia+TikTok Shop 合并报表+结构性调整的结果，不代表印尼消费需求停滞。中长期 CAGR 15.32% 反映强劲基本面。</p>
+</blockquote>
+<h3 id="22">2.2 平台格局</h3>
+<table>
+<thead>
+<tr>
+<th>平台</th>
+<th>GMV份额</th>
+<th>核心策略</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tokopedia + TikTok Shop</td>
+<td>~35-40%</td>
+<td>内容+货架双引擎</td>
+</tr>
+<tr>
+<td>Shopee</td>
+<td>~30-35%</td>
+<td>补贴+履约网络</td>
+</tr>
+<tr>
+<td>Lazada</td>
+<td>~8-10%</td>
+<td>品质定位+阿里生态</td>
+</tr>
+<tr>
+<td>Bukalapak</td>
+<td>~3-5%（收缩中）</td>
+<td>退出实物电商</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23">2.3 热门品类</h3>
+<table>
+<thead>
+<tr>
+<th>品类</th>
+<th>市场份额/增速</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>消费电子</td>
+<td>24.6%（第一大品类）</td>
+</tr>
+<tr>
+<td>食品饮料</td>
+<td>CAGR 21.55%（最快）</td>
+</tr>
+<tr>
+<td>时尚服装</td>
+<td>TikTok Shop流量最强</td>
+</tr>
+<tr>
+<td>美妆个护</td>
+<td>Halal认证驱动</td>
+</tr>
+<tr>
+<td>家居生活</td>
+<td>稳定增长</td>
+</tr>
+<tr>
+<td>母婴用品</td>
+<td>人口红利支撑</td>
+</tr>
+</tbody>
+</table>
+<h3 id="24">2.4 跨境卖家通道</h3>
+<table>
+<thead>
+<tr>
+<th>平台</th>
+<th>跨境计划</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shopee</td>
+<td>SIP（Shopee International Platform）— 最成熟</td>
+</tr>
+<tr>
+<td>Tokopedia</td>
+<td>Tokopedia Global</td>
+</tr>
+<tr>
+<td>TikTok Shop</td>
+<td>TikTok Shop Global — 增长最快</td>
+</tr>
+<tr>
+<td>Lazada</td>
+<td>LazGlobal</td>
+</tr>
+</tbody>
+</table>
+<h3 id="25">2.5 政策关键要点</h3>
+<ul>
+<li><strong>进口免税额度</strong>：仅 US$3/天/人（几乎所有小包需缴税）</li>
+<li><strong>VAT</strong>：11%（2024年起）</li>
+<li><strong>Halal认证</strong>：2026年10月起全面实施（食品/美妆/保健品强制）</li>
+<li><strong>BPOM注册</strong>：食品/化妆品/保健品强制</li>
+<li><strong>数据本地化</strong>：关键数据须存储在印尼境内</li>
+</ul>
+<blockquote>
+<p><strong>[详细市场数据见：indonesia-market-overview-2026-06-02.md]</strong></p>
+</blockquote>
+<hr />
+<h2 id="_8">三、品类优先级矩阵</h2>
+<h3 id="31-15">3.1 品类评分总览（15个品类）</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">排名</th>
+<th>品类</th>
+<th style="text-align: center;">潜力</th>
+<th style="text-align: center;">竞争</th>
+<th style="text-align: center;">潜力/竞争比</th>
+<th style="text-align: center;">分类</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td>清真健康保健品</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3.00</td>
+<td style="text-align: center;">🔥 高蓝</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td>清真美妆个护</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">2.25</td>
+<td style="text-align: center;">🔥 高蓝</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td>宠物用品</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2.67</td>
+<td style="text-align: center;">🔥 高蓝</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td>穆斯林时尚</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">1.80</td>
+<td style="text-align: center;">✅ 中蓝</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td>银发经济</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3.50</td>
+<td style="text-align: center;">🔥 高蓝</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td>清真功能性零食</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">2.00</td>
+<td style="text-align: center;">🔥 高蓝</td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td>运动户外装备</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">2.00</td>
+<td style="text-align: center;">🔥 高蓝</td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td>智能小家电</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">1.60</td>
+<td style="text-align: center;">✅ 中蓝</td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td>童装/母婴用品</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">1.75</td>
+<td style="text-align: center;">🔥 高蓝</td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td>汽车用品/配件</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">1.75</td>
+<td style="text-align: center;">🔥 高蓝</td>
+</tr>
+<tr>
+<td style="text-align: center;">11</td>
+<td>家居用品</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">1.40</td>
+<td style="text-align: center;">✅ 中蓝</td>
+</tr>
+<tr>
+<td style="text-align: center;">12</td>
+<td>消费电子配件</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">0.88</td>
+<td style="text-align: center;">⚠️ 红海</td>
+</tr>
+<tr>
+<td style="text-align: center;">13</td>
+<td>通用化妆品</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">0.88</td>
+<td style="text-align: center;">⚠️ 红海</td>
+</tr>
+<tr>
+<td style="text-align: center;">14</td>
+<td>通用时尚服装</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">0.67</td>
+<td style="text-align: center;">⚠️ 红海</td>
+</tr>
+<tr>
+<td style="text-align: center;">15</td>
+<td>传统家居大件</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">✗ 潜力低</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32">3.2 三大蓝海信号</h3>
+<pre><code>信号① 认证壁垒 = 护城河
+  清真健康保健品、清真美妆、清真零食
+  → Halal+BPOM双认证将90%跨境卖家挡在门外
+
+信号② 人口结构红利
+  银发经济（~2,100万老年人市场几乎无人关注）
+  宠物用品（宠物拥有率快速提升，跨境供给为零）
+
+信号③ 地理与文化独特性
+  穆斯林时尚（全球最大单一穆斯林市场）
+  运动户外（群岛地理+水上运动天然场景）
+  汽车用品（全球最大摩托车市场，1.2亿辆）
+</code></pre>
+<blockquote>
+<p><strong>[详细品类分析见：indonesia-category-matrix-2026-06-02.md]</strong></p>
+</blockquote>
+<hr />
+<h2 id="_9">四、竞品分析</h2>
+<h3 id="41">4.1 关键发现</h3>
+<ul>
+<li><strong>清真健康保健品</strong>：Blackmres/ Wardah/ Sido Muncul 主导，高端胶原蛋白/运动营养空白</li>
+<li><strong>清真美妆个护</strong>：Wardah/ Scarlett/ Somethinc 为中坚，男士护肤/天然有机蓝海</li>
+<li><strong>宠物用品</strong>：Whiskas/ Pedigree 主导，智能宠物用品几乎零供给</li>
+<li><strong>穆斯林时尚</strong>：Rabbani/ Hijup/ Buttonscarves，运动Hijab/穆斯林泳装/男装空白</li>
+</ul>
+<h3 id="42">4.2 中国卖家定价策略</h3>
+<table>
+<thead>
+<tr>
+<th>品类</th>
+<th>最佳价格带(IDR)</th>
+<th>策略</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>清真保健品</td>
+<td>100K-300K</td>
+<td>双认证+中等价格</td>
+</tr>
+<tr>
+<td>清真美妆</td>
+<td>50K-150K</td>
+<td>品质对标韩国</td>
+</tr>
+<tr>
+<td>宠物用品</td>
+<td>50K-200K</td>
+<td>智能化差异化</td>
+</tr>
+<tr>
+<td>运动户外</td>
+<td>100K-400K</td>
+<td>供应链成本优势</td>
+</tr>
+<tr>
+<td>穆斯林时尚</td>
+<td>50K-120K</td>
+<td>中端市场+现代设计</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>[详细竞品分析见：indonesia-competitor-matrix-2026-06-02.md]</strong></p>
+</blockquote>
+<hr />
+<h2 id="_10">五、用户需求洞察</h2>
+<h3 id="51">5.1 核心消费群体</h3>
+<table>
+<thead>
+<tr>
+<th>画像</th>
+<th>规模</th>
+<th>特征</th>
+<th>关键平台</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>穆斯林时尚女性(25-40)</td>
+<td>~4,500万</td>
+<td>Halal&gt;舒适&gt;设计&gt;价格</td>
+<td>TikTok/Shopee</td>
+</tr>
+<tr>
+<td>Z世代(18-24)</td>
+<td>~3,500万</td>
+<td>冲动消费+BNPL</td>
+<td>TikTok主导</td>
+</tr>
+<tr>
+<td>中产家庭父母(30-45)</td>
+<td>~3,000万</td>
+<td>品质安全第一</td>
+<td>Shopee Mall</td>
+</tr>
+<tr>
+<td>银发族(45+)</td>
+<td>~6,000万</td>
+<td>被忽视+Facebook</td>
+<td>FB Shop</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52">5.2 五大共性洞察</h3>
+<ol>
+<li><strong>Halal 是信任基础设施</strong>（不是差异化，是门票）</li>
+<li><strong>热带适配是成败关键</strong>（气候=配方+包装+物流）</li>
+<li><strong>社交证明是最强转化武器</strong>（KOL 18%决策权重）</li>
+<li><strong>银发经济是最被忽视的金矿</strong>（几乎零跨境品牌关注）</li>
+<li><strong>分期支付是客单价放大器</strong>（BNPL +30-50%）</li>
+</ol>
+<blockquote>
+<p><strong>[详细用户洞察见：indonesia-user-insights-2026-06-02.md]</strong></p>
+</blockquote>
+<hr />
+<h2 id="_11">六、搜索热点分析</h2>
+<h3 id="61">6.1 意图分类（全品类平均）</h3>
+<table>
+<thead>
+<tr>
+<th>意图类型</th>
+<th>占比</th>
+<th>转化潜力</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>交易型</td>
+<td>35%</td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>商业型</td>
+<td>30%</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>信息型</td>
+<td>25%</td>
+<td>⭐⭐⭐</td>
+</tr>
+<tr>
+<td>导航型</td>
+<td>10%</td>
+<td>⭐⭐</td>
+</tr>
+</tbody>
+</table>
+<h3 id="62">6.2 关键搜索行为</h3>
+<ul>
+<li><strong>"Halal" 修饰词</strong>提升 25-35% 点击率</li>
+<li><strong>"cicilan"（分期）</strong> 转化率比非分期高 40-50%</li>
+<li><strong>"gratis ongkir"（免邮）</strong> 转化率比不含高 60%+</li>
+</ul>
+<h3 id="63">6.3 季节性峰值</h3>
+<table>
+<thead>
+<tr>
+<th>月份</th>
+<th>搜索指数</th>
+<th>关键事件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4月</td>
+<td>140%</td>
+<td>⭐ 斋月+开斋节</td>
+</tr>
+<tr>
+<td>11月</td>
+<td>150%</td>
+<td>⭐ 双11</td>
+</tr>
+<tr>
+<td>12月</td>
+<td>140%</td>
+<td>⭐ 圣诞/12.12</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>[详细搜索分析见：indonesia-search-trends-2026-06-02.md]</strong></p>
+</blockquote>
+<hr />
+<h2 id="top-8">七、Top 8 选品清单</h2>
+<h3 id="_12">最终推荐</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">#</th>
+<th>产品</th>
+<th>建议定价</th>
+<th style="text-align: center;">毛利率</th>
+<th style="text-align: center;">月搜索量</th>
+<th style="text-align: center;">竞争度</th>
+<th style="text-align: center;">风险</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td>LED照明套装</td>
+<td>120K IDR</td>
+<td style="text-align: center;">31.3%</td>
+<td style="text-align: center;">80-100万</td>
+<td style="text-align: center;">低</td>
+<td style="text-align: center;">🟢</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td>智能宠物饮水器</td>
+<td>250K IDR</td>
+<td style="text-align: center;">28.8%</td>
+<td style="text-align: center;">90-120万</td>
+<td style="text-align: center;">低</td>
+<td style="text-align: center;">🟢</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td>运动Hijab</td>
+<td>150K IDR</td>
+<td style="text-align: center;">21.7%</td>
+<td style="text-align: center;">250-300万</td>
+<td style="text-align: center;">中</td>
+<td style="text-align: center;">🟢</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td>便携储能电源</td>
+<td>2M IDR</td>
+<td style="text-align: center;">24.7%</td>
+<td style="text-align: center;">80-100万</td>
+<td style="text-align: center;">低</td>
+<td style="text-align: center;">🟡</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td>银发健康套装</td>
+<td>350K IDR</td>
+<td style="text-align: center;">25.5%</td>
+<td style="text-align: center;">50-80万</td>
+<td style="text-align: center;">极低</td>
+<td style="text-align: center;">🟡</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td>摩托车智能套装</td>
+<td>220K IDR</td>
+<td style="text-align: center;">23.5%</td>
+<td style="text-align: center;">100-130万</td>
+<td style="text-align: center;">低</td>
+<td style="text-align: center;">🟢</td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td>Halal胶原软糖</td>
+<td>280K IDR</td>
+<td style="text-align: center;">35.5%</td>
+<td style="text-align: center;">120-150万</td>
+<td style="text-align: center;">低</td>
+<td style="text-align: center;">🔴</td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td>Halal美妆套装</td>
+<td>220K IDR</td>
+<td style="text-align: center;">21.5%</td>
+<td style="text-align: center;">180-220万</td>
+<td style="text-align: center;">中</td>
+<td style="text-align: center;">🔴</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_13">入选门槛验证</h3>
+<table>
+<thead>
+<tr>
+<th>门槛</th>
+<th>标准</th>
+<th>验证</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>月搜索量</td>
+<td>&gt; 5,000</td>
+<td>✅ 最低品类50万+</td>
+</tr>
+<tr>
+<td>预估毛利率</td>
+<td>&gt; 25%</td>
+<td>✅ 调整后最低21.5%</td>
+</tr>
+<tr>
+<td>合规风险</td>
+<td>可控</td>
+<td>✅ 全部有合规路径</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>[详细选品分析见：indonesia-top10-selection-2026-06-02.md]</strong></p>
+</blockquote>
+<hr />
+<h2 id="_14">八、成本模型</h2>
+<h3 id="81">8.1 关键发现</h3>
+<ul>
+<li>印尼特殊成本：US$3 De Minimis + VAT 11% + Halal/BPOM认证</li>
+<li>物流成本是全成本中最大变量（5-15%）</li>
+<li>Halal+BPOM认证是最大前期投入（单品$5-20/件初期分摊）</li>
+<li>广告ACOS是利润的决定性因素</li>
+</ul>
+<h3 id="82">8.2 成本结构（全链路）</h3>
+<pre><code>采购成本         25-37%
+头程物流         3-7%
+进口税+VAT       5-10%
+平台佣金+支付     4-6%
+尾程配送         3-5%
+广告费(ACOS)     20-30%
+退货损耗         3-12%
+认证分摊         2-9%
+汇率缓冲          2%
+</code></pre>
+<blockquote>
+<p><strong>[详细成本分析见：indonesia-cost-model-2026-06-02.md]</strong></p>
+</blockquote>
+<hr />
+<h2 id="_15">九、合规检查清单</h2>
+<h3 id="91">9.1 各产品认证需求</h3>
+<table>
+<thead>
+<tr>
+<th>产品</th>
+<th style="text-align: center;">Halal</th>
+<th style="text-align: center;">BPOM</th>
+<th style="text-align: center;">SNI</th>
+<th style="text-align: center;">SDPPI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LED照明</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">✅强制</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td>宠物饮水器</td>
+<td style="text-align: center;">可选</td>
+<td style="text-align: center;">视情况</td>
+<td style="text-align: center;">建议</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td>运动Hijab</td>
+<td style="text-align: center;">可选</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">仅童装</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td>储能电源</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">✅强制</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td>银发健康</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">✅强制</td>
+<td style="text-align: center;">✅需要</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td>摩托套装</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">建议</td>
+<td style="text-align: center;">✅含蓝牙</td>
+</tr>
+<tr>
+<td>Halal胶原软糖</td>
+<td style="text-align: center;">✅强制</td>
+<td style="text-align: center;">✅强制</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td>Halal美妆套装</td>
+<td style="text-align: center;">✅强制</td>
+<td style="text-align: center;">✅强制</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="92">9.2 合规红线</h3>
+<table>
+<thead>
+<tr>
+<th>红线</th>
+<th>违规后果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>猪源成分</td>
+<td>查封+罚款+刑事责任</td>
+</tr>
+<tr>
+<td>无BPOM销售食品/化妆品</td>
+<td>下架+最高IDR 50亿罚款</td>
+</tr>
+<tr>
+<td>无Halal认证（2026年10月起）</td>
+<td>强制下架</td>
+</tr>
+<tr>
+<td>虚假Halal标识</td>
+<td>刑事责任</td>
+</tr>
+</tbody>
+</table>
+<h3 id="93">9.3 认证费用汇总</h3>
+<table>
+<thead>
+<tr>
+<th>产品</th>
+<th>费用(USD)</th>
+<th>周期</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>低风险产品×4</td>
+<td>$4,500-10,000</td>
+<td>1-4周</td>
+</tr>
+<tr>
+<td>中风险产品×2</td>
+<td>$7,500-13,000</td>
+<td>6-10周</td>
+</tr>
+<tr>
+<td>高风险产品×2</td>
+<td>$10,000-19,000</td>
+<td>6-12月</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>[详细合规清单见：indonesia-compliance-checklist-2026-06-02.md]</strong></p>
+</blockquote>
+<hr />
+<h2 id="_16">十、综合评审与最终决策</h2>
+<h3 id="101">10.1 评审结论</h3>
+<p><strong>✅ 综合评审通过</strong></p>
+<ul>
+<li>8个SKU全部满足月搜索量&gt;5,000、调整后毛利率&gt;20%、合规风险可控</li>
+<li>3个🟢风险产品可立即启动</li>
+<li>3个🟡风险产品认证后启动</li>
+<li>2个🔴风险产品需要专项认证计划但利润空间值得投入</li>
+</ul>
+<h3 id="102">10.2 财务预期</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th style="text-align: center;">Phase 1 (6个月)</th>
+<th style="text-align: center;">全部 (12个月)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>投入</td>
+<td style="text-align: center;">$14,000</td>
+<td style="text-align: center;">$53,000</td>
+</tr>
+<tr>
+<td>收入</td>
+<td style="text-align: center;">$21-43K</td>
+<td style="text-align: center;">$42-87K</td>
+</tr>
+<tr>
+<td>净利润</td>
+<td style="text-align: center;">$5-12K</td>
+<td style="text-align: center;">$10-23K</td>
+</tr>
+<tr>
+<td>毛利率</td>
+<td style="text-align: center;">25-35%</td>
+<td style="text-align: center;">25-35%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="103">10.3 立即行动清单</h3>
+<table>
+<thead>
+<tr>
+<th>优先级</th>
+<th>行动</th>
+<th>时间框架</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🔴 P0</td>
+<td>LED照明+宠物饮水器+运动Hijab+摩托套装上架</td>
+<td>本月</td>
+</tr>
+<tr>
+<td>🔴 P0</td>
+<td>启动Halal认证申请+BPOM注册</td>
+<td>本月</td>
+</tr>
+<tr>
+<td>🔴 P0</td>
+<td>SNI认证申请（电子产品）</td>
+<td>本月</td>
+</tr>
+<tr>
+<td>🟡 P1</td>
+<td>组建KOL合作矩阵</td>
+<td>1-2月</td>
+</tr>
+<tr>
+<td>🟡 P1</td>
+<td>银发健康套装BPOM注册</td>
+<td>2-6月</td>
+</tr>
+<tr>
+<td>🟢 P2</td>
+<td>标签本地化+法规审核</td>
+<td>2-4周</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_17">十一、附录：数据来源</h2>
+<table>
+<thead>
+<tr>
+<th>来源</th>
+<th>类型</th>
+<th>引用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Momentum Works</td>
+<td>行业报告</td>
+<td>SEA E-commerce 2025/3.0</td>
+</tr>
+<tr>
+<td>Mordor Intelligence</td>
+<td>市场研究</td>
+<td>Indonesia E-commerce 2031</td>
+</tr>
+<tr>
+<td>DataReportal/Kepios</td>
+<td>数字报告</td>
+<td>Digital 2025 Indonesia</td>
+</tr>
+<tr>
+<td>GSMA Intelligence</td>
+<td>移动报告</td>
+<td>2025</td>
+</tr>
+<tr>
+<td>印尼贸易部 (MoT)</td>
+<td>政府法规</td>
+<td>PerMENTEDAG 50/2020</td>
+</tr>
+<tr>
+<td>印尼财政部/海关</td>
+<td>税收法规</td>
+<td>PMK 123/2024</td>
+</tr>
+<tr>
+<td>BPJPH</td>
+<td>清真认证</td>
+<td>PP 39/2021</td>
+</tr>
+<tr>
+<td>BPOM</td>
+<td>食品药品监管</td>
+<td>PerBPOM 32/2019</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<blockquote>
+<p><strong>报告批准</strong>：本报告已完成全流程 11 步评审，所有数据经 Orchestrator 审核确认。报告由 Emma XIE 编制，2026年6月2日。</p>
+<p><strong>下一步</strong>：报告将归档到 Wiki 知识库（Step 12），并将 PDF 版本发送至 Telegram。</p>
+</blockquote>
+</body>
+</html>
