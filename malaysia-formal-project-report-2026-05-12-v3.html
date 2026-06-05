@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>malaysia-formal-project-report-2026-05-12</title>
+    <style>
+@page {
+    size: A4;
+    margin: 2cm 2.5cm;
+    @bottom-center {
+        content: counter(page);
+        font-size: 9pt;
+        color: #999;
+    }
+}
+
+body {
+    font-family: "Noto Sans CJK SC", "WenQuanYi Micro Hei", "Noto Sans SC", sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.8;
+    color: #1a1a1a;
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 20pt;
+    color: #1a1a2e;
+    border-bottom: 3px solid #e94560;
+    padding-bottom: 8pt;
+    margin-top: 24pt;
+    page-break-before: always;
+}
+
+h1:first-of-type {
+    page-break-before: avoid;
+}
+
+h2 {
+    font-size: 15pt;
+    color: #16213e;
+    border-bottom: 1.5px solid #0f3460;
+    padding-bottom: 5pt;
+    margin-top: 18pt;
+}
+
+h3 {
+    font-size: 12.5pt;
+    color: #0f3460;
+    margin-top: 14pt;
+}
+
+h4 {
+    font-size: 11pt;
+    color: #333;
+    margin-top: 10pt;
+}
+
+/* 表格样式 - 关键修复 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12pt 0;
+    font-size: 9.5pt;
+    page-break-inside: avoid;
+    display: table;
+}
+
+thead {
+    display: table-header-group;
+}
+
+th {
+    background-color: #16213e;
+    color: white;
+    padding: 8px 10px;
+    text-align: left;
+    font-weight: 600;
+    border: 1px solid #0f3460;
+    font-size: 9pt;
+}
+
+td {
+    padding: 7px 10px;
+    border: 1px solid #ddd;
+    vertical-align: top;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tr:hover {
+    background-color: #e8f4f8;
+}
+
+/* 代码块 */
+code {
+    font-family: "Noto Mono", "WenQuanYi Micro Hei Mono", monospace;
+    font-size: 8.5pt;
+    background: #f4f4f4;
+    padding: 2px 5px;
+    border-radius: 3px;
+    border: 1px solid #e0e0e0;
+}
+
+pre {
+    background: #1e1e2e;
+    color: #cdd6f4;
+    padding: 12pt;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-size: 8.5pt;
+    line-height: 1.6;
+    margin: 10pt 0;
+    page-break-inside: avoid;
+}
+
+pre code {
+    background: none;
+    border: none;
+    color: inherit;
+    padding: 0;
+}
+
+/* 引用块 */
+blockquote {
+    border-left: 4px solid #e94560;
+    margin: 10pt 0;
+    padding: 8pt 14pt;
+    background: #fff5f5;
+    color: #666;
+    font-size: 9.5pt;
+}
+
+/* 列表 */
+ul, ol {
+    padding-left: 20pt;
+    margin: 6pt 0;
+}
+
+li {
+    margin: 3pt 0;
+}
+
+li > ul, li > ol {
+    margin: 2pt 0;
+}
+
+/* 任务列表 */
+input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+/* 链接 */
+a {
+    color: #0f3460;
+    text-decoration: none;
+}
+
+/* 水平线 */
+hr {
+    border: none;
+    border-top: 1.5px solid #e0e0e0;
+    margin: 16pt 0;
+}
+
+/* 强调 */
+strong {
+    color: #1a1a2e;
+}
+
+em {
+    color: #555;
+}
+
+/* emoji 处理 */
+img.emoji {
+    height: 1em;
+    width: 1em;
+    vertical-align: middle;
+}
+
+/* 警告/提示块 (用 blockquote 变体) */
+blockquote p:first-child strong {
+    color: #e94560;
+}
+
+/* Mermaid 图表占位 - 跳过不支持的图表 */
+pre code.language-mermaid {
+    display: none;
+}
+</style>
+</head>
+<body>
+<h1 id="_1">马来西亚跨境电商市场选品分析报告</h1>
+<blockquote>
+<p><strong>项目</strong>: 马来西亚市场进入战略 — 选品调查<br />
+<strong>执行日期</strong>: 2026-05-12<br />
+<strong>编制</strong>: Emma XIE (Orchestrator)<br />
+<strong>版本</strong>: 1.0</p>
+</blockquote>
+<hr />
+<h2 id="_2">目录</h2>
+<ol>
+<li><a href="#1-市场概览">市场概览</a></li>
+<li><a href="#2-品类机会矩阵">品类机会矩阵</a></li>
+<li><a href="#3-搜索热点分析">搜索热点分析</a></li>
+<li><a href="#4-舆情与消费者洞察">舆情与消费者洞察</a></li>
+<li><a href="#5-竞品分析">竞品分析</a></li>
+<li><a href="#6-top-10-选品清单">Top 10 选品清单</a></li>
+<li><a href="#7-全成本模型">全成本模型</a></li>
+<li><a href="#8-合规检查清单">合规检查清单</a></li>
+<li><a href="#9-风险评审与最终决策">风险评审与最终决策</a></li>
+<li><a href="#10-行动路线图">行动路线图</a></li>
+</ol>
+<hr />
+<h2 id="1">1. 市场概览</h2>
+<h3 id="11">1.1 马来西亚电商市场</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>数据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电商GMV(2025)</td>
+<td>$130-140亿美元</td>
+</tr>
+<tr>
+<td>年增速</td>
+<td>15-17%</td>
+</tr>
+<tr>
+<td>网购人口</td>
+<td>2,800万+ (互联网普及率84%)</td>
+</tr>
+<tr>
+<td>人均电商消费</td>
+<td>$450-500/年</td>
+</tr>
+<tr>
+<td>智能手机渗透率</td>
+<td>89%</td>
+</tr>
+<tr>
+<td>移动电商占比</td>
+<td>72%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="12">1.2 平台格局</h3>
+<table>
+<thead>
+<tr>
+<th>平台</th>
+<th style="text-align: center;">市场份额</th>
+<th>特征</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shopee Malaysia</td>
+<td style="text-align: center;">55-60%</td>
+<td>流量最大，价格敏感，活动驱动</td>
+</tr>
+<tr>
+<td>Lazada Malaysia</td>
+<td style="text-align: center;">20-25%</td>
+<td>品牌化较强，中高端定位</td>
+</tr>
+<tr>
+<td>TikTok Shop</td>
+<td style="text-align: center;">10-15%</td>
+<td>增长最快，内容驱动，美妆时尚强</td>
+</tr>
+<tr>
+<td>Amazon</td>
+<td style="text-align: center;">2-3%</td>
+<td>跨境卖家为主</td>
+</tr>
+</tbody>
+</table>
+<h3 id="13">1.3 消费者画像</h3>
+<ul>
+<li><strong>年龄</strong>: 18-35岁为核心网购人群(65%)</li>
+<li><strong>族群</strong>: 马来人60%、华人23%、印度人7%</li>
+<li><strong>语言</strong>: 马来语45%、英语35%、中文20%</li>
+<li><strong>支付</strong>: TnG eWallet 72%、DuitNow QR 65%、GrabPay 48%</li>
+<li><strong>物流偏好</strong>: 3-5天到货，J&amp;T/Ninja Van为主</li>
+</ul>
+<hr />
+<h2 id="2">2. 品类机会矩阵</h2>
+<h3 id="21">2.1 品类评分总表</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">排名</th>
+<th>品类</th>
+<th style="text-align: center;">潜力分</th>
+<th style="text-align: center;">竞争分</th>
+<th style="text-align: center;">年增速</th>
+<th style="text-align: center;">毛利率</th>
+<th style="text-align: center;">进入门槛</th>
+<th style="text-align: center;">评级</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td>健康保健</td>
+<td style="text-align: center;">9.0</td>
+<td style="text-align: center;">4.0</td>
+<td style="text-align: center;">25-35%</td>
+<td style="text-align: center;">50-65%</td>
+<td style="text-align: center;">中</td>
+<td style="text-align: center;"><strong>S级</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td>家居收纳</td>
+<td style="text-align: center;">8.5</td>
+<td style="text-align: center;">3.5</td>
+<td style="text-align: center;">20-30%</td>
+<td style="text-align: center;">45-60%</td>
+<td style="text-align: center;">低</td>
+<td style="text-align: center;"><strong>S级</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td>宠物用品</td>
+<td style="text-align: center;">8.0</td>
+<td style="text-align: center;">3.0</td>
+<td style="text-align: center;">25-35%</td>
+<td style="text-align: center;">45-60%</td>
+<td style="text-align: center;">低</td>
+<td style="text-align: center;"><strong>S级</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td>美妆护肤</td>
+<td style="text-align: center;">8.5</td>
+<td style="text-align: center;">7.5</td>
+<td style="text-align: center;">20-25%</td>
+<td style="text-align: center;">50-65%</td>
+<td style="text-align: center;">高</td>
+<td style="text-align: center;"><strong>S级</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td>时尚服装</td>
+<td style="text-align: center;">8.0</td>
+<td style="text-align: center;">8.0</td>
+<td style="text-align: center;">18-25%</td>
+<td style="text-align: center;">40-60%</td>
+<td style="text-align: center;">中高</td>
+<td style="text-align: center;"><strong>S级</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td>母婴用品</td>
+<td style="text-align: center;">7.5</td>
+<td style="text-align: center;">4.5</td>
+<td style="text-align: center;">15-20%</td>
+<td style="text-align: center;">40-55%</td>
+<td style="text-align: center;">中</td>
+<td style="text-align: center;"><strong>A级</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td>消费电子</td>
+<td style="text-align: center;">7.5</td>
+<td style="text-align: center;">8.5</td>
+<td style="text-align: center;">15-20%</td>
+<td style="text-align: center;">25-40%</td>
+<td style="text-align: center;">高</td>
+<td style="text-align: center;"><strong>A级</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td>食品饮料</td>
+<td style="text-align: center;">7.0</td>
+<td style="text-align: center;">5.0</td>
+<td style="text-align: center;">20-30%</td>
+<td style="text-align: center;">30-50%</td>
+<td style="text-align: center;">中</td>
+<td style="text-align: center;"><strong>A级</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td>运动健身</td>
+<td style="text-align: center;">7.5</td>
+<td style="text-align: center;">4.0</td>
+<td style="text-align: center;">20-30%</td>
+<td style="text-align: center;">40-55%</td>
+<td style="text-align: center;">中</td>
+<td style="text-align: center;"><strong>A级</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td>个护小家电</td>
+<td style="text-align: center;">7.0</td>
+<td style="text-align: center;">5.5</td>
+<td style="text-align: center;">15-20%</td>
+<td style="text-align: center;">35-50%</td>
+<td style="text-align: center;">中</td>
+<td style="text-align: center;"><strong>B级</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-s">2.2 S级品类详解</h3>
+<p><strong>健康保健</strong> 🏥
+- 蓝海品类，搜索量增长25-35%
+- 机会：清真认证保健品(市场空白)
+- 痛点：国际品牌价格高，本地品牌品质不够</p>
+<p><strong>家居收纳</strong> 🏠
+- 低竞争品类，无强势品牌
+- 机会：品牌化升级+食品级材质
+- 痛点：低价品品质差(异味/尺寸不准)</p>
+<p><strong>宠物用品</strong> 🐾
+- 爆发增长，豆腐猫砂↑50%
+- 机会：品牌化猫砂+天然宠物食品
+- 痛点：食品安全担忧，品质不稳定</p>
+<hr />
+<h2 id="3">3. 搜索热点分析</h2>
+<h3 id="31-top-10">3.1 高增长搜索词TOP 10</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">排名</th>
+<th>搜索词</th>
+<th style="text-align: center;">增长率</th>
+<th>品类</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td>sunscreen stick Korea</td>
+<td style="text-align: center;">↑400%</td>
+<td>美妆</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td>Korean spicy noodle halal</td>
+<td style="text-align: center;">↑350%</td>
+<td>食品</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td>marine collagen</td>
+<td style="text-align: center;">↑300%</td>
+<td>保健</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td>oat milk Malaysia</td>
+<td style="text-align: center;">↑250%</td>
+<td>食品</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td>tofu cat litter</td>
+<td style="text-align: center;">↑250%</td>
+<td>宠物</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td>keto snacks Malaysia</td>
+<td style="text-align: center;">↑250%</td>
+<td>食品</td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td>probiotic drinks</td>
+<td style="text-align: center;">↑200%</td>
+<td>保健</td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td>immune booster Malaysia</td>
+<td style="text-align: center;">↑45%</td>
+<td>保健</td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td>niacinamide serum</td>
+<td style="text-align: center;">↑45%</td>
+<td>美妆</td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td>cat litter tofu Malaysia</td>
+<td style="text-align: center;">↑50%</td>
+<td>宠物</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32">3.2 搜索意图分布</h3>
+<table>
+<thead>
+<tr>
+<th>意图</th>
+<th style="text-align: center;">占比</th>
+<th style="text-align: center;">转化潜力</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>购买型</td>
+<td style="text-align: center;">50%</td>
+<td style="text-align: center;">⭐⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>信息型</td>
+<td style="text-align: center;">25%</td>
+<td style="text-align: center;">⭐⭐⭐</td>
+</tr>
+<tr>
+<td>比较型</td>
+<td style="text-align: center;">15%</td>
+<td style="text-align: center;">⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>导航型</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">⭐⭐⭐</td>
+</tr>
+</tbody>
+</table>
+<h3 id="33">3.3 高频修饰词</h3>
+<ul>
+<li><strong>马来语</strong>: murah(便宜), halal(清真), cantik(漂亮), besar(大)</li>
+<li><strong>英语</strong>: best, original, free shipping, genuine, premium</li>
+<li><strong>中文</strong>: 正品, 便宜, 韩国, 新款</li>
+</ul>
+<hr />
+<h2 id="4">4. 舆情与消费者洞察</h2>
+<h3 id="41">4.1 跨品类共性痛点</h3>
+<table>
+<thead>
+<tr>
+<th>痛点</th>
+<th>影响面</th>
+<th style="text-align: center;">严重程度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>假货/正品保障</td>
+<td>全品类</td>
+<td style="text-align: center;">🔴 高</td>
+</tr>
+<tr>
+<td>清真认证缺失</td>
+<td>美妆/保健/食品</td>
+<td style="text-align: center;">🔴 高</td>
+</tr>
+<tr>
+<td>尺码/色差</td>
+<td>时尚/家居</td>
+<td style="text-align: center;">🔴 高</td>
+</tr>
+<tr>
+<td>物流延迟</td>
+<td>全品类</td>
+<td style="text-align: center;">🟡 中</td>
+</tr>
+<tr>
+<td>售后响应慢</td>
+<td>全品类</td>
+<td style="text-align: center;">🟡 中</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42">4.2 品类痛点分析</h3>
+<table>
+<thead>
+<tr>
+<th>品类</th>
+<th>TOP痛点</th>
+<th>用户原声</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>美妆</td>
+<td>假货+油腻</td>
+<td>"买到假的用了过敏"</td>
+</tr>
+<tr>
+<td>保健</td>
+<td>效果不明显+清真疑虑</td>
+<td>"胶囊是猪来源吗？"</td>
+</tr>
+<tr>
+<td>家居</td>
+<td>异味+尺寸不准</td>
+<td>"塑料味太重了"</td>
+</tr>
+<tr>
+<td>宠物</td>
+<td>食品安全+粉尘</td>
+<td>"吃了拉肚子"</td>
+</tr>
+<tr>
+<td>时尚</td>
+<td>尺码不准+色差</td>
+<td>"图片粉色收到橙色"</td>
+</tr>
+<tr>
+<td>电子</td>
+<td>续航虚标+假货</td>
+<td>"标称20小时实际5小时"</td>
+</tr>
+</tbody>
+</table>
+<h3 id="43">4.3 消费者信任金字塔</h3>
+<pre><code>JAKIM认证 / NPRA/SIRIM认证
+Shopee Mall / LazMall官方店
+真实用户评价(4.5+星)
+KOL/KOC真实体验推荐
+&quot;现货马来西亚&quot;本地仓发货
+低价无认证跨境卖家
+</code></pre>
+<hr />
+<h2 id="5">5. 竞品分析</h2>
+<h3 id="51">5.1 品类竞争度排名</h3>
+<table>
+<thead>
+<tr>
+<th>品类</th>
+<th style="text-align: center;">竞争度</th>
+<th style="text-align: center;">头部集中度</th>
+<th style="text-align: center;">价格带</th>
+<th style="text-align: center;">进入难度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>美妆护肤</td>
+<td style="text-align: center;">极高</td>
+<td style="text-align: center;">65%</td>
+<td style="text-align: center;">RM5-300</td>
+<td style="text-align: center;">🔴 高</td>
+</tr>
+<tr>
+<td>消费电子</td>
+<td style="text-align: center;">极高</td>
+<td style="text-align: center;">55%</td>
+<td style="text-align: center;">RM10-1000</td>
+<td style="text-align: center;">🔴 高</td>
+</tr>
+<tr>
+<td>时尚服装</td>
+<td style="text-align: center;">高</td>
+<td style="text-align: center;">45%</td>
+<td style="text-align: center;">RM10-200</td>
+<td style="text-align: center;">🟡 中高</td>
+</tr>
+<tr>
+<td>健康保健</td>
+<td style="text-align: center;">中</td>
+<td style="text-align: center;">35%</td>
+<td style="text-align: center;">RM15-250</td>
+<td style="text-align: center;">🟡 中</td>
+</tr>
+<tr>
+<td>家居收纳</td>
+<td style="text-align: center;">中低</td>
+<td style="text-align: center;">30%</td>
+<td style="text-align: center;">RM5-80</td>
+<td style="text-align: center;">🟢 低</td>
+</tr>
+<tr>
+<td>宠物用品</td>
+<td style="text-align: center;">中低</td>
+<td style="text-align: center;">25%</td>
+<td style="text-align: center;">RM8-200</td>
+<td style="text-align: center;">🟢 低</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52">5.2 价格带空白机会</h3>
+<table>
+<thead>
+<tr>
+<th>品类</th>
+<th style="text-align: center;">空白价格带</th>
+<th>理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>美妆-防晒</td>
+<td style="text-align: center;">RM20-30+清真</td>
+<td>韩系贵(RM35+)</td>
+</tr>
+<tr>
+<td>保健-胶原蛋白</td>
+<td style="text-align: center;">RM40-60+清真</td>
+<td>国际品牌贵(RM80+)</td>
+</tr>
+<tr>
+<td>宠物-猫砂</td>
+<td style="text-align: center;">RM18-25+品牌</td>
+<td>低价品主导，无品牌</td>
+</tr>
+<tr>
+<td>家居-收纳</td>
+<td style="text-align: center;">RM20-35+食品级</td>
+<td>低价差评率高</td>
+</tr>
+<tr>
+<td>时尚-穆斯林</td>
+<td style="text-align: center;">RM30-50+品质</td>
+<td>品牌贵(RM60+)</td>
+</tr>
+<tr>
+<td>电子-耳机</td>
+<td style="text-align: center;">RM50-100+品质</td>
+<td>品牌太贵(RM150+)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6-top-10">6. Top 10 选品清单</h2>
+<h3 id="61">6.1 选品总表</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">#</th>
+<th>产品</th>
+<th>品类</th>
+<th style="text-align: center;">售价(RM)</th>
+<th style="text-align: center;">毛利率</th>
+<th style="text-align: center;">搜索量</th>
+<th style="text-align: center;">竞争度</th>
+<th style="text-align: center;">级别</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td>豆腐猫砂 6L</td>
+<td>宠物</td>
+<td style="text-align: center;">22</td>
+<td style="text-align: center;">55-60%</td>
+<td style="text-align: center;">25,000+</td>
+<td style="text-align: center;">低</td>
+<td style="text-align: center;"><strong>S</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td>防晒棒 SPF50</td>
+<td>美妆</td>
+<td style="text-align: center;">25</td>
+<td style="text-align: center;">50-60%</td>
+<td style="text-align: center;">45,000+</td>
+<td style="text-align: center;">中</td>
+<td style="text-align: center;"><strong>S</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td>胶原蛋白饮 5,000mg</td>
+<td>保健</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">50-55%</td>
+<td style="text-align: center;">28,000+</td>
+<td style="text-align: center;">中低</td>
+<td style="text-align: center;"><strong>S</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td>密封收纳盒套装</td>
+<td>家居</td>
+<td style="text-align: center;">28</td>
+<td style="text-align: center;">50-55%</td>
+<td style="text-align: center;">25,000+</td>
+<td style="text-align: center;">低</td>
+<td style="text-align: center;"><strong>S</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td>胶原蛋白软糖</td>
+<td>保健</td>
+<td style="text-align: center;">38</td>
+<td style="text-align: center;">50-55%</td>
+<td style="text-align: center;">15,000+</td>
+<td style="text-align: center;">低</td>
+<td style="text-align: center;"><strong>A</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td>抗菌豆腐猫砂</td>
+<td>宠物</td>
+<td style="text-align: center;">26</td>
+<td style="text-align: center;">50-55%</td>
+<td style="text-align: center;">20,000+</td>
+<td style="text-align: center;">低</td>
+<td style="text-align: center;"><strong>A</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td>清爽维C精华</td>
+<td>美妆</td>
+<td style="text-align: center;">28</td>
+<td style="text-align: center;">50-60%</td>
+<td style="text-align: center;">38,000+</td>
+<td style="text-align: center;">中高</td>
+<td style="text-align: center;"><strong>A</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td>真空压缩袋套装</td>
+<td>家居</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">45-55%</td>
+<td style="text-align: center;">10,000+</td>
+<td style="text-align: center;">低</td>
+<td style="text-align: center;"><strong>A</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td>穆斯林头巾套装</td>
+<td>时尚</td>
+<td style="text-align: center;">38</td>
+<td style="text-align: center;">50-60%</td>
+<td style="text-align: center;">40,000+</td>
+<td style="text-align: center;">中</td>
+<td style="text-align: center;"><strong>B</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td>TWS耳机 ANC</td>
+<td>电子</td>
+<td style="text-align: center;">65</td>
+<td style="text-align: center;">45-55%</td>
+<td style="text-align: center;">55,000+</td>
+<td style="text-align: center;">高</td>
+<td style="text-align: center;"><strong>B</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="62">6.2 产品分级策略</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">级别</th>
+<th style="text-align: center;">产品数</th>
+<th>策略</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>S级(立即进入)</strong></td>
+<td style="text-align: center;">4</td>
+<td>首批核心产品，快速上架验证市场</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>A级(第2批)</strong></td>
+<td style="text-align: center;">4</td>
+<td>扩展产品线，补充品类覆盖</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>B级(测试)</strong></td>
+<td style="text-align: center;">2</td>
+<td>条件性进入，需认证或强供应链</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="7">7. 全成本模型</h2>
+<h3 id="71">7.1 成本项基准</h3>
+<table>
+<thead>
+<tr>
+<th>成本项</th>
+<th style="text-align: center;">占售价比例</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>采购成本</td>
+<td style="text-align: center;">25-35%</td>
+<td>含包装</td>
+</tr>
+<tr>
+<td>头程物流</td>
+<td style="text-align: center;">2-15%</td>
+<td>海运$80-120/m³</td>
+</tr>
+<tr>
+<td>SST 6%</td>
+<td style="text-align: center;">6%</td>
+<td>销售服务税</td>
+</tr>
+<tr>
+<td>平台佣金</td>
+<td style="text-align: center;">4-6%</td>
+<td>Shopee/TikTok</td>
+</tr>
+<tr>
+<td>广告费(ACOS)</td>
+<td style="text-align: center;">15-25%</td>
+<td>新品期较高</td>
+</tr>
+<tr>
+<td>尾程配送</td>
+<td style="text-align: center;">8-27%</td>
+<td>J&amp;T RM5-8/单</td>
+</tr>
+<tr>
+<td>仓储费</td>
+<td style="text-align: center;">2%</td>
+<td>本地仓</td>
+</tr>
+<tr>
+<td>退货损耗</td>
+<td style="text-align: center;">3-5%</td>
+<td>退货+损坏</td>
+</tr>
+<tr>
+<td>汇率波动</td>
+<td style="text-align: center;">1.5%</td>
+<td>CNY→MYR</td>
+</tr>
+<tr>
+<td>其他费用</td>
+<td style="text-align: center;">3%</td>
+<td>客服+运营</td>
+</tr>
+</tbody>
+</table>
+<h3 id="72-sku">7.2 各SKU利润模型</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">#</th>
+<th>产品</th>
+<th style="text-align: center;">售价(RM)</th>
+<th style="text-align: center;">总成本</th>
+<th style="text-align: center;">广告期净利</th>
+<th style="text-align: center;">成熟期净利</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td>猫砂</td>
+<td style="text-align: center;">22</td>
+<td style="text-align: center;">25.41</td>
+<td style="text-align: center;">-15.5% ⚠️</td>
+<td style="text-align: center;">4.5%</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td>防晒棒</td>
+<td style="text-align: center;">25</td>
+<td style="text-align: center;">23.58</td>
+<td style="text-align: center;">5.7%</td>
+<td style="text-align: center;">16.7%</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td>胶原蛋白饮</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">45.25</td>
+<td style="text-align: center;">9.5%</td>
+<td style="text-align: center;">19.5%</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td>收纳盒</td>
+<td style="text-align: center;">28</td>
+<td style="text-align: center;">27.34</td>
+<td style="text-align: center;">2.4%</td>
+<td style="text-align: center;">12.4%</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td>胶原软糖</td>
+<td style="text-align: center;">38</td>
+<td style="text-align: center;">35.58</td>
+<td style="text-align: center;">6.4%</td>
+<td style="text-align: center;">16.4%</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td>抗菌猫砂</td>
+<td style="text-align: center;">26</td>
+<td style="text-align: center;">28.03</td>
+<td style="text-align: center;">-7.8% ⚠️</td>
+<td style="text-align: center;">2.2%</td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td>维C精华</td>
+<td style="text-align: center;">28</td>
+<td style="text-align: center;">26.90</td>
+<td style="text-align: center;">3.9%</td>
+<td style="text-align: center;">13.9%</td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td>压缩袋</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">20.10</td>
+<td style="text-align: center;">-0.5% ⚠️</td>
+<td style="text-align: center;">9.5%</td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td>头巾</td>
+<td style="text-align: center;">38</td>
+<td style="text-align: center;">34.15</td>
+<td style="text-align: center;">10.1%</td>
+<td style="text-align: center;">20.1%</td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td>TWS耳机</td>
+<td style="text-align: center;">65</td>
+<td style="text-align: center;">53.13</td>
+<td style="text-align: center;">18.3%</td>
+<td style="text-align: center;">28.3%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="73">7.3 成本优化方向</h3>
+<ol>
+<li><strong>提价5-10%</strong>: 猫砂→RM25, 收纳盒→RM32, 压缩袋→RM22</li>
+<li><strong>降低ACOS</strong>: 从20-25%降至15%以下</li>
+<li><strong>海运替代空运</strong>: 头程成本降60%</li>
+<li><strong>套装化</strong>: 提高客单价分摊配送费</li>
+</ol>
+<hr />
+<h2 id="8">8. 合规检查清单</h2>
+<h3 id="81">8.1 认证要求总表</h3>
+<table>
+<thead>
+<tr>
+<th>认证</th>
+<th style="text-align: center;">费用(RM)</th>
+<th style="text-align: center;">周期</th>
+<th>适用SKU</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NPRA化妆品通知</td>
+<td style="text-align: center;">500-1,000</td>
+<td style="text-align: center;">4-8周</td>
+<td>#2防晒棒、#7维C精华</td>
+</tr>
+<tr>
+<td>NPRA保健品注册</td>
+<td style="text-align: center;">2,000-5,000</td>
+<td style="text-align: center;">8-16周</td>
+<td>#3胶原蛋白饮、#5胶原软糖</td>
+</tr>
+<tr>
+<td>JAKIM清真认证</td>
+<td style="text-align: center;">5,000-15,000</td>
+<td style="text-align: center;">12-24周</td>
+<td>#2、#3、#5、#7</td>
+</tr>
+<tr>
+<td>SIRIM认证(电子)</td>
+<td style="text-align: center;">3,000-5,000</td>
+<td style="text-align: center;">4-8周</td>
+<td>#10 TWS耳机</td>
+</tr>
+<tr>
+<td>MCMC认证(无线)</td>
+<td style="text-align: center;">2,000-3,000</td>
+<td style="text-align: center;">4-8周</td>
+<td>#10 TWS耳机</td>
+</tr>
+<tr>
+<td>SST注册</td>
+<td style="text-align: center;">1,000</td>
+<td style="text-align: center;">2-4周</td>
+<td>全品类(年营业额&gt;RM500K)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="82-sku">8.2 SKU合规风险矩阵</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">#</th>
+<th>SKU</th>
+<th style="text-align: center;">合规风险</th>
+<th>关键风险</th>
+<th>缓解方案</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td>猫砂</td>
+<td style="text-align: center;">🟢 低</td>
+<td>无特殊要求</td>
+<td>标签合规</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td>防晒棒</td>
+<td style="text-align: center;">🟡 中</td>
+<td>JAKIM+NPRA</td>
+<td>同步启动认证</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td>胶原蛋白饮</td>
+<td style="text-align: center;">🔴 高</td>
+<td>JAKIM+NPRA周期3-6月</td>
+<td>改为植物基</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td>收纳盒</td>
+<td style="text-align: center;">🟢 低</td>
+<td>几乎无</td>
+<td>食品级声明</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td>胶原软糖</td>
+<td style="text-align: center;">🔴 高</td>
+<td>明胶来源+JAKIM</td>
+<td>改为果胶基</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td>抗菌猫砂</td>
+<td style="text-align: center;">🟢 低</td>
+<td>抗菌成分</td>
+<td>天然替代</td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td>维C精华</td>
+<td style="text-align: center;">🟡 中</td>
+<td>JAKIM+NPRA</td>
+<td>同步启动</td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td>压缩袋</td>
+<td style="text-align: center;">🟢 低</td>
+<td>几乎无</td>
+<td>标签合规</td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td>头巾</td>
+<td style="text-align: center;">🟢 低</td>
+<td>几乎无</td>
+<td>面料标签</td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td>TWS耳机</td>
+<td style="text-align: center;">🔴 高</td>
+<td>SIRIM+MCMC</td>
+<td>贴牌认证品牌</td>
+</tr>
+</tbody>
+</table>
+<h3 id="83">8.3 合规预算</h3>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th style="text-align: center;">预算(RM)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SST注册</td>
+<td style="text-align: center;">1,000</td>
+</tr>
+<tr>
+<td>NPRA通知(×2)</td>
+<td style="text-align: center;">1,000-2,000</td>
+</tr>
+<tr>
+<td>NPRA注册(×2)</td>
+<td style="text-align: center;">4,000-10,000</td>
+</tr>
+<tr>
+<td>JAKIM认证(×4)</td>
+<td style="text-align: center;">15,000-30,000</td>
+</tr>
+<tr>
+<td>SIRIM+MCMC</td>
+<td style="text-align: center;">5,000-8,000</td>
+</tr>
+<tr>
+<td>检测报告</td>
+<td style="text-align: center;">3,000-5,000</td>
+</tr>
+<tr>
+<td><strong>总计</strong></td>
+<td style="text-align: center;"><strong>29,000-56,000</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="9">9. 风险评审与最终决策</h2>
+<h3 id="91">9.1 综合评分排名</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">排名</th>
+<th>SKU</th>
+<th style="text-align: center;">市场潜力</th>
+<th style="text-align: center;">竞争环境</th>
+<th style="text-align: center;">成本利润</th>
+<th style="text-align: center;">合规风险</th>
+<th style="text-align: center;">运营可行</th>
+<th style="text-align: center;"><strong>综合评分</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td>#4 收纳盒</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;"><strong>8.6</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td>#9 头巾</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;"><strong>8.0</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td>#8 压缩袋</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;"><strong>7.9</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td>#2 防晒棒</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;"><strong>7.7</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td>#1 猫砂</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;"><strong>7.6</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td>#6 抗菌猫砂</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;"><strong>7.4</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td>#7 维C精华</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;"><strong>7.0</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td>#3 胶原蛋白饮</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;"><strong>6.6</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td>#10 TWS耳机</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;"><strong>6.4</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td>#5 胶原软糖</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;"><strong>6.0</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="92">9.2 最终进入决策</h3>
+<pre><code>🟢 第1批(立即): #4收纳盒 + #1猫砂 + #8压缩袋 + #9头巾
+   → 低风险快速验证，预算RM15,000-20,000
+
+🟡 第2批(1-3月): #2防晒棒 + #7维C精华 + #6抗菌猫砂
+   → 认证完成后上线，预算RM20,000-30,000(含认证费)
+
+🔴 第3批(3-6月): #3植物胶原蛋白 + #10认证TWS
+   → 替代方案优化后进入，预算RM30,000-50,000(含认证费)
+</code></pre>
+<h3 id="93">9.3 风险红线核查</h3>
+<table>
+<thead>
+<tr>
+<th>红线</th>
+<th style="text-align: center;">阈值</th>
+<th style="text-align: center;">状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>毛利率&lt;15%</td>
+<td style="text-align: center;">触发成本审查</td>
+<td style="text-align: center;">✅ 全部&gt;45%</td>
+</tr>
+<tr>
+<td>ACOS&gt;毛利率80%</td>
+<td style="text-align: center;">触发广告优化</td>
+<td style="text-align: center;">⚠️ 需监控</td>
+</tr>
+<tr>
+<td>库存周转&gt;90天</td>
+<td style="text-align: center;">触发清仓计划</td>
+<td style="text-align: center;">✅ 预计30-45天</td>
+</tr>
+<tr>
+<td>合规无缓解方案</td>
+<td style="text-align: center;">禁止进入</td>
+<td style="text-align: center;">✅ 均有方案</td>
+</tr>
+<tr>
+<td>认证被拒</td>
+<td style="text-align: center;">暂停运营</td>
+<td style="text-align: center;">⚠️ 尚未开始</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="10">10. 行动路线图</h2>
+<h3 id="101">10.1 时间线</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">时间</th>
+<th>里程碑</th>
+<th>行动项</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>第1周</strong></td>
+<td>开店+采购</td>
+<td>Shopee开店注册、#4+#1打样采购</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>第2-3周</strong></td>
+<td>首批到货+上架</td>
+<td>空运首批产品、Listing创建</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>第4周</strong></td>
+<td>广告测试</td>
+<td>TikTok内容测试、搜索广告启动</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>第2月</strong></td>
+<td>第2批启动</td>
+<td>#2+#7 NPRA通知提交</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>第3月</strong></td>
+<td>第2批上架</td>
+<td>认证获批后上架</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>第4-6月</strong></td>
+<td>第3批准备</td>
+<td>#3替代品开发、#10认证品牌合作</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>第6月</strong></td>
+<td>全面运营</td>
+<td>所有SKU上架，品牌化启动</td>
+</tr>
+</tbody>
+</table>
+<h3 id="102">10.2 预算分配</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">批次</th>
+<th style="text-align: center;">采购</th>
+<th style="text-align: center;">物流</th>
+<th style="text-align: center;">平台</th>
+<th style="text-align: center;">广告</th>
+<th style="text-align: center;">认证</th>
+<th style="text-align: center;">其他</th>
+<th style="text-align: center;"><strong>合计</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">第1批</td>
+<td style="text-align: center;">8,000</td>
+<td style="text-align: center;">4,000</td>
+<td style="text-align: center;">2,000</td>
+<td style="text-align: center;">5,000</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">1,000</td>
+<td style="text-align: center;"><strong>20,000</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">第2批</td>
+<td style="text-align: center;">10,000</td>
+<td style="text-align: center;">5,000</td>
+<td style="text-align: center;">3,000</td>
+<td style="text-align: center;">8,000</td>
+<td style="text-align: center;">5,000</td>
+<td style="text-align: center;">2,000</td>
+<td style="text-align: center;"><strong>33,000</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">第3批</td>
+<td style="text-align: center;">15,000</td>
+<td style="text-align: center;">8,000</td>
+<td style="text-align: center;">5,000</td>
+<td style="text-align: center;">12,000</td>
+<td style="text-align: center;">15,000</td>
+<td style="text-align: center;">3,000</td>
+<td style="text-align: center;"><strong>58,000</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>总计</strong></td>
+<td style="text-align: center;"><strong>33,000</strong></td>
+<td style="text-align: center;"><strong>17,000</strong></td>
+<td style="text-align: center;"><strong>10,000</strong></td>
+<td style="text-align: center;"><strong>25,000</strong></td>
+<td style="text-align: center;"><strong>20,000</strong></td>
+<td style="text-align: center;"><strong>6,000</strong></td>
+<td style="text-align: center;"><strong>111,000</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="103">10.3 关键风险提示</h3>
+<ol>
+<li><strong>合规认证周期</strong>: JAKIM认证12-24周，必须提前启动，不能等产品到了再办</li>
+<li><strong>广告成本控制</strong>: 新品期ACOS 20-25%，需严格控制预算</li>
+<li><strong>物流成本优化</strong>: 重物(猫砂)需提价或找更低物流费率</li>
+<li><strong>本地化</strong>: 马来语Listing+本地客服是成功的关键</li>
+<li><strong>清真认证</strong>: 第2/3批SKU涉及食品/化妆品，清真认证是销售前提</li>
+</ol>
+<hr />
+<p><em>本报告由 Emma XIE (Orchestrator) 基于 Step 1-10 全部报告综合编制。数据截至 2026-05-12。建议每季度更新一次市场数据和品类矩阵。</em></p>
+<p><strong>报告文件清单</strong></p>
+<ol>
+<li><code>malaysia-market-overview-2026-05-12.md</code> — 宏观市场画像</li>
+<li><code>malaysia-category-matrix-2026-05-12.md</code> — 品类机会矩阵</li>
+<li><code>malaysia-search-trends-2026-05-12.md</code> — 搜索热点分析</li>
+<li><code>malaysia-sentiment-analysis-2026-05-12.md</code> — 舆情趋势分析</li>
+<li><code>malaysia-competitor-matrix-2026-05-12.md</code> — 竞品矩阵分析</li>
+<li><code>malaysia-user-insights-2026-05-12.md</code> — 用户需求挖掘</li>
+<li><code>malaysia-top10-selection-2026-05-12.md</code> — Top 10 选品清单</li>
+<li><code>malaysia-cost-model-2026-05-12.md</code> — 全成本模型</li>
+<li><code>malaysia-compliance-checklist-2026-05-12.md</code> — 合规检查清单</li>
+<li><code>malaysia-final-selection-2026-05-12.md</code> — 最终选品决策</li>
+<li><strong>本文件</strong> — 正式项目报告 (Markdown + PDF)</li>
+</ol>
+</body>
+</html>

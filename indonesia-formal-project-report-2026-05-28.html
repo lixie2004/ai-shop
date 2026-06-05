@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>indonesia-formal-project-report-2026-05-28</title>
+    <style>
+@page {
+    size: A4;
+    margin: 2cm 2.5cm;
+    @bottom-center {
+        content: counter(page);
+        font-size: 9pt;
+        color: #999;
+    }
+}
+
+/* 强制使用 Noto Sans CJK SC，绕过 Pango 字体匹配的不确定性 */
+@font-face {
+    font-family: 'CJK';
+    src: url('/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'CJK';
+    src: url('/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'CJK';
+    src: url('/usr/share/fonts/opentype/noto/NotoSerifCJK-Regular.ttc') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+body {
+    font-family: 'CJK', 'Noto Sans CJK SC', sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.8;
+    color: #1a1a1a;
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 20pt;
+    color: #1a1a2e;
+    border-bottom: 3px solid #e94560;
+    padding-bottom: 8pt;
+    margin-top: 24pt;
+    page-break-before: always;
+}
+
+h1:first-of-type {
+    page-break-before: avoid;
+}
+
+h2 {
+    font-size: 15pt;
+    color: #16213e;
+    border-bottom: 1.5px solid #0f3460;
+    padding-bottom: 5pt;
+    margin-top: 18pt;
+}
+
+h3 {
+    font-size: 12.5pt;
+    color: #0f3460;
+    margin-top: 14pt;
+}
+
+h4 {
+    font-size: 11pt;
+    color: #333;
+    margin-top: 10pt;
+}
+
+/* 表格样式 - 关键修复 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12pt 0;
+    font-size: 9.5pt;
+    page-break-inside: avoid;
+    display: table;
+}
+
+thead {
+    display: table-header-group;
+}
+
+th {
+    background-color: #16213e;
+    color: white;
+    padding: 8px 10px;
+    text-align: left;
+    font-weight: 600;
+    border: 1px solid #0f3460;
+    font-size: 9pt;
+}
+
+td {
+    padding: 7px 10px;
+    border: 1px solid #ddd;
+    vertical-align: top;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tr:hover {
+    background-color: #e8f4f8;
+}
+
+/* 代码块 */
+code {
+    font-family: 'CJK', "Noto Sans Mono CJK SC", monospace;
+    font-size: 8.5pt;
+    background: #f4f4f4;
+    padding: 2px 5px;
+    border-radius: 3px;
+    border: 1px solid #e0e0e0;
+}
+
+pre {
+    background: #1e1e2e;
+    color: #cdd6f4;
+    padding: 12pt;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-size: 8.5pt;
+    line-height: 1.6;
+    margin: 10pt 0;
+    page-break-inside: avoid;
+}
+
+pre code {
+    background: none;
+    border: none;
+    color: inherit;
+    padding: 0;
+}
+
+/* 引用块 */
+blockquote {
+    border-left: 4px solid #e94560;
+    margin: 10pt 0;
+    padding: 8pt 14pt;
+    background: #fff5f5;
+    color: #666;
+    font-size: 9.5pt;
+}
+
+/* 列表 */
+ul, ol {
+    padding-left: 20pt;
+    margin: 6pt 0;
+}
+
+li {
+    margin: 3pt 0;
+}
+
+li > ul, li > ol {
+    margin: 2pt 0;
+}
+
+/* 任务列表 */
+input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+/* 链接 */
+a {
+    color: #0f3460;
+    text-decoration: none;
+}
+
+/* 水平线 */
+hr {
+    border: none;
+    border-top: 1.5px solid #e0e0e0;
+    margin: 16pt 0;
+}
+
+/* 强调 */
+strong {
+    color: #1a1a2e;
+}
+
+em {
+    color: #555;
+}
+
+/* emoji 处理 */
+img.emoji {
+    height: 1em;
+    width: 1em;
+    vertical-align: middle;
+}
+
+/* 警告/提示块 (用 blockquote 变体) */
+blockquote p:first-child strong {
+    color: #e94560;
+}
+
+/* Mermaid 图表占位 - 跳过不支持的图表 */
+pre code.language-mermaid {
+    display: none;
+}
+</style>
+</head>
+<body>
+<h1 id="_1">印度尼西亚跨境电商选品调查 — 正式项目报告</h1>
+<blockquote>
+<p><strong>项目名称</strong>: 印度尼西亚市场选品调查<br />
+<strong>报告日期</strong>: 2026年5月28日<br />
+<strong>版本</strong>: V1.0<br />
+<strong>编制</strong>: Emma XIE (跨境电商 Orchestrator)<br />
+<strong>数据来源</strong>: e-Conomy SEA 2025, DataReportal, APJII 2025, Shopee/Tokopedia 平台数据, Trade.gov</p>
+</blockquote>
+<hr />
+<h2 id="_2">📋 目录</h2>
+<ol>
+<li><a href="#执行摘要">执行摘要</a></li>
+<li><a href="#一-宏观市场画像">宏观市场画像</a></li>
+<li><a href="#二-品类机会矩阵">品类机会矩阵</a></li>
+<li><a href="#三-搜索热点与关键词趋势">搜索热点与关键词趋势</a></li>
+<li><a href="#四-社交媒体舆情分析">社交媒体舆情分析</a></li>
+<li><a href="#五-竞品矩阵分析">竞品矩阵分析</a></li>
+<li><a href="#六-用户需求挖掘">用户需求挖掘</a></li>
+<li><a href="#七-top-8-选品清单">Top 8 选品清单</a></li>
+<li><a href="#八-全成本模型">全成本模型</a></li>
+<li><a href="#九-合规检查清单">合规检查清单</a></li>
+<li><a href="#十-最终决策建议与路线图">最终决策建议与路线图</a></li>
+<li><a href="#附录">附录</a></li>
+</ol>
+<hr />
+<h2 id="_3">执行摘要</h2>
+<p>印度尼西亚是<strong>东南亚最大的电商市场</strong>，2025年GMV预计达710-1,000亿美元，增速14%。拥有2.85亿人口、2.2亿互联网用户、6,570万在线购物者，电商渗透率仍在快速增长。</p>
+<p><strong>核心发现</strong>:
+- 🏆 <strong>美妆护肤</strong>和<strong>清真时尚</strong>是最大的跨境蓝海机会
+- 📱 <strong>TikTok Shop</strong> 增速最快（27.37%用户访问率，同比+15pp）
+- 🔬 清真认证产品仅占美妆市场的5%，供给严重不足
+- 💰 美白精华、硅胶厨具、宠物套装净利率最高（20-29%）
+- ⚠️ PMK 4/2025将免税额度从$3，跨境卖家必须重新核算成本</p>
+<p><strong>最终推荐 8个SKU进入，预期全年GMV ~90万人民币，净利润 ~18.9万人民币</strong></p>
+<hr />
+<h2 id="_4">一、宏观市场画像</h2>
+<h3 id="11">1.1 市场规模</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2025年GMV</td>
+<td>710-1,000亿美元</td>
+</tr>
+<tr>
+<td>2025年增速</td>
+<td>+14%</td>
+</tr>
+<tr>
+<td>在线购物者</td>
+<td>6,570万</td>
+</tr>
+<tr>
+<td>人均年消费</td>
+<td>765美元</td>
+</tr>
+<tr>
+<td>互联网渗透率</td>
+<td>~80%</td>
+</tr>
+<tr>
+<td>移动端占比</td>
+<td>&gt;95%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="12">1.2 平台格局</h3>
+<table>
+<thead>
+<tr>
+<th>排名</th>
+<th>平台</th>
+<th>访问量</th>
+<th>核心优势</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Shopee</td>
+<td>53.22%</td>
+<td>美妆/时尚/FMCG</td>
+</tr>
+<tr>
+<td>2</td>
+<td>TikTok Shop</td>
+<td>27.37%</td>
+<td>内容+冲动消费</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Tokopedia</td>
+<td>~25%</td>
+<td>本地生态</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Lazada</td>
+<td>~23%</td>
+<td>跨境/电子</td>
+</tr>
+</tbody>
+</table>
+<h3 id="13">1.3 消费者特征</h3>
+<ul>
+<li>价格敏感度极高，53%因免运费购买</li>
+<li>93%参与过直播购物</li>
+<li>电子钱包使用率&gt;80%（城市）</li>
+<li>日均社交媒体使用3.5小时</li>
+</ul>
+<hr />
+<h2 id="_5">二、品类机会矩阵</h2>
+<h3 id="21">2.1 品类综合评分</h3>
+<table>
+<thead>
+<tr>
+<th>品类</th>
+<th>综合分</th>
+<th>优先级</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>美妆护肤</td>
+<td>48/50</td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>3C电子配件</td>
+<td>48/50</td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>清真时尚</td>
+<td>43/50</td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>健康保健</td>
+<td>41/50</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>家居小家电</td>
+<td>41/50</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>母婴产品</td>
+<td>39/50</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>宠物用品</td>
+<td>41/50</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>运动户外</td>
+<td>40/50</td>
+<td>⭐⭐⭐</td>
+</tr>
+<tr>
+<td>个人护理</td>
+<td>41/50</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>家居收纳</td>
+<td>41/50</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22">2.2 蓝海品类</h3>
+<table>
+<thead>
+<tr>
+<th>品类</th>
+<th>为什么是蓝海</th>
+<th>跨境优势</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>清真美妆</td>
+<td>仅5%美妆品牌获清真认证</td>
+<td>中国供应链+清真认证</td>
+</tr>
+<tr>
+<td>宠物用品</td>
+<td>电商渗透率极低</td>
+<td>中国宠物供应链全球最强</td>
+</tr>
+<tr>
+<td>家居收纳</td>
+<td>品牌化程度低</td>
+<td>义乌/潮汕供应链</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_6">三、搜索热点与关键词趋势</h2>
+<h3 id="31">3.1 品类搜索热度</h3>
+<table>
+<thead>
+<tr>
+<th>品类</th>
+<th>月均搜索量</th>
+<th>趋势</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>美妆护肤</td>
+<td>240万+</td>
+<td>↑</td>
+</tr>
+<tr>
+<td>3C电子配件</td>
+<td>180万+</td>
+<td>→</td>
+</tr>
+<tr>
+<td>时尚服装</td>
+<td>150万+</td>
+<td>↑</td>
+</tr>
+<tr>
+<td>健康保健</td>
+<td>90万+</td>
+<td>↑↑</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32">3.2 增长最快关键词</h3>
+<table>
+<thead>
+<tr>
+<th>关键词</th>
+<th>增长</th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"skincare halal bpom"</td>
+<td>+45%</td>
+<td>美妆</td>
+</tr>
+<tr>
+<td>"suplemen collagen halal"</td>
+<td>+52%</td>
+<td>健康</td>
+</tr>
+<tr>
+<td>"kucing snack sehat"</td>
+<td>+65%</td>
+<td>宠物</td>
+</tr>
+<tr>
+<td>"collagen"</td>
+<td>+45%</td>
+<td>健康</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_7">四、社交媒体舆情分析</h2>
+<h3 id="41-top-5">4.1 消费者痛点（全品类TOP 5）</h3>
+<ol>
+<li>🚨 <strong>假货泛滥</strong> — 美妆/3C品类18%差评与假货相关</li>
+<li>🚨 <strong>与图片不符</strong> — 时尚/美妆16-20%差评</li>
+<li>🚨 <strong>质量差/易坏</strong> — 3C/时尚18-22%差评</li>
+<li>🚨 <strong>配送慢</strong> — 全品类25-30%差评</li>
+<li>🚨 <strong>色差严重</strong> — 时尚/美妆12-16%差评</li>
+</ol>
+<h3 id="42-kol">4.2 KOL合作趋势</h3>
+<table>
+<thead>
+<tr>
+<th>KOL层级</th>
+<th>粉丝量</th>
+<th>单条报价(IDR)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mega</td>
+<td>&gt;500万</td>
+<td>5,000万-2亿</td>
+</tr>
+<tr>
+<td>Macro</td>
+<td>50-500万</td>
+<td>500万-5,000万</td>
+</tr>
+<tr>
+<td>Micro</td>
+<td>5-50万</td>
+<td>50万-500万</td>
+</tr>
+<tr>
+<td>Nano</td>
+<td>&lt;5万</td>
+<td>5万-50万</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_8">五、竞品矩阵分析</h2>
+<h3 id="51-shopee-2025-q1">5.1 美妆品牌市场份额（Shopee 2025 Q1）</h3>
+<table>
+<thead>
+<tr>
+<th>品牌</th>
+<th>份额</th>
+<th>定位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Skintific</td>
+<td>4.10%</td>
+<td>成分党/平价</td>
+</tr>
+<tr>
+<td>Wardah</td>
+<td>2.97%</td>
+<td>清真/大众</td>
+</tr>
+<tr>
+<td>Glad2Glow</td>
+<td>2.51%</td>
+<td>平价/年轻</td>
+</tr>
+<tr>
+<td>Somethinc</td>
+<td>2.10%</td>
+<td>纯净美妆</td>
+</tr>
+<tr>
+<td>Scarlett</td>
+<td>1.85%</td>
+<td>美白/大众</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52">5.2 竞品弱点与跨境机会</h3>
+<table>
+<thead>
+<tr>
+<th>竞品</th>
+<th>弱点</th>
+<th>跨境卖家机会</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wardah</td>
+<td>创新慢</td>
+<td>快速迭代+新成分</td>
+</tr>
+<tr>
+<td>白牌3C</td>
+<td>质量不稳</td>
+<td>品质+品牌化</td>
+</tr>
+<tr>
+<td>Zoya</td>
+<td>设计保守</td>
+<td>时尚+清真</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_9">六、用户需求挖掘</h2>
+<h3 id="61">6.1 用户画像</h3>
+<table>
+<thead>
+<tr>
+<th>画像</th>
+<th>占比</th>
+<th>消费特征</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>虔诚穆斯林女性</td>
+<td>40%</td>
+<td>清真+美妆+时尚</td>
+</tr>
+<tr>
+<td>Z世代潮流族</td>
+<td>25%</td>
+<td>TikTok驱动</td>
+</tr>
+<tr>
+<td>城市中产妈妈</td>
+<td>20%</td>
+<td>母婴+家居+健康</td>
+</tr>
+<tr>
+<td>小镇青年</td>
+<td>15%</td>
+<td>平价好物</td>
+</tr>
+</tbody>
+</table>
+<h3 id="62-must-have">6.2 Must Have需求清单</h3>
+<ol>
+<li>✅ BPOM认证（美妆/健康）</li>
+<li>✅ 清真认证（MUI）</li>
+<li>✅ 正品保证</li>
+<li>✅ 实拍图片</li>
+<li>✅ 详细尺码指南</li>
+<li>✅ 本地仓储/快速配送</li>
+<li>✅ 印尼语客服</li>
+</ol>
+<hr />
+<h2 id="top-8">七、Top 8 选品清单</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>SKU</th>
+<th>月搜索量</th>
+<th>毛利率</th>
+<th>净利率</th>
+<th>进入时机</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>美白精华</td>
+<td>280K+</td>
+<td>60%</td>
+<td>29.2%</td>
+<td>BPOM获证后</td>
+</tr>
+<tr>
+<td>2</td>
+<td>收纳套装</td>
+<td>80K+</td>
+<td>55%</td>
+<td>19.2%</td>
+<td>立即</td>
+</tr>
+<tr>
+<td>3</td>
+<td>头巾 Pashmina</td>
+<td>420K+</td>
+<td>45%</td>
+<td>18.3%</td>
+<td>立即</td>
+</tr>
+<tr>
+<td>4</td>
+<td>硅胶厨具</td>
+<td>65K+</td>
+<td>50%</td>
+<td>20%</td>
+<td>立即</td>
+</tr>
+<tr>
+<td>5</td>
+<td>清真防晒霜</td>
+<td>210K+</td>
+<td>55%</td>
+<td>7%→15%</td>
+<td>BPOM获证后</td>
+</tr>
+<tr>
+<td>6</td>
+<td>宠物套装</td>
+<td>45K+</td>
+<td>45%</td>
+<td>25.4%</td>
+<td>立即(纯玩具)</td>
+</tr>
+<tr>
+<td>7</td>
+<td>维生素C咀嚼片</td>
+<td>150K+</td>
+<td>50%</td>
+<td>26.1%</td>
+<td>BPOM获证后</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sku">淘汰SKU</h3>
+<table>
+<thead>
+<tr>
+<th>SKU</th>
+<th>淘汰原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TWS耳机</td>
+<td>净利率仅0.7%，ACOS过高</td>
+</tr>
+<tr>
+<td>手机壳</td>
+<td>利润偏薄(10%)，仅作引流款</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_10">八、全成本模型</h2>
+<h3 id="81">8.1 成本结构</h3>
+<table>
+<thead>
+<tr>
+<th>成本项</th>
+<th>占比范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>采购成本</td>
+<td>25-40%</td>
+</tr>
+<tr>
+<td>进口关税</td>
+<td>5-10%</td>
+</tr>
+<tr>
+<td>增值税(PPN)</td>
+<td>11%</td>
+</tr>
+<tr>
+<td>平台佣金</td>
+<td>3-6%</td>
+</tr>
+<tr>
+<td>广告费(ACOS)</td>
+<td>15-35%</td>
+</tr>
+<tr>
+<td>尾程配送</td>
+<td>3-5%</td>
+</tr>
+<tr>
+<td>退货损耗</td>
+<td>2-5%</td>
+</tr>
+<tr>
+<td>其他</td>
+<td>3-8%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="82">8.2 利润汇总</h3>
+<table>
+<thead>
+<tr>
+<th>SKU</th>
+<th>零售价</th>
+<th>净利率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>美白精华</td>
+<td>35 CNY</td>
+<td>29.2%</td>
+</tr>
+<tr>
+<td>宠物套装</td>
+<td>28 CNY</td>
+<td>25.4%</td>
+</tr>
+<tr>
+<td>维生素C</td>
+<td>25 CNY</td>
+<td>26.1%</td>
+</tr>
+<tr>
+<td>收纳套装</td>
+<td>30 CNY</td>
+<td>19.2%</td>
+</tr>
+<tr>
+<td>硅胶厨具</td>
+<td>50 CNY</td>
+<td>20%</td>
+</tr>
+<tr>
+<td>头巾</td>
+<td>35 CNY</td>
+<td>18.3%</td>
+</tr>
+<tr>
+<td>防晒霜</td>
+<td>40 CNY</td>
+<td>7%→15%</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_11">九、合规检查清单</h2>
+<h3 id="91">9.1 认证要求汇总</h3>
+<table>
+<thead>
+<tr>
+<th>SKU</th>
+<th>认证</th>
+<th>周期</th>
+<th>费用(USD)</th>
+<th>风险</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>美白精华</td>
+<td>BPOM</td>
+<td>3-9月</td>
+<td>5,000-15,000</td>
+<td>🟡 中</td>
+</tr>
+<tr>
+<td>防晒霜</td>
+<td>BPOM+清真</td>
+<td>3-9月</td>
+<td>7,000-20,000</td>
+<td>🟡 中</td>
+</tr>
+<tr>
+<td>收纳套装</td>
+<td>无</td>
+<td>-</td>
+<td>0</td>
+<td>🟢 低</td>
+</tr>
+<tr>
+<td>头巾</td>
+<td>可选</td>
+<td>-</td>
+<td>0-5,000</td>
+<td>🟢 低</td>
+</tr>
+<tr>
+<td>硅胶厨具</td>
+<td>可选</td>
+<td>-</td>
+<td>0-1,000</td>
+<td>🟢 低</td>
+</tr>
+<tr>
+<td>宠物套装</td>
+<td>含食BPOM</td>
+<td>3-6月</td>
+<td>0-8,000</td>
+<td>🟡 中</td>
+</tr>
+<tr>
+<td>维生素C</td>
+<td>BPOM</td>
+<td>6-12月</td>
+<td>8,000-20,000</td>
+<td>🔴 高</td>
+</tr>
+</tbody>
+</table>
+<h3 id="92">9.2 风险红线</h3>
+<ul>
+<li>❌ 无BPOM销售化妆品/保健品 → 海关扣留+店铺关闭</li>
+<li>❌ 虚假halal认证 → 品牌危机+法律风险</li>
+<li>❌ 逃税(VAT未申报) → 账号冻结+补税+罚款</li>
+</ul>
+<hr />
+<h2 id="_12">十、最终决策建议与路线图</h2>
+<h3 id="101">10.1 推荐进入策略</h3>
+<p><strong>Phase 1（立即）</strong>: 收纳套装 + 头巾 + 硅胶厨具 + 宠物玩具
+- 无需认证，快速上架
+- 利用Shopee+TikTok Shop双平台
+- 启动KOL合作</p>
+<p><strong>Phase 2（BPOM获证后）</strong>: 美白精华 + 清真防晒霜 + 维生素C
+- 高毛利+高增长
+- 清真认证作为差异化卖点</p>
+<h3 id="102">10.2 预期财务模型</h3>
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>月均GMV</th>
+<th>月均净利润</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Month 1-3</td>
+<td>20,000 CNY</td>
+<td>3,000 CNY</td>
+</tr>
+<tr>
+<td>Month 4-6</td>
+<td>50,000 CNY</td>
+<td>10,000 CNY</td>
+</tr>
+<tr>
+<td>Month 7-12</td>
+<td>120,000 CNY</td>
+<td>25,000 CNY</td>
+</tr>
+<tr>
+<td><strong>全年</strong></td>
+<td><strong>900,000 CNY</strong></td>
+<td><strong>189,000 CNY</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="103-kpi">10.3 核心KPI</h3>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th>门槛</th>
+<th>预警线</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>毛利率</td>
+<td>≥ 40%</td>
+<td>&lt; 30%</td>
+</tr>
+<tr>
+<td>净利率</td>
+<td>≥ 15%</td>
+<td>&lt; 10%</td>
+</tr>
+<tr>
+<td>ACOS</td>
+<td>&lt; 30%</td>
+<td>&gt; 40%</td>
+</tr>
+<tr>
+<td>退货率</td>
+<td>&lt; 5%</td>
+<td>&gt; 10%</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_13">附录</h2>
+<h3 id="a">A. 数据来源</h3>
+<ol>
+<li>e-Conomy SEA 2025 (Google/Temasek/Bain &amp; Company)</li>
+<li>DataReportal Digital 2025: Indonesia</li>
+<li>APJII (Asosiasi Penyelenggara Jasa Internet Indonesia) 2025</li>
+<li>ResearchAndMarkets Indonesia B2C Ecommerce Report Q4 2025</li>
+<li>Trade.gov Indonesia E-Commerce Country Guide</li>
+<li>Goodstats.id Shopee Skincare Market Share 2025 Q1</li>
+<li>Compas Shopee Beauty Package Sales Q4 2025</li>
+<li>PMK 4/2025 &amp; PMK 37/2025 (印尼财政部条例)</li>
+</ol>
+<h3 id="b">B. 详细报告索引</h3>
+<table>
+<thead>
+<tr>
+<th>步骤</th>
+<th>报告文件</th>
+<th>路径</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Step 1</td>
+<td>宏观市场画像</td>
+<td>reports/indonesia-market-overview-2026-05-28.md</td>
+</tr>
+<tr>
+<td>Step 2</td>
+<td>品类机会矩阵</td>
+<td>reports/indonesia-category-matrix-2026-05-28.md</td>
+</tr>
+<tr>
+<td>Step 3</td>
+<td>搜索热点报告</td>
+<td>reports/indonesia-search-trends-2026-05-28.md</td>
+</tr>
+<tr>
+<td>Step 4</td>
+<td>舆情分析报告</td>
+<td>reports/indonesia-sentiment-analysis-2026-05-28.md</td>
+</tr>
+<tr>
+<td>Step 5</td>
+<td>竞品分析矩阵</td>
+<td>reports/indonesia-competitor-matrix-2026-05-28.md</td>
+</tr>
+<tr>
+<td>Step 6</td>
+<td>用户需求挖掘</td>
+<td>reports/indonesia-user-insights-2026-05-28.md</td>
+</tr>
+<tr>
+<td>Step 7</td>
+<td>Top 10 选品清单</td>
+<td>reports/indonesia-top10-selection-2026-05-28.md</td>
+</tr>
+<tr>
+<td>Step 8</td>
+<td>全成本模型</td>
+<td>reports/indonesia-cost-model-2026-05-28.md</td>
+</tr>
+<tr>
+<td>Step 9</td>
+<td>合规检查清单</td>
+<td>reports/indonesia-compliance-checklist-2026-05-28.md</td>
+</tr>
+<tr>
+<td>Step 10</td>
+<td>最终决策报告</td>
+<td>reports/indonesia-final-selection-2026-05-28.md</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>报告编制: Emma XIE (普罗米修斯) | 跨境电商 Orchestrator</em><br />
+<em>报告日期: 2026年5月28日</em><br />
+<em>本报告基于公开数据源编制，仅供内部决策参考</em></p>
+</body>
+</html>

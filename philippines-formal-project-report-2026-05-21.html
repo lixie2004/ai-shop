@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>philippines-formal-project-report-2026-05-21</title>
+    <style>
+@page {
+    size: A4;
+    margin: 2cm 2.5cm;
+    @bottom-center {
+        content: counter(page);
+        font-size: 9pt;
+        color: #999;
+    }
+}
+
+/* 强制使用 Noto Sans CJK SC，绕过 Pango 字体匹配的不确定性 */
+@font-face {
+    font-family: 'CJK';
+    src: url('/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'CJK';
+    src: url('/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'CJK';
+    src: url('/usr/share/fonts/opentype/noto/NotoSerifCJK-Regular.ttc') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+body {
+    font-family: 'CJK', 'Noto Sans CJK SC', sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.8;
+    color: #1a1a1a;
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 20pt;
+    color: #1a1a2e;
+    border-bottom: 3px solid #e94560;
+    padding-bottom: 8pt;
+    margin-top: 24pt;
+    page-break-before: always;
+}
+
+h1:first-of-type {
+    page-break-before: avoid;
+}
+
+h2 {
+    font-size: 15pt;
+    color: #16213e;
+    border-bottom: 1.5px solid #0f3460;
+    padding-bottom: 5pt;
+    margin-top: 18pt;
+}
+
+h3 {
+    font-size: 12.5pt;
+    color: #0f3460;
+    margin-top: 14pt;
+}
+
+h4 {
+    font-size: 11pt;
+    color: #333;
+    margin-top: 10pt;
+}
+
+/* 表格样式 - 关键修复 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12pt 0;
+    font-size: 9.5pt;
+    page-break-inside: avoid;
+    display: table;
+}
+
+thead {
+    display: table-header-group;
+}
+
+th {
+    background-color: #16213e;
+    color: white;
+    padding: 8px 10px;
+    text-align: left;
+    font-weight: 600;
+    border: 1px solid #0f3460;
+    font-size: 9pt;
+}
+
+td {
+    padding: 7px 10px;
+    border: 1px solid #ddd;
+    vertical-align: top;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tr:hover {
+    background-color: #e8f4f8;
+}
+
+/* 代码块 */
+code {
+    font-family: 'CJK', "Noto Sans Mono CJK SC", monospace;
+    font-size: 8.5pt;
+    background: #f4f4f4;
+    padding: 2px 5px;
+    border-radius: 3px;
+    border: 1px solid #e0e0e0;
+}
+
+pre {
+    background: #1e1e2e;
+    color: #cdd6f4;
+    padding: 12pt;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-size: 8.5pt;
+    line-height: 1.6;
+    margin: 10pt 0;
+    page-break-inside: avoid;
+}
+
+pre code {
+    background: none;
+    border: none;
+    color: inherit;
+    padding: 0;
+}
+
+/* 引用块 */
+blockquote {
+    border-left: 4px solid #e94560;
+    margin: 10pt 0;
+    padding: 8pt 14pt;
+    background: #fff5f5;
+    color: #666;
+    font-size: 9.5pt;
+}
+
+/* 列表 */
+ul, ol {
+    padding-left: 20pt;
+    margin: 6pt 0;
+}
+
+li {
+    margin: 3pt 0;
+}
+
+li > ul, li > ol {
+    margin: 2pt 0;
+}
+
+/* 任务列表 */
+input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+/* 链接 */
+a {
+    color: #0f3460;
+    text-decoration: none;
+}
+
+/* 水平线 */
+hr {
+    border: none;
+    border-top: 1.5px solid #e0e0e0;
+    margin: 16pt 0;
+}
+
+/* 强调 */
+strong {
+    color: #1a1a2e;
+}
+
+em {
+    color: #555;
+}
+
+/* emoji 处理 */
+img.emoji {
+    height: 1em;
+    width: 1em;
+    vertical-align: middle;
+}
+
+/* 警告/提示块 (用 blockquote 变体) */
+blockquote p:first-child strong {
+    color: #e94560;
+}
+
+/* Mermaid 图表占位 - 跳过不支持的图表 */
+pre code.language-mermaid {
+    display: none;
+}
+</style>
+</head>
+<body>
+<h1 id="_1">🇵🇭 菲律宾跨境电商市场进入战略报告</h1>
+<h2 id="philippines-cross-border-e-commerce-market-entry-strategy">Philippines Cross-Border E-Commerce Market Entry Strategy</h2>
+<p><strong>报告日期</strong>: 2026年5月21日<br />
+<strong>编制方</strong>: Emma XIE (Orchestrator) + 专业 Agent 团队<br />
+<strong>版本</strong>: V1.0 — 正式版<br />
+<strong>密级</strong>: 内部机密  </p>
+<hr />
+<h2 id="_2">目录</h2>
+<ol>
+<li><a href="#1-执行摘要">执行摘要</a></li>
+<li><a href="#2-宏观市场画像">宏观市场画像</a></li>
+<li><a href="#3-品类机会矩阵">品类机会矩阵</a></li>
+<li><a href="#4-搜索热点分析">搜索热点分析</a></li>
+<li><a href="#5-舆情趋势分析">舆情趋势分析</a></li>
+<li><a href="#6-竞品矩阵分析">竞品矩阵分析</a></li>
+<li><a href="#7-用户需求洞察">用户需求洞察</a></li>
+<li><a href="#8-top-10-选品清单">Top 10 选品清单</a></li>
+<li><a href="#9-全成本模型">全成本模型</a></li>
+<li><a href="#10-合规检查清单">合规检查清单</a></li>
+<li><a href="#11-综合评审与最终决策">综合评审与最终决策</a></li>
+<li><a href="#12-执行路线图">执行路线图</a></li>
+</ol>
+<hr />
+<h2 id="1">1. 执行摘要</h2>
+<h3 id="_3">核心结论</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>菲律宾电商GMV (2026)</td>
+<td><strong>$37.5亿</strong> (PHP 2.1万亿)</td>
+</tr>
+<tr>
+<td>YoY增速</td>
+<td><strong>18%</strong> (东南亚第三)</td>
+</tr>
+<tr>
+<td>平台格局</td>
+<td>Shopee 42-55% / TikTok Shop 15-29% / Lazada 16-28%</td>
+</tr>
+<tr>
+<td>推荐进入SKU</td>
+<td><strong>7个 Go / 1个暂缓 / 2个 No-Go</strong></td>
+</tr>
+<tr>
+<td>预期12个月GMV</td>
+<td><strong>₱1,000万 ($17.9万)</strong></td>
+</tr>
+<tr>
+<td>投资回收期</td>
+<td><strong>5.8个月</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_4">关键发现</h3>
+<ol>
+<li><strong>菲律宾是东南亚成本最恶劣的市场</strong> — FORM E不适用→关税15%不可减免、岛屿物流→大件运费占比20-29%、COD拒收5-15%</li>
+<li><strong>仅2个健康利润SKU</strong> — #9多功能锅(15%)和#5空气炸锅(13.2%)，均为电器类</li>
+<li><strong>50%的候选SKU亏损或微利</strong> — 选品清单宣称的55-65%毛利率被成本模型证伪</li>
+<li><strong>最大蓝海</strong> — 家居收纳（竞争极低、退货率&lt;5%、白牌90%+）</li>
+<li><strong>最大市场</strong> — 美妆个护（$68亿），美白+防晒二合一产品是最大缺口</li>
+</ol>
+<h3 id="_5">最终决策</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">决策</th>
+<th style="text-align: center;">SKU</th>
+<th>产品</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">🥇 Go优先</td>
+<td style="text-align: center;">#9</td>
+<td>多功能一体锅 5L（净利率15.0%）</td>
+</tr>
+<tr>
+<td style="text-align: center;">✅ Go条件</td>
+<td style="text-align: center;">#3,#4,#5,#6,#7,#10</td>
+<td>胶原蛋白软糖/T恤/空气炸锅/维C/玻尿酸/大码女装</td>
+</tr>
+<tr>
+<td style="text-align: center;">⏳ 暂缓</td>
+<td style="text-align: center;">#8</td>
+<td>家居收纳8件套（净利率仅1.0%）</td>
+</tr>
+<tr>
+<td style="text-align: center;">❌ No-Go</td>
+<td style="text-align: center;">#1,#2</td>
+<td>美白防晒乳霜/收纳箱3件套（结构性亏损）</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="2">2. 宏观市场画像</h2>
+<blockquote>
+<p>完整报告: <code>philippines-market-overview-2026-05-21.md</code></p>
+</blockquote>
+<h3 id="_6">电商市场规模</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>数值</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026年电商总规模</td>
+<td><strong>PHP 2.1万亿（~$37.5亿）</strong></td>
+<td>Cloudecommerce 2026</td>
+</tr>
+<tr>
+<td>2024→2027 CAGR</td>
+<td><strong>~13%</strong></td>
+<td>PaymentsCMI</td>
+</tr>
+<tr>
+<td>2027年预计规模</td>
+<td><strong>$405亿</strong></td>
+<td>PaymentsCMI</td>
+</tr>
+<tr>
+<td>活跃在线购物者</td>
+<td><strong>6,720万（+12% YoY）</strong></td>
+<td>Cloudecommerce 2026</td>
+</tr>
+<tr>
+<td>平均客单价</td>
+<td><strong>PHP 2,850（+8% YoY）</strong></td>
+<td>Cloudecommerce 2026</td>
+</tr>
+<tr>
+<td>移动电商占比</td>
+<td><strong>78%</strong></td>
+<td>Cloudecommerce 2026</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_7">平台格局</h3>
+<table>
+<thead>
+<tr>
+<th>平台</th>
+<th style="text-align: center;">市场份额</th>
+<th style="text-align: center;">核心人群</th>
+<th>适合品类</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Shopee.ph</strong></td>
+<td style="text-align: center;">42-55%</td>
+<td style="text-align: center;">18-35岁大众</td>
+<td>美妆、家居、服饰、保健</td>
+</tr>
+<tr>
+<td><strong>TikTok Shop PH</strong></td>
+<td style="text-align: center;">15-29%</td>
+<td style="text-align: center;">16-28岁Z世代</td>
+<td>美妆、时尚、新奇家居</td>
+</tr>
+<tr>
+<td><strong>Lazada.ph</strong></td>
+<td style="text-align: center;">16-28%</td>
+<td style="text-align: center;">25-40岁中产</td>
+<td>小家电、品牌护肤、营养品</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2026">2026年关键趋势</h3>
+<ul>
+<li><strong>社交电商爆发</strong>：社交电商三年内将占电商总额25%</li>
+<li><strong>COD急剧下降</strong>：从2019年52%降至约11%，数字支付全面主导</li>
+<li><strong>GCash生态扩张</strong>：占数字钱包市场89%份额</li>
+<li><strong>跨境电商增长25% YoY</strong>：跨境销售额达PHP 3,150亿（~$56亿）</li>
+</ul>
+<hr />
+<h2 id="3">3. 品类机会矩阵</h2>
+<blockquote>
+<p>完整报告: <code>philippines-category-matrix-2026-05-21.md</code></p>
+</blockquote>
+<h3 id="_8">品类优先级矩阵</h3>
+<table>
+<thead>
+<tr>
+<th>品类</th>
+<th style="text-align: center;">市场潜力</th>
+<th style="text-align: center;">竞争度</th>
+<th style="text-align: center;">利润率</th>
+<th style="text-align: center;">合规难度</th>
+<th style="text-align: center;">综合评分</th>
+<th style="text-align: center;">优先级</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>💄 美妆个护</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"><strong>8.5</strong></td>
+<td style="text-align: center;">P1</td>
+</tr>
+<tr>
+<td>💊 健康保健</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"><strong>7.8</strong></td>
+<td style="text-align: center;">P1</td>
+</tr>
+<tr>
+<td>👗 时尚服饰</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;"><strong>6.5</strong></td>
+<td style="text-align: center;">P2</td>
+</tr>
+<tr>
+<td>🍳 厨房家电</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;"><strong>7.2</strong></td>
+<td style="text-align: center;">P1</td>
+</tr>
+<tr>
+<td>📦 家居收纳</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;"><strong>7.0</strong></td>
+<td style="text-align: center;">P2</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4">4. 搜索热点分析</h2>
+<blockquote>
+<p>完整报告: <code>philippines-search-trends-2026-05-21.md</code></p>
+</blockquote>
+<h3 id="_9">核心搜索词趋势</h3>
+<table>
+<thead>
+<tr>
+<th>品类</th>
+<th>热搜词</th>
+<th style="text-align: center;">月搜索量</th>
+<th style="text-align: center;">趋势</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>美妆</td>
+<td>whitening cream</td>
+<td style="text-align: center;">60,000+</td>
+<td style="text-align: center;">↑</td>
+</tr>
+<tr>
+<td>美妆</td>
+<td>sunscreen SPF50</td>
+<td style="text-align: center;">45,000+</td>
+<td style="text-align: center;">↑</td>
+</tr>
+<tr>
+<td>健康</td>
+<td>collagen gummies</td>
+<td style="text-align: center;">55,000+</td>
+<td style="text-align: center;">↑↑</td>
+</tr>
+<tr>
+<td>健康</td>
+<td>vitamin C</td>
+<td style="text-align: center;">45,000+</td>
+<td style="text-align: center;">→</td>
+</tr>
+<tr>
+<td>时尚</td>
+<td>t-shirt basic</td>
+<td style="text-align: center;">80,000+</td>
+<td style="text-align: center;">→</td>
+</tr>
+<tr>
+<td>家电</td>
+<td>air fryer</td>
+<td style="text-align: center;">40,000+</td>
+<td style="text-align: center;">↑↑</td>
+</tr>
+<tr>
+<td>收纳</td>
+<td>storage box</td>
+<td style="text-align: center;">50,000+</td>
+<td style="text-align: center;">→</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5">5. 舆情趋势分析</h2>
+<blockquote>
+<p>完整报告: <code>philippines-sentiment-analysis-2026-05-21.md</code></p>
+</blockquote>
+<h3 id="_10">社交媒体生态</h3>
+<table>
+<thead>
+<tr>
+<th>平台</th>
+<th style="text-align: center;">渗透率</th>
+<th>电商角色</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Facebook</td>
+<td style="text-align: center;">94.9%</td>
+<td>Facebook Shops、直播带货</td>
+</tr>
+<tr>
+<td>TikTok</td>
+<td style="text-align: center;">82.2%</td>
+<td>TikTok Shop、直播购物</td>
+</tr>
+<tr>
+<td>YouTube</td>
+<td style="text-align: center;">85.0%</td>
+<td>产品种草、开箱视频</td>
+</tr>
+<tr>
+<td>Instagram</td>
+<td style="text-align: center;">71.2%</td>
+<td>品牌种草、KOL合作</td>
+</tr>
+</tbody>
+</table>
+<h3 id="top5">消费者痛点TOP5</h3>
+<ol>
+<li><strong>假货焦虑</strong> — 美妆和保健品类最严重</li>
+<li><strong>尺码不准</strong> — 时尚服饰退货率30%+</li>
+<li><strong>产品偏厚重</strong> — K-Beauty在热带气候不适配</li>
+<li><strong>COD拒收</strong> — 高价值商品拒收损失大</li>
+<li><strong>物流慢</strong> — 外岛配送3-7天</li>
+</ol>
+<hr />
+<h2 id="6">6. 竞品矩阵分析</h2>
+<blockquote>
+<p>完整报告: <code>philippines-competitor-matrix-2026-05-21.md</code></p>
+</blockquote>
+<h3 id="_11">各品类竞争格局</h3>
+<table>
+<thead>
+<tr>
+<th>品类</th>
+<th style="text-align: center;">竞品数量</th>
+<th style="text-align: center;">竞争强度</th>
+<th style="text-align: center;">蓝海程度</th>
+<th>最大空白</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>💄 美妆个护</td>
+<td style="text-align: center;">10+</td>
+<td style="text-align: center;">⚡⚡⚡⚡ 高</td>
+<td style="text-align: center;">🟦🟦🟦</td>
+<td>美白+防晒二合一</td>
+</tr>
+<tr>
+<td>💊 健康保健</td>
+<td style="text-align: center;">10+</td>
+<td style="text-align: center;">⚡⚡⚡ 中</td>
+<td style="text-align: center;">🟦🟦🟦🟦</td>
+<td>低糖零食化保健</td>
+</tr>
+<tr>
+<td>👗 时尚服饰</td>
+<td style="text-align: center;">10+</td>
+<td style="text-align: center;">⚡⚡⚡⚡⚡ 极高</td>
+<td style="text-align: center;">🟦🟦</td>
+<td>中端品质基础款</td>
+</tr>
+<tr>
+<td>🍳 厨房家电</td>
+<td style="text-align: center;">10+</td>
+<td style="text-align: center;">⚡⚡⚡ 中</td>
+<td style="text-align: center;">🟦🟦🟦</td>
+<td>中端价格带(₱1,500-2,500)</td>
+</tr>
+<tr>
+<td>📦 家居收纳</td>
+<td style="text-align: center;">10+</td>
+<td style="text-align: center;">⚡⚡ 低</td>
+<td style="text-align: center;">🟦🟦🟦🟦🟦🟦</td>
+<td>品牌化收纳</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="7">7. 用户需求洞察</h2>
+<blockquote>
+<p>完整报告: <code>philippines-user-insights-2026-05-21.md</code></p>
+</blockquote>
+<h3 id="_12">核心用户画像</h3>
+<table>
+<thead>
+<tr>
+<th>画像</th>
+<th style="text-align: center;">年龄</th>
+<th style="text-align: center;">月收入</th>
+<th>核心品类</th>
+<th>关键特征</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gen Z美白女孩</td>
+<td style="text-align: center;">16-25</td>
+<td style="text-align: center;">₱5K-20K</td>
+<td>美妆、时尚</td>
+<td>TikTok原生、美白狂热、成分党</td>
+</tr>
+<tr>
+<td>职场千禧妈妈</td>
+<td style="text-align: center;">26-38</td>
+<td style="text-align: center;">₱20K-60K</td>
+<td>美妆、健康、收纳</td>
+<td>品质+性价比、正品焦虑</td>
+</tr>
+<tr>
+<td>年轻打工人</td>
+<td style="text-align: center;">22-32</td>
+<td style="text-align: center;">₱15K-35K</td>
+<td>时尚、家电</td>
+<td>租房党、高性价比不低质</td>
+</tr>
+<tr>
+<td>家庭主理人</td>
+<td style="text-align: center;">30-50</td>
+<td style="text-align: center;">₱20K-50K</td>
+<td>家电、收纳</td>
+<td>家庭刚需、促销敏感</td>
+</tr>
+<tr>
+<td>健康意识中产</td>
+<td style="text-align: center;">28-45</td>
+<td style="text-align: center;">₱30K-80K</td>
+<td>健康保健</td>
+<td>进口品牌偏好、正品认证前提</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_13">购买决策因素权重</h3>
+<table>
+<thead>
+<tr>
+<th>因素</th>
+<th style="text-align: center;">权重</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>价格</td>
+<td style="text-align: center;">39.4%</td>
+</tr>
+<tr>
+<td>服务</td>
+<td style="text-align: center;">16.4%</td>
+</tr>
+<tr>
+<td>产品质量</td>
+<td style="text-align: center;">12.9%</td>
+</tr>
+<tr>
+<td>品牌信任</td>
+<td style="text-align: center;">10.2%</td>
+</tr>
+<tr>
+<td>支付便利</td>
+<td style="text-align: center;">8.7%</td>
+</tr>
+<tr>
+<td>物流速度</td>
+<td style="text-align: center;">7.5%</td>
+</tr>
+<tr>
+<td>其他</td>
+<td style="text-align: center;">4.9%</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="8-top-10">8. Top 10 选品清单</h2>
+<blockquote>
+<p>完整报告: <code>philippines-top10-selection-2026-05-21.md</code></p>
+</blockquote>
+<h3 id="_14">选品总览</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">排名</th>
+<th style="text-align: center;">产品</th>
+<th style="text-align: center;">品类</th>
+<th style="text-align: center;">目标售价(PHP)</th>
+<th style="text-align: center;">毛利率</th>
+<th style="text-align: center;">月搜索量</th>
+<th style="text-align: center;">综合分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>1</strong></td>
+<td style="text-align: center;">美白+防晒二合一乳霜</td>
+<td style="text-align: center;">💄 美妆</td>
+<td style="text-align: center;">250-450</td>
+<td style="text-align: center;">55-65%</td>
+<td style="text-align: center;">60,000+</td>
+<td style="text-align: center;">92.5</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>2</strong></td>
+<td style="text-align: center;">品牌化防潮收纳箱套装</td>
+<td style="text-align: center;">📦 收纳</td>
+<td style="text-align: center;">200-500</td>
+<td style="text-align: center;">55-65%</td>
+<td style="text-align: center;">50,000+</td>
+<td style="text-align: center;">91.8</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>3</strong></td>
+<td style="text-align: center;">低糖胶原蛋白软糖</td>
+<td style="text-align: center;">💊 健康</td>
+<td style="text-align: center;">250-400</td>
+<td style="text-align: center;">50-60%</td>
+<td style="text-align: center;">55,000+</td>
+<td style="text-align: center;">90.5</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: center;">品质基础款T恤（3件装）</td>
+<td style="text-align: center;">👗 时尚</td>
+<td style="text-align: center;">350-600</td>
+<td style="text-align: center;">50-60%</td>
+<td style="text-align: center;">80,000+</td>
+<td style="text-align: center;">89.2</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>5</strong></td>
+<td style="text-align: center;">中端空气炸锅</td>
+<td style="text-align: center;">🍳 家电</td>
+<td style="text-align: center;">1,500-2,500</td>
+<td style="text-align: center;">35-45%</td>
+<td style="text-align: center;">40,000+</td>
+<td style="text-align: center;">87.5</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>6</strong></td>
+<td style="text-align: center;">小颗粒维生素C 500mg</td>
+<td style="text-align: center;">💊 健康</td>
+<td style="text-align: center;">200-350</td>
+<td style="text-align: center;">55-65%</td>
+<td style="text-align: center;">45,000+</td>
+<td style="text-align: center;">86.8</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>7</strong></td>
+<td style="text-align: center;">轻薄版K-Beauty玻尿酸精华</td>
+<td style="text-align: center;">💄 美妆</td>
+<td style="text-align: center;">400-700</td>
+<td style="text-align: center;">55-65%</td>
+<td style="text-align: center;">35,000+</td>
+<td style="text-align: center;">85.2</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>8</strong></td>
+<td style="text-align: center;">一站式家居收纳套装</td>
+<td style="text-align: center;">📦 收纳</td>
+<td style="text-align: center;">500-1,000</td>
+<td style="text-align: center;">45-55%</td>
+<td style="text-align: center;">30,000+</td>
+<td style="text-align: center;">84.5</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>9</strong></td>
+<td style="text-align: center;">多功能一体锅</td>
+<td style="text-align: center;">🍳 家电</td>
+<td style="text-align: center;">1,800-3,000</td>
+<td style="text-align: center;">35-45%</td>
+<td style="text-align: center;">25,000+</td>
+<td style="text-align: center;">83.8</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>10</strong></td>
+<td style="text-align: center;">大码女装基础款系列</td>
+<td style="text-align: center;">👗 时尚</td>
+<td style="text-align: center;">250-500</td>
+<td style="text-align: center;">50-60%</td>
+<td style="text-align: center;">20,000+</td>
+<td style="text-align: center;">82.5</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="9">9. 全成本模型</h2>
+<blockquote>
+<p>完整报告: <code>philippines-cost-model-2026-05-21.md</code></p>
+</blockquote>
+<h3 id="_15">盈利能力排名</h3>
+<table>
+<thead>
+<tr>
+<th>排名</th>
+<th>SKU</th>
+<th style="text-align: center;">税后净利率</th>
+<th>核心优势/劣势</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🥇</td>
+<td>#9 多功能一体锅5L</td>
+<td style="text-align: center;"><strong>15.0%</strong></td>
+<td>高客单价+0%关税+低佣金+刚需</td>
+</tr>
+<tr>
+<td>🥈</td>
+<td>#5 空气炸锅5.5L</td>
+<td style="text-align: center;"><strong>13.2%</strong></td>
+<td>高客单价+0%关税+厨房家电热</td>
+</tr>
+<tr>
+<td>🥉</td>
+<td>#6 维生素C 500mg</td>
+<td style="text-align: center;"><strong>8.0%</strong></td>
+<td>采购成本低+刚需+低退货</td>
+</tr>
+<tr>
+<td>4</td>
+<td>#7 K-Beauty玻尿酸精华</td>
+<td style="text-align: center;"><strong>7.9%</strong></td>
+<td>K-Beauty高热度+轻小件</td>
+</tr>
+<tr>
+<td>5</td>
+<td>#3 胶原蛋白软糖</td>
+<td style="text-align: center;"><strong>7.1%</strong></td>
+<td>健康补剂需求增长</td>
+</tr>
+<tr>
+<td>6</td>
+<td>#4 T恤3件装</td>
+<td style="text-align: center;"><strong>4.3%</strong></td>
+<td>刚需但关税+退货率高</td>
+</tr>
+<tr>
+<td>7</td>
+<td>#8 家居收纳8件套</td>
+<td style="text-align: center;"><strong>1.0%</strong></td>
+<td>大件物流成本占比过高</td>
+</tr>
+<tr>
+<td>8</td>
+<td>#10 大码女装</td>
+<td style="text-align: center;"><strong>-2.8%</strong></td>
+<td>亏损：关税+退货+COD</td>
+</tr>
+<tr>
+<td>9</td>
+<td>#1 美白防晒乳霜</td>
+<td style="text-align: center;"><strong>-7.6%</strong></td>
+<td>亏损：关税15%+COD+尾程</td>
+</tr>
+<tr>
+<td>10</td>
+<td>#2 防潮收纳箱3件套</td>
+<td style="text-align: center;"><strong>-8.4%</strong></td>
+<td>亏损最严重：大件物流+COD</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_16">关键成本参数</h3>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>汇率</td>
+<td>1 USD ≈ 56 PHP</td>
+</tr>
+<tr>
+<td>进口关税（MFN）</td>
+<td>0-15%（按品类）</td>
+</tr>
+<tr>
+<td>增值税（VAT）</td>
+<td>12%</td>
+</tr>
+<tr>
+<td>Shopee综合佣金</td>
+<td>9-13%</td>
+</tr>
+<tr>
+<td>COD拒收率</td>
+<td>5-15%</td>
+</tr>
+<tr>
+<td>企业所得税</td>
+<td>25%</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="10">10. 合规检查清单</h2>
+<blockquote>
+<p>完整报告: <code>philippines-compliance-checklist-2026-05-21.md</code></p>
+</blockquote>
+<h3 id="_17">风险汇总矩阵</h3>
+<table>
+<thead>
+<tr>
+<th>SKU</th>
+<th>产品</th>
+<th style="text-align: center;">风险评级</th>
+<th style="text-align: center;">预估认证费用(USD)</th>
+<th style="text-align: center;">预估周期</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#1</td>
+<td>美白防晒二合一乳霜</td>
+<td style="text-align: center;">🟡 中</td>
+<td style="text-align: center;">$2,000-$5,600</td>
+<td style="text-align: center;">2-5月</td>
+</tr>
+<tr>
+<td>#2</td>
+<td>防潮收纳箱3件套</td>
+<td style="text-align: center;">🟢 低</td>
+<td style="text-align: center;">$250-$650</td>
+<td style="text-align: center;">1-3周</td>
+</tr>
+<tr>
+<td>#3</td>
+<td>低糖胶原蛋白软糖</td>
+<td style="text-align: center;">🔴 高</td>
+<td style="text-align: center;">$4,900-$11,300</td>
+<td style="text-align: center;">8-18月</td>
+</tr>
+<tr>
+<td>#4</td>
+<td>基础款T恤3件装</td>
+<td style="text-align: center;">🟢 低</td>
+<td style="text-align: center;">$300-$900</td>
+<td style="text-align: center;">1-3周</td>
+</tr>
+<tr>
+<td>#5</td>
+<td>中端空气炸锅5.5L</td>
+<td style="text-align: center;">🔴 高</td>
+<td style="text-align: center;">$5,500-$13,500</td>
+<td style="text-align: center;">6-12周</td>
+</tr>
+<tr>
+<td>#6</td>
+<td>维生素C 500mg</td>
+<td style="text-align: center;">🔴 高</td>
+<td style="text-align: center;">$4,900-$11,300</td>
+<td style="text-align: center;">8-15月</td>
+</tr>
+<tr>
+<td>#7</td>
+<td>K-Beauty玻尿酸精华</td>
+<td style="text-align: center;">🟡 中</td>
+<td style="text-align: center;">$1,800-$3,100</td>
+<td style="text-align: center;">2-5月</td>
+</tr>
+<tr>
+<td>#8</td>
+<td>家居收纳套装8件套</td>
+<td style="text-align: center;">🟢 低</td>
+<td style="text-align: center;">$250-$650</td>
+<td style="text-align: center;">1-3周</td>
+</tr>
+<tr>
+<td>#9</td>
+<td>多功能一体锅5L</td>
+<td style="text-align: center;">🔴 高</td>
+<td style="text-align: center;">$6,500-$14,500</td>
+<td style="text-align: center;">6-12周</td>
+</tr>
+<tr>
+<td>#10</td>
+<td>大码女装系列</td>
+<td style="text-align: center;">🟢 低</td>
+<td style="text-align: center;">$300-$800</td>
+<td style="text-align: center;">1-3周</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_18">合规路线图</h3>
+<pre><code>第一阶段（第1-8周）: 实体设立
+  · DTI/SEC 公司注册
+  · FDA LTO 企业运营许可证申请
+  · BOC 进口商注册
+
+第二阶段（第2-18个月）: 产品认证
+  · FDA管辖（化妆品/补充剂）: CPN 1-3月 / CPR 6-12月
+  · BPS-DTI管辖（电器类）: ICC 4-8周/批次 / PS License 8-12周
+
+第三阶段: 海关清关
+  · BM进口关税 + VAT 12%
+  · FORM E不适用（中国非东盟成员国）
+
+第四阶段: 长期合规
+  · FDA LTO/CPN/CPR续期
+  · BPS-PS License续期
+</code></pre>
+<hr />
+<h2 id="11">11. 综合评审与最终决策</h2>
+<blockquote>
+<p>完整报告: <code>philippines-final-selection-2026-05-21.md</code> + <code>philippines-risk-assessment-2026-05-21.md</code></p>
+</blockquote>
+<h3 id="_19">独立风险评估结论</h3>
+<p><strong>整体方案可行性：6.2/10</strong></p>
+<h3 id="_20">最终决策</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">决策</th>
+<th style="text-align: center;">数量</th>
+<th>SKU</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">🥇 Go优先</td>
+<td style="text-align: center;">1</td>
+<td>#9 多功能一体锅 5L</td>
+</tr>
+<tr>
+<td style="text-align: center;">✅ Go条件</td>
+<td style="text-align: center;">6</td>
+<td>#3,#4,#5,#6,#7,#10</td>
+</tr>
+<tr>
+<td style="text-align: center;">⏳ 暂缓</td>
+<td style="text-align: center;">1</td>
+<td>#8 家居收纳8件套</td>
+</tr>
+<tr>
+<td style="text-align: center;">❌ No-Go</td>
+<td style="text-align: center;">2</td>
+<td>#1 美白防晒乳霜, #2 收纳箱3件套</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_21">五维评分总表</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">SKU</th>
+<th style="text-align: center;">综合评分</th>
+<th style="text-align: center;">市场(25%)</th>
+<th style="text-align: center;">盈利(25%)</th>
+<th style="text-align: center;">合规(20%)</th>
+<th style="text-align: center;">运营(15%)</th>
+<th style="text-align: center;">竞争(15%)</th>
+<th style="text-align: center;">决策</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">#9 多功能一体锅</td>
+<td style="text-align: center;">7.8</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">🥇 Go</td>
+</tr>
+<tr>
+<td style="text-align: center;">#5 空气炸锅</td>
+<td style="text-align: center;">7.2</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">✅ Go条件</td>
+</tr>
+<tr>
+<td style="text-align: center;">#6 维生素C</td>
+<td style="text-align: center;">6.8</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">✅ Go条件</td>
+</tr>
+<tr>
+<td style="text-align: center;">#7 玻尿酸精华</td>
+<td style="text-align: center;">6.5</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">✅ Go条件</td>
+</tr>
+<tr>
+<td style="text-align: center;">#3 胶原蛋白软糖</td>
+<td style="text-align: center;">6.3</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">✅ Go条件</td>
+</tr>
+<tr>
+<td style="text-align: center;">#4 T恤3件装</td>
+<td style="text-align: center;">6.0</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">✅ Go条件</td>
+</tr>
+<tr>
+<td style="text-align: center;">#10 大码女装</td>
+<td style="text-align: center;">5.5</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">✅ Go条件</td>
+</tr>
+<tr>
+<td style="text-align: center;">#8 收纳8件套</td>
+<td style="text-align: center;">5.2</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">⏳ 暂缓</td>
+</tr>
+<tr>
+<td style="text-align: center;">#1 美白防晒</td>
+<td style="text-align: center;">5.0</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">❌ No-Go</td>
+</tr>
+<tr>
+<td style="text-align: center;">#2 收纳箱3件套</td>
+<td style="text-align: center;">4.5</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">❌ No-Go</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="12">12. 执行路线图</h2>
+<h3 id="phase-10-3">Phase 1（0-3个月）— 快速启动 + 利润核心</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">优先级</th>
+<th>产品</th>
+<th>关键动作</th>
+<th style="text-align: center;">首批备货</th>
+<th style="text-align: center;">预期月GMV</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>P0</strong></td>
+<td>#9 多功能一体锅</td>
+<td>BPS-PS License→OEM→KOL</td>
+<td style="text-align: center;">300台</td>
+<td style="text-align: center;">₱720K</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>P0</strong></td>
+<td>#5 空气炸锅</td>
+<td>共用PS License→OEM</td>
+<td style="text-align: center;">500台</td>
+<td style="text-align: center;">₱1M</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>P1</strong></td>
+<td>#4 T恤3件装</td>
+<td>面料打样→尺码测试</td>
+<td style="text-align: center;">1,000套</td>
+<td style="text-align: center;">₱475K</td>
+</tr>
+</tbody>
+</table>
+<p><strong>合规并行</strong>: 启动 #3/#6 FDA CPR + #7 FDA CPN</p>
+<h3 id="phase-23-6">Phase 2（3-6个月）— 美妆个护上市</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">优先级</th>
+<th>产品</th>
+<th>关键动作</th>
+<th style="text-align: center;">首批备货</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>P1</strong></td>
+<td>#7 K-Beauty玻尿酸精华</td>
+<td>FDA CPN获批→配方开发</td>
+<td style="text-align: center;">500瓶</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>P2</strong></td>
+<td>#10 大码女装</td>
+<td>版型开发→提价至₱480+</td>
+<td style="text-align: center;">500件</td>
+</tr>
+</tbody>
+</table>
+<h3 id="phase-36-12">Phase 3（6-12个月）— 健康补剂上市</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">优先级</th>
+<th>产品</th>
+<th>关键动作</th>
+<th style="text-align: center;">首批备货</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>P2</strong></td>
+<td>#6 维生素C 500mg</td>
+<td>FDA CPR获批→上架</td>
+<td style="text-align: center;">1,000瓶</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>P2</strong></td>
+<td>#3 低糖胶原蛋白软糖</td>
+<td>FDA CPR获批→TikTok KOC</td>
+<td style="text-align: center;">1,000瓶</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>P3</strong></td>
+<td>#8 收纳套装（拆分）</td>
+<td>拆分为2个4件套</td>
+<td style="text-align: center;">500套×2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_22">财务预测</h3>
+<table>
+<thead>
+<tr>
+<th>月份</th>
+<th style="text-align: center;">累计GMV(₱)</th>
+<th style="text-align: center;">累计净利润(₱)</th>
+<th style="text-align: center;">累计净利润(USD)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M1</td>
+<td style="text-align: center;">300,000</td>
+<td style="text-align: center;">35,000</td>
+<td style="text-align: center;">$625</td>
+</tr>
+<tr>
+<td>M3</td>
+<td style="text-align: center;">1,500,000</td>
+<td style="text-align: center;">180,000</td>
+<td style="text-align: center;">$3,214</td>
+</tr>
+<tr>
+<td>M6</td>
+<td style="text-align: center;">4,000,000</td>
+<td style="text-align: center;">480,000</td>
+<td style="text-align: center;">$8,571</td>
+</tr>
+<tr>
+<td>M12</td>
+<td style="text-align: center;">10,000,000</td>
+<td style="text-align: center;">1,200,000</td>
+<td style="text-align: center;">$21,429</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_23">投资回收期</h3>
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th style="text-align: center;">投资(USD)</th>
+<th style="text-align: center;">月均净利润(USD)</th>
+<th style="text-align: center;">回收期</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Phase 1</td>
+<td style="text-align: center;">$15,000</td>
+<td style="text-align: center;">$2,500</td>
+<td style="text-align: center;">6个月</td>
+</tr>
+<tr>
+<td>Phase 2</td>
+<td style="text-align: center;">$8,000</td>
+<td style="text-align: center;">$1,500</td>
+<td style="text-align: center;">5.3个月</td>
+</tr>
+<tr>
+<td>Phase 3</td>
+<td style="text-align: center;">$12,000</td>
+<td style="text-align: center;">$2,000</td>
+<td style="text-align: center;">6个月</td>
+</tr>
+<tr>
+<td><strong>合计</strong></td>
+<td style="text-align: center;"><strong>$35,000</strong></td>
+<td style="text-align: center;"><strong>$6,000</strong></td>
+<td style="text-align: center;"><strong>5.8个月</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="emma">Emma 最终建议</h2>
+<h3 id="_24">核心策略：<strong>"电器先行，美妆跟随，健康蓄力"</strong></h3>
+<ol>
+<li><strong>立即行动</strong>：启动 #9 多功能一体锅 + #5 空气炸锅的 BPS-PS License 申请</li>
+<li><strong>快速验证</strong>：#4 T恤3件装无认证门槛，可立即上线</li>
+<li><strong>合规并行</strong>：Phase 1 同步启动 FDA 认证，为 Phase 2/3 做好准备</li>
+<li><strong>坚决放弃</strong>：#1 美白防晒乳霜和 #2 收纳箱3件套结构性亏损</li>
+<li><strong>关键成功因素</strong>：
+   - 开通 GCash/SPayLater 降低 COD 占比至 30% 以下
+   - 初期仅覆盖 Luzon 岛控制物流成本
+   - 厨房家电走 Lazada 建立品牌信任
+   - 美妆走 TikTok Shop 内容营销</li>
+</ol>
+<hr />
+<p><strong>报告编制</strong>: Emma XIE (Orchestrator)<br />
+<strong>独立评审</strong>: specialized-risk-assessor<br />
+<strong>报告日期</strong>: 2026-05-21<br />
+<strong>数据截止</strong>: 2026年5月21日<br />
+<strong>版本</strong>: V1.0 — 正式版</p>
+<p><em>本报告综合 Step 1-10 全部输出，为菲律宾市场选品最终决策文件。</em>
+<em>所有子报告位于 <code>/home/nicli/.openclaw/workspace/reports/</code> 目录。</em></p>
+</body>
+</html>

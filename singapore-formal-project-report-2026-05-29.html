@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>singapore-formal-project-report-2026-05-29</title>
+    <style>
+@page {
+    size: A4;
+    margin: 2cm 2.5cm;
+    @bottom-center {
+        content: counter(page);
+        font-size: 9pt;
+        color: #999;
+    }
+}
+
+/* 强制使用 Noto Sans CJK SC，绕过 Pango 字体匹配的不确定性 */
+@font-face {
+    font-family: 'CJK';
+    src: url('/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'CJK';
+    src: url('/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'CJK';
+    src: url('/usr/share/fonts/opentype/noto/NotoSerifCJK-Regular.ttc') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+body {
+    font-family: 'CJK', 'Noto Sans CJK SC', sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.8;
+    color: #1a1a1a;
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 20pt;
+    color: #1a1a2e;
+    border-bottom: 3px solid #e94560;
+    padding-bottom: 8pt;
+    margin-top: 24pt;
+    page-break-before: always;
+}
+
+h1:first-of-type {
+    page-break-before: avoid;
+}
+
+h2 {
+    font-size: 15pt;
+    color: #16213e;
+    border-bottom: 1.5px solid #0f3460;
+    padding-bottom: 5pt;
+    margin-top: 18pt;
+}
+
+h3 {
+    font-size: 12.5pt;
+    color: #0f3460;
+    margin-top: 14pt;
+}
+
+h4 {
+    font-size: 11pt;
+    color: #333;
+    margin-top: 10pt;
+}
+
+/* 表格样式 - 关键修复 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12pt 0;
+    font-size: 9.5pt;
+    page-break-inside: avoid;
+    display: table;
+}
+
+thead {
+    display: table-header-group;
+}
+
+th {
+    background-color: #16213e;
+    color: white;
+    padding: 8px 10px;
+    text-align: left;
+    font-weight: 600;
+    border: 1px solid #0f3460;
+    font-size: 9pt;
+}
+
+td {
+    padding: 7px 10px;
+    border: 1px solid #ddd;
+    vertical-align: top;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tr:hover {
+    background-color: #e8f4f8;
+}
+
+/* 代码块 */
+code {
+    font-family: 'CJK', "Noto Sans Mono CJK SC", monospace;
+    font-size: 8.5pt;
+    background: #f4f4f4;
+    padding: 2px 5px;
+    border-radius: 3px;
+    border: 1px solid #e0e0e0;
+}
+
+pre {
+    background: #1e1e2e;
+    color: #cdd6f4;
+    padding: 12pt;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-size: 8.5pt;
+    line-height: 1.6;
+    margin: 10pt 0;
+    page-break-inside: avoid;
+}
+
+pre code {
+    background: none;
+    border: none;
+    color: inherit;
+    padding: 0;
+}
+
+/* 引用块 */
+blockquote {
+    border-left: 4px solid #e94560;
+    margin: 10pt 0;
+    padding: 8pt 14pt;
+    background: #fff5f5;
+    color: #666;
+    font-size: 9.5pt;
+}
+
+/* 列表 */
+ul, ol {
+    padding-left: 20pt;
+    margin: 6pt 0;
+}
+
+li {
+    margin: 3pt 0;
+}
+
+li > ul, li > ol {
+    margin: 2pt 0;
+}
+
+/* 任务列表 */
+input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+/* 链接 */
+a {
+    color: #0f3460;
+    text-decoration: none;
+}
+
+/* 水平线 */
+hr {
+    border: none;
+    border-top: 1.5px solid #e0e0e0;
+    margin: 16pt 0;
+}
+
+/* 强调 */
+strong {
+    color: #1a1a2e;
+}
+
+em {
+    color: #555;
+}
+
+/* emoji 处理 */
+img.emoji {
+    height: 1em;
+    width: 1em;
+    vertical-align: middle;
+}
+
+/* 警告/提示块 (用 blockquote 变体) */
+blockquote p:first-child strong {
+    color: #e94560;
+}
+
+/* Mermaid 图表占位 - 跳过不支持的图表 */
+pre code.language-mermaid {
+    display: none;
+}
+</style>
+</head>
+<body>
+<h1 id="2026-05-29">新加坡跨境电商项目正式报告（2026-05-29）</h1>
+<blockquote>
+<p><strong>报告来源</strong>：本次 Cron 任务 <code>02f9440b-f486-4fa7-88c1-6d7633bf327d</code></p>
+<p><strong>流程</strong>：按 <code>market-analysis-agent-steps.md</code> 11 步执行。</p>
+<p><strong>保存位</strong>：<code>/home/nicli/.openclaw/workspace/reports/</code>。</p>
+</blockquote>
+<hr />
+<h2 id="1">1. 环境概览</h2>
+<p>本章节参考 <strong>Step 1</strong> — 宏观市场画像报告：</p>
+<ul>
+<li>电商 GMV（2025）: US$5.9B，YOY +20.4%</li>
+<li>主要平台份额：Shopee 52%、Lazada 36%、Amazon.sg 6%、TikTok Shop 6%</li>
+<li>消费者画像：中位年龄 36.2 歳，25‑44 岁占 36.5%，ARPU US$1,445</li>
+<li>支付方式：信用卡 35%、PayNow 25%、GrabPay 15%</li>
+<li>市场趋势：直播电商增长快，TikTok Shop 制约 6% GMV 但增速强。</li>
+</ul>
+<blockquote>
+<p>详见【<strong>市场概览报告</strong>】引用自 <code>/home/nicli/.openclaw/workspace/reports/singapore-market-overview-2026-05-29.md</code>。</p>
+</blockquote>
+<hr />
+<h2 id="2">2. 品类机会矩阵</h2>
+<p>参考 <strong>Step 2</strong> — 品类机会扫描报告。</p>
+<table>
+<thead>
+<tr>
+<th>品类</th>
+<th>潜力评分</th>
+<th>竞争度</th>
+<th>蓝海指引</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>保健品/膳食补充剂</td>
+<td>4.5/5</td>
+<td>2.5/5</td>
+<td>极佳</td>
+</tr>
+<tr>
+<td>宠物用品</td>
+<td>4.0/5</td>
+<td>2.0/5</td>
+<td>极佳</td>
+</tr>
+<tr>
+<td>中式食品/零食</td>
+<td>3.5/5</td>
+<td>2.0/5</td>
+<td>极佳</td>
+</tr>
+<tr>
+<td>智能家居 IoT 小件</td>
+<td>3.5/5</td>
+<td>2.0/5</td>
+<td>极佳</td>
+</tr>
+<tr>
+<td>母婴用品</td>
+<td>3.5/5</td>
+<td>2.5/5</td>
+<td>极佳</td>
+</tr>
+<tr>
+<td>运动户外</td>
+<td>3.5/5</td>
+<td>2.5/5</td>
+<td>极佳</td>
+</tr>
+<tr>
+<td>美妆护肤</td>
+<td>3.5/5</td>
+<td>3.0/5</td>
+<td>有条件进入</td>
+</tr>
+<tr>
+<td>个护小家电</td>
+<td>3.5/5</td>
+<td>3.0/5</td>
+<td>有条件进入</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>详见【<strong>品类矩阵报告</strong>】引用自 <code>/home/nicli/.openclaw/workspace/reports/singapore-category-matrix-2026-05-29.md</code>。</p>
+</blockquote>
+<hr />
+<h2 id="3">3. 搜索热点分析</h2>
+<p>参考 <strong>Step 3</strong> — 搜索热点报告。
+- <strong>保健品</strong>：功能性软糖、护肝片高增长，英文搜索占比 80%+。
+- <strong>宠物用品</strong>：智能硬件年增 50%。
+- <strong>中式食品</strong>：螺蛳粉自热火锅年增 60%。
+- 关键词修饰词：organic/vegan/natural 占比 38%。
+- 交易型意图 42%。</p>
+<blockquote>
+<p>详见【<strong>搜索热点报告</strong>】引用自 <code>/home/nicli/.openclaw/workspace/reports/singapore-search-trends-2026-05-29.md</code>。</p>
+</blockquote>
+<hr />
+<h2 id="4">4. 舆情趋势</h2>
+<p>参考 <strong>Step 4</strong> — 舆情分析报告。
+- 5+ 关键消费者痛点已识别。
+- 3+ 竞品营销卖点分析完成。
+- 核心痛点：成分不透明、价格过高、物流周期长、售后支持差、包装不环保。
+- 竞品 UVP：功能配方、天然原料、正品保证、极速物流、优质客服。</p>
+<blockquote>
+<p>详见【<strong>舆情趋势报告</strong>】引用自 <code>/home/nicli/.openclaw/workspace/reports/singapore-sentiment-analysis-2026-05-29.md</code>。</p>
+</blockquote>
+<hr />
+<h2 id="5">5. 竞品矩阵（待完成）</h2>
+<p>该章节待 <code>marketing-cross-border-ecommerce</code> 或 <code>product-manager</code> 进一步获取竞品 SKU 数据完成。</p>
+<h2 id="6">6. 用户需求挖掘（待完成）</h2>
+<h2 id="7-top-10">7. Top 10 选品（待完成）</h2>
+<h2 id="8">8. 成本模型（待完成）</h2>
+<h2 id="9">9. 合规清单（待完成）</h2>
+<h2 id="10">10. 最终决策（待完成）</h2>
+<hr />
+<h2 id="_1">结论</h2>
+<p>截至目前，已完成<strong>前四步</strong>的完整调研与分析，提供了宏观环境、品类机会、搜索热点与舆情趋势的全面视角。继续进行后续<strong>竞品、需求、产品筛选、成本与合规</strong>等关键步骤，即可完成全链路选品决策。</p>
+<blockquote>
+<p>本报告主要面向 Nick 与团队内部共享。</p>
+</blockquote>
+</body>
+</html>
