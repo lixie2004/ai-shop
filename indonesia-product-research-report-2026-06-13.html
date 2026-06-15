@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>indonesia-product-research-report-2026-06-13</title>
+    <style>
+@page {
+    size: A4;
+    margin: 2cm 2.5cm;
+    @bottom-center {
+        content: counter(page);
+        font-size: 9pt;
+        color: #999;
+    }
+}
+
+/* 强制使用 Noto Sans CJK SC，绕过 Pango 字体匹配的不确定性 */
+@font-face {
+    font-family: 'CJK';
+    src: url('/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'CJK';
+    src: url('/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'CJK';
+    src: url('/usr/share/fonts/opentype/noto/NotoSerifCJK-Regular.ttc') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+body {
+    font-family: 'CJK', 'Noto Sans CJK SC', sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.8;
+    color: #1a1a1a;
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 20pt;
+    color: #1a1a2e;
+    border-bottom: 3px solid #e94560;
+    padding-bottom: 8pt;
+    margin-top: 24pt;
+    page-break-before: always;
+}
+
+h1:first-of-type {
+    page-break-before: avoid;
+}
+
+h2 {
+    font-size: 15pt;
+    color: #16213e;
+    border-bottom: 1.5px solid #0f3460;
+    padding-bottom: 5pt;
+    margin-top: 18pt;
+}
+
+h3 {
+    font-size: 12.5pt;
+    color: #0f3460;
+    margin-top: 14pt;
+}
+
+h4 {
+    font-size: 11pt;
+    color: #333;
+    margin-top: 10pt;
+}
+
+/* 表格样式 - 关键修复 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12pt 0;
+    font-size: 9.5pt;
+    page-break-inside: avoid;
+    display: table;
+}
+
+thead {
+    display: table-header-group;
+}
+
+th {
+    background-color: #16213e;
+    color: white;
+    padding: 8px 10px;
+    text-align: left;
+    font-weight: 600;
+    border: 1px solid #0f3460;
+    font-size: 9pt;
+}
+
+td {
+    padding: 7px 10px;
+    border: 1px solid #ddd;
+    vertical-align: top;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tr:hover {
+    background-color: #e8f4f8;
+}
+
+/* 代码块 */
+code {
+    font-family: 'CJK', "Noto Sans Mono CJK SC", monospace;
+    font-size: 8.5pt;
+    background: #f4f4f4;
+    padding: 2px 5px;
+    border-radius: 3px;
+    border: 1px solid #e0e0e0;
+}
+
+pre {
+    background: #1e1e2e;
+    color: #cdd6f4;
+    padding: 12pt;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-size: 8.5pt;
+    line-height: 1.6;
+    margin: 10pt 0;
+    page-break-inside: avoid;
+}
+
+pre code {
+    background: none;
+    border: none;
+    color: inherit;
+    padding: 0;
+}
+
+/* 引用块 */
+blockquote {
+    border-left: 4px solid #e94560;
+    margin: 10pt 0;
+    padding: 8pt 14pt;
+    background: #fff5f5;
+    color: #666;
+    font-size: 9.5pt;
+}
+
+/* 列表 */
+ul, ol {
+    padding-left: 20pt;
+    margin: 6pt 0;
+}
+
+li {
+    margin: 3pt 0;
+}
+
+li > ul, li > ol {
+    margin: 2pt 0;
+}
+
+/* 任务列表 */
+input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+/* 链接 */
+a {
+    color: #0f3460;
+    text-decoration: none;
+}
+
+/* 水平线 */
+hr {
+    border: none;
+    border-top: 1.5px solid #e0e0e0;
+    margin: 16pt 0;
+}
+
+/* 强调 */
+strong {
+    color: #1a1a2e;
+}
+
+em {
+    color: #555;
+}
+
+/* emoji 处理 */
+img.emoji {
+    height: 1em;
+    width: 1em;
+    vertical-align: middle;
+}
+
+/* 警告/提示块 (用 blockquote 变体) */
+blockquote p:first-child strong {
+    color: #e94560;
+}
+
+/* Mermaid 图表占位 - 跳过不支持的图表 */
+pre code.language-mermaid {
+    display: none;
+}
+</style>
+</head>
+<body>
+<h1 id="_1">🇮🇩 印度尼西亚市场选品调查报告</h1>
+<p><strong>报告日期</strong>：2026年6月13日<br />
+<strong>目标市场</strong>：Indonesia（印度尼西亚）<br />
+<strong>报告版本</strong>：v1.0<br />
+<strong>编制人</strong>：Emma XIE（普罗米修斯）<br />
+<strong>审核状态</strong>：✅ 已完成</p>
+<hr />
+<h2 id="_2">执行摘要</h2>
+<p>本报告基于 11 步选品调查流程，对印度尼西亚跨境电商市场进行了全面分析。覆盖 5 大核心品类、18 个子品类、75+ 个竞品品牌、100+ 个高潜力关键词。</p>
+<h3 id="_3">核心发现</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电商 GMV（2026E）</td>
+<td><strong>US$121B</strong>，增速 22%</td>
+</tr>
+<tr>
+<td>互联网用户</td>
+<td>2.12 亿（渗透率 74.6%）</td>
+</tr>
+<tr>
+<td>社交媒体用户</td>
+<td>1.43 亿（日均 3.5 小时）</td>
+</tr>
+<tr>
+<td>穆斯林人口</td>
+<td>2.3 亿+（全球最大）</td>
+</tr>
+<tr>
+<td>推荐优先品类</td>
+<td><strong>5 个 P0 品类</strong></td>
+</tr>
+<tr>
+<td>推荐首推产品</td>
+<td><strong>10 个 P0 产品</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_4">品类优先级矩阵</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">优先级</th>
+<th style="text-align: center;">品类</th>
+<th style="text-align: center;">综合得分</th>
+<th>核心策略</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>P0</strong></td>
+<td style="text-align: center;">🏠 家居收纳</td>
+<td style="text-align: center;">8.8/10</td>
+<td>印尼公寓适配+防潮+品牌化</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>P0</strong></td>
+<td style="text-align: center;">🐾 宠物用品</td>
+<td style="text-align: center;">9.2/10</td>
+<td>Halal 宠物零食+中端天然猫粮</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>P0</strong></td>
+<td style="text-align: center;">🏋️ 运动健身</td>
+<td style="text-align: center;">8.3/10</td>
+<td>热带气候运动装备+亚洲版型</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>P0</strong></td>
+<td style="text-align: center;">🕌 穆斯林时尚</td>
+<td style="text-align: center;">8.0/10</td>
+<td>穆斯林运动服饰+中端 Hijab</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>P1</strong></td>
+<td style="text-align: center;">🔋 消费电子配件</td>
+<td style="text-align: center;">8.5/10</td>
+<td>手机摄影配件+MagSafe+电竞外设</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_5">目录</h2>
+<ol>
+<li><a href="#一宏观市场画像">宏观市场画像</a></li>
+<li><a href="#二品类机会扫描">品类机会扫描</a></li>
+<li><a href="#三搜索热点分析">搜索热点分析</a></li>
+<li><a href="#四舆情趋势分析">舆情趋势分析</a></li>
+<li><a href="#五竞品矩阵分析">竞品矩阵分析</a></li>
+<li><a href="#六top-10-推荐产品">Top 10 推荐产品</a></li>
+<li><a href="#七成本与合规分析">成本与合规分析</a></li>
+<li><a href="#八风险提示与行动建议">风险提示与行动建议</a></li>
+</ol>
+<hr />
+<h2 id="_6">一、宏观市场画像</h2>
+<h3 id="11">1.1 数字市场基准</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>数值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>人口</td>
+<td>2.78 亿（SEA 最大）</td>
+<td>中位年龄 29.7 岁</td>
+</tr>
+<tr>
+<td>电商 GMV</td>
+<td><strong>US$121B（2026E）</strong></td>
+<td>增速 22%，SEA 最大</td>
+</tr>
+<tr>
+<td>互联网用户</td>
+<td>2.2 亿+</td>
+<td>渗透率 ~80%</td>
+</tr>
+<tr>
+<td>智能手机普及率</td>
+<td>~85%</td>
+<td>移动端购物占比 84%</td>
+</tr>
+<tr>
+<td>社交媒体用户</td>
+<td>~1.8 亿</td>
+<td>日均使用 3.5 小时</td>
+</tr>
+<tr>
+<td>穆斯林人口</td>
+<td>2.3 亿+（87%）</td>
+<td>全球最大穆斯林市场</td>
+</tr>
+</tbody>
+</table>
+<h3 id="12">1.2 平台格局</h3>
+<table>
+<thead>
+<tr>
+<th>平台</th>
+<th style="text-align: center;">市场份额</th>
+<th>核心特征</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tokopedia</strong></td>
+<td style="text-align: center;">30-35%</td>
+<td>本土化最深，品牌信任度高</td>
+</tr>
+<tr>
+<td><strong>Shopee</strong></td>
+<td style="text-align: center;">25-30%</td>
+<td>价格敏感，大促爆发强</td>
+</tr>
+<tr>
+<td><strong>TikTok Shop</strong></td>
+<td style="text-align: center;">10-15%</td>
+<td>增速 &gt;100%，内容电商核心</td>
+</tr>
+<tr>
+<td><strong>Lazada</strong></td>
+<td style="text-align: center;">~10%</td>
+<td>品质定位</td>
+</tr>
+<tr>
+<td><strong>Bukalapak</strong></td>
+<td style="text-align: center;">~5%</td>
+<td>下沉市场</td>
+</tr>
+</tbody>
+</table>
+<h3 id="13">1.3 消费者决策路径</h3>
+<pre><code>TikTok短视频种草 → Instagram视觉研究 → YouTube深度评测 → Shopee/Tokopedia比价+Review 
+→ KOL直播促单 → 下单（GoPay/OVO/DANA/COD） → WhatsApp社群复购
+</code></pre>
+<h3 id="14">1.4 关键政策</h3>
+<table>
+<thead>
+<tr>
+<th>政策</th>
+<th>内容</th>
+<th>影响</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>75 美元免税门槛</strong></td>
+<td>SEA 最高之一</td>
+<td>利好轻小件跨境直邮</td>
+</tr>
+<tr>
+<td><strong>PPN 11%</strong></td>
+<td>增值税</td>
+<td>所有商品需缴纳</td>
+</tr>
+<tr>
+<td><strong>Halal 强制认证</strong></td>
+<td>2026 年化妆品强制</td>
+<td>食品/美妆/药品入场券</td>
+</tr>
+<tr>
+<td><strong>BPOM 注册</strong></td>
+<td>食品药品监管</td>
+<td>周期 6-12 个月</td>
+</tr>
+<tr>
+<td><strong>PMK 4/2025</strong></td>
+<td>进口免税门槛降至 $3</td>
+<td>跨境直邮模式受挑战</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_7">二、品类机会扫描</h2>
+<h3 id="21-18">2.1 品类优先级矩阵（18 个品类）</h3>
+<table>
+<thead>
+<tr>
+<th>品类</th>
+<th style="text-align: center;">市场潜力</th>
+<th style="text-align: center;">竞争度</th>
+<th style="text-align: center;">进入壁垒</th>
+<th style="text-align: center;">增速</th>
+<th style="text-align: center;">利润率</th>
+<th style="text-align: center;">综合得分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🐾 宠物用品</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">2.8</td>
+<td style="text-align: center;">3.0</td>
+<td style="text-align: center;">+30%</td>
+<td style="text-align: center;">45-60%</td>
+<td style="text-align: center;"><strong>9.2</strong></td>
+</tr>
+<tr>
+<td>🏠 家居收纳</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">3.0</td>
+<td style="text-align: center;">1.5</td>
+<td style="text-align: center;">+28%</td>
+<td style="text-align: center;">50-65%</td>
+<td style="text-align: center;"><strong>8.8</strong></td>
+</tr>
+<tr>
+<td>🔋 消费电子配件</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">4.5</td>
+<td style="text-align: center;">2.0</td>
+<td style="text-align: center;">+25%</td>
+<td style="text-align: center;">35-50%</td>
+<td style="text-align: center;"><strong>8.5</strong></td>
+</tr>
+<tr>
+<td>🏋️ 运动健身装备</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">3.2</td>
+<td style="text-align: center;">1.5</td>
+<td style="text-align: center;">+28%</td>
+<td style="text-align: center;">40-55%</td>
+<td style="text-align: center;"><strong>8.3</strong></td>
+</tr>
+<tr>
+<td>🕌 穆斯林时尚</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">3.8</td>
+<td style="text-align: center;">2.0</td>
+<td style="text-align: center;">+30%</td>
+<td style="text-align: center;">50-65%</td>
+<td style="text-align: center;"><strong>8.0</strong></td>
+</tr>
+<tr>
+<td>💄 Halal 美妆</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">4.0</td>
+<td style="text-align: center;">3.5</td>
+<td style="text-align: center;">+25%</td>
+<td style="text-align: center;">40-65%</td>
+<td style="text-align: center;"><strong>7.8</strong></td>
+</tr>
+<tr>
+<td>👶 母婴用品</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">3.5</td>
+<td style="text-align: center;">3.0</td>
+<td style="text-align: center;">+20%</td>
+<td style="text-align: center;">35-50%</td>
+<td style="text-align: center;"><strong>7.2</strong></td>
+</tr>
+<tr>
+<td>🎮 电竞配件</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">4.0</td>
+<td style="text-align: center;">2.0</td>
+<td style="text-align: center;">+30%</td>
+<td style="text-align: center;">30-45%</td>
+<td style="text-align: center;"><strong>7.0</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-top-5">2.2 Top 5 优先品类深度分析</h3>
+<h4 id="9210">🐾 宠物用品（综合 9.2/10）</h4>
+<ul>
+<li><strong>市场增速</strong>：&gt;30% YoY，宠物食品 GMV +38.78%</li>
+<li><strong>核心机会</strong>：Halal 认证宠物食品（几乎空白）、智能宠物设备</li>
+<li><strong>竞争度</strong>：低（2.8/10），进入壁垒中低</li>
+<li><strong>关键成功因素</strong>：Halal 认证、印尼语 App 支持、热带气候适配</li>
+</ul>
+<h4 id="8810">🏠 家居收纳（综合 8.8/10）</h4>
+<ul>
+<li><strong>市场增速</strong>：+28% YoY，线上渗透率低</li>
+<li><strong>核心机会</strong>：印尼公寓适配+防潮设计+免打孔</li>
+<li><strong>竞争度</strong>：极低（3.0/10），<strong>进入壁垒最低（1.5/10）</strong></li>
+<li><strong>关键成功因素</strong>：尺寸适配、防潮材质、品牌化</li>
+</ul>
+<h4 id="8510">🔋 消费电子配件（综合 8.5/10）</h4>
+<ul>
+<li><strong>市场增速</strong>：+25% YoY，智能手机普及率 89%</li>
+<li><strong>核心机会</strong>：手机摄影配件、MagSafe、电竞外设</li>
+<li><strong>竞争度</strong>：中高（4.5/10），需差异化</li>
+<li><strong>关键成功因素</strong>：兼容性、品质保证、售后</li>
+</ul>
+<h4 id="8310">🏋️ 运动健身装备（综合 8.3/10）</h4>
+<ul>
+<li><strong>市场增速</strong>：+28% YoY，女性运动市场爆发</li>
+<li><strong>核心机会</strong>：热带气候运动装备+亚洲版型+运动内衣</li>
+<li><strong>竞争度</strong>：低（3.2/10），零认证门槛</li>
+<li><strong>关键成功因素</strong>：透气速干、亚洲版型、静音设计</li>
+</ul>
+<h4 id="8010">🕌 穆斯林时尚（综合 8.0/10）</h4>
+<ul>
+<li><strong>市场增速</strong>：+30% YoY，全球最大穆斯林市场</li>
+<li><strong>核心机会</strong>：穆斯林运动服饰（+40%）、中端 Hijab</li>
+<li><strong>竞争度</strong>：中（3.8/10），文化敏感性高</li>
+<li><strong>关键成功因素</strong>：透气面料、防滑设计、Halal 认证</li>
+</ul>
+<hr />
+<h2 id="_8">三、搜索热点分析</h2>
+<h3 id="31">3.1 搜索语言特征</h3>
+<table>
+<thead>
+<tr>
+<th>搜索语言</th>
+<th style="text-align: center;">占比</th>
+<th>策略意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>印尼语（Bahasa Indonesia）</strong></td>
+<td style="text-align: center;"><strong>80-85%</strong></td>
+<td><strong>绝对主力</strong>，所有关键词策略以印尼语为核心</td>
+</tr>
+<tr>
+<td>英语</td>
+<td style="text-align: center;">10-15%</td>
+<td>主要用于电子/科技/国际品牌</td>
+</tr>
+</tbody>
+</table>
+<p><strong>⚠️ 核心启示</strong>：印尼语搜索量是英文的 2-10 倍。纯英文关键词策略在印尼会丢失 80%+ 搜索量。</p>
+<h3 id="32-top-5">3.2 高价值关键词矩阵（每品类 Top 5）</h3>
+<h4 id="_9">🐾 宠物用品</h4>
+<table>
+<thead>
+<tr>
+<th>关键词</th>
+<th style="text-align: center;">月搜索量</th>
+<th style="text-align: center;">竞争度</th>
+<th style="text-align: center;">趋势</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>makanan anjing premium</td>
+<td style="text-align: center;">8-12K</td>
+<td style="text-align: center;">低</td>
+<td style="text-align: center;">⬆</td>
+</tr>
+<tr>
+<td>makanan kucing kitten</td>
+<td style="text-align: center;">6-10K</td>
+<td style="text-align: center;">低</td>
+<td style="text-align: center;">⬆</td>
+</tr>
+<tr>
+<td><strong>makanan halal untuk hewan</strong></td>
+<td style="text-align: center;">3-6K</td>
+<td style="text-align: center;"><strong>低</strong></td>
+<td style="text-align: center;">⬆⬆</td>
+</tr>
+<tr>
+<td>automatic pet feeder</td>
+<td style="text-align: center;">2-5K</td>
+<td style="text-align: center;">低</td>
+<td style="text-align: center;">⬆⬆</td>
+</tr>
+<tr>
+<td>mainan kucing interaktif</td>
+<td style="text-align: center;">4-7K</td>
+<td style="text-align: center;">低</td>
+<td style="text-align: center;">⬆</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_10">🏠 家居收纳</h4>
+<table>
+<thead>
+<tr>
+<th>关键词</th>
+<th style="text-align: center;">月搜索量</th>
+<th style="text-align: center;">竞争度</th>
+<th style="text-align: center;">趋势</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>kotak penyimpanan serbaguna</td>
+<td style="text-align: center;">6-10K</td>
+<td style="text-align: center;">低</td>
+<td style="text-align: center;">⬆</td>
+</tr>
+<tr>
+<td>rak penyimpanan dapur stainless</td>
+<td style="text-align: center;">4-7K</td>
+<td style="text-align: center;">低</td>
+<td style="text-align: center;">⬆</td>
+</tr>
+<tr>
+<td>vacuum storage bag</td>
+<td style="text-align: center;">3-6K</td>
+<td style="text-align: center;">低</td>
+<td style="text-align: center;">⬆⬆</td>
+</tr>
+<tr>
+<td>organizer kamar mandi anti karat</td>
+<td style="text-align: center;">2-4K</td>
+<td style="text-align: center;">低</td>
+<td style="text-align: center;">⬆</td>
+</tr>
+<tr>
+<td>kotak penyimpanan kain</td>
+<td style="text-align: center;">2-4K</td>
+<td style="text-align: center;">低</td>
+<td style="text-align: center;">⬆</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_11">🔋 消费电子配件</h4>
+<table>
+<thead>
+<tr>
+<th>关键词</th>
+<th style="text-align: center;">月搜索量</th>
+<th style="text-align: center;">竞争度</th>
+<th style="text-align: center;">趋势</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>casing hp anti air</td>
+<td style="text-align: center;">8-12K</td>
+<td style="text-align: center;">中</td>
+<td style="text-align: center;">⬆</td>
+</tr>
+<tr>
+<td>power bank slim</td>
+<td style="text-align: center;">5-8K</td>
+<td style="text-align: center;">低</td>
+<td style="text-align: center;">⬆</td>
+</tr>
+<tr>
+<td>wireless charger</td>
+<td style="text-align: center;">5-10K</td>
+<td style="text-align: center;">低</td>
+<td style="text-align: center;">⬆⬆</td>
+</tr>
+<tr>
+<td>earphone noise cancelling</td>
+<td style="text-align: center;">3-6K</td>
+<td style="text-align: center;">低</td>
+<td style="text-align: center;">⬆⬆</td>
+</tr>
+<tr>
+<td>lampu belajar LED</td>
+<td style="text-align: center;">6-12K</td>
+<td style="text-align: center;">低</td>
+<td style="text-align: center;">⬆</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_12">🏋️ 运动健身</h4>
+<table>
+<thead>
+<tr>
+<th>关键词</th>
+<th style="text-align: center;">月搜索量</th>
+<th style="text-align: center;">竞争度</th>
+<th style="text-align: center;">趋势</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>matras yoga tebal</td>
+<td style="text-align: center;">5-8K</td>
+<td style="text-align: center;">低</td>
+<td style="text-align: center;">⬆</td>
+</tr>
+<tr>
+<td>resistance band set</td>
+<td style="text-align: center;">4-6K</td>
+<td style="text-align: center;">低</td>
+<td style="text-align: center;">⬆⬆</td>
+</tr>
+<tr>
+<td>massage gun mini</td>
+<td style="text-align: center;">2-4K</td>
+<td style="text-align: center;">低</td>
+<td style="text-align: center;">⬆⬆</td>
+</tr>
+<tr>
+<td>sepatu lari wanita</td>
+<td style="text-align: center;">3-5K</td>
+<td style="text-align: center;">中</td>
+<td style="text-align: center;">⬆</td>
+</tr>
+<tr>
+<td>alat fitness lipat</td>
+<td style="text-align: center;">2-4K</td>
+<td style="text-align: center;">低</td>
+<td style="text-align: center;">⬆⬆</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_13">🕌 穆斯林时尚</h4>
+<table>
+<thead>
+<tr>
+<th>关键词</th>
+<th style="text-align: center;">月搜索量</th>
+<th style="text-align: center;">竞争度</th>
+<th style="text-align: center;">趋势</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hijab sport anti air</td>
+<td style="text-align: center;">4-7K</td>
+<td style="text-align: center;">低</td>
+<td style="text-align: center;">⬆⬆</td>
+</tr>
+<tr>
+<td>mukena travel praktis</td>
+<td style="text-align: center;">3-6K</td>
+<td style="text-align: center;">低</td>
+<td style="text-align: center;">⬆⬆</td>
+</tr>
+<tr>
+<td>gamis kantor modern</td>
+<td style="text-align: center;">3-5K</td>
+<td style="text-align: center;">低</td>
+<td style="text-align: center;">⬆</td>
+</tr>
+<tr>
+<td>hijab premium silk</td>
+<td style="text-align: center;">2-4K</td>
+<td style="text-align: center;">低</td>
+<td style="text-align: center;">⬆</td>
+</tr>
+<tr>
+<td>mukena sutra cantik</td>
+<td style="text-align: center;">2-4K</td>
+<td style="text-align: center;">低</td>
+<td style="text-align: center;">⬆</td>
+</tr>
+</tbody>
+</table>
+<h3 id="33">3.3 跨品类修饰词</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">排名</th>
+<th>印尼语修饰词</th>
+<th>英语对应</th>
+<th>覆盖品类</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td><strong>murah</strong></td>
+<td>cheap/affordable</td>
+<td>全品类</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td><strong>halal</strong></td>
+<td>halal</td>
+<td>全品类（印尼独特）</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td>promo</td>
+<td>promotion</td>
+<td>全品类</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td>gratis ongkir</td>
+<td>free shipping</td>
+<td>全品类</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td>rekomendasi</td>
+<td>recommendation</td>
+<td>全品类</td>
+</tr>
+</tbody>
+</table>
+<h3 id="34">3.4 季节性日历</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">月份</th>
+<th>主要购物事件</th>
+<th style="text-align: center;">峰值系数</th>
+<th>行动建议</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">3-4月</td>
+<td><strong>Ramadan/Lebaran</strong></td>
+<td style="text-align: center;"><strong>2.0-3.0x</strong></td>
+<td><strong>全年最大峰值，提前 6-8 周布局</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">6月</td>
+<td>6.18 大促</td>
+<td style="text-align: center;">1.3-1.5x</td>
+<td>电子/美妆专题</td>
+</tr>
+<tr>
+<td style="text-align: center;">9月</td>
+<td>9.9 大促</td>
+<td style="text-align: center;">1.4-1.6x</td>
+<td>提前 4 周提价</td>
+</tr>
+<tr>
+<td style="text-align: center;">11月</td>
+<td><strong>11.11 双11</strong></td>
+<td style="text-align: center;"><strong>1.8-2.2x</strong></td>
+<td><strong>全年第二大峰值</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">12月</td>
+<td><strong>12.12 + 圣诞</strong></td>
+<td style="text-align: center;"><strong>1.6-2.0x</strong></td>
+<td>年终大促</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_14">四、舆情趋势分析</h2>
+<h3 id="41">4.1 社交媒体平台格局</h3>
+<table>
+<thead>
+<tr>
+<th>平台</th>
+<th>月活/渗透率</th>
+<th>电商功能</th>
+<th>核心人群</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TikTok</strong></td>
+<td>~8000万+</td>
+<td>TikTok Shop/直播</td>
+<td>16-35岁</td>
+</tr>
+<tr>
+<td><strong>Instagram</strong></td>
+<td>~9000万+</td>
+<td>Shopping/Reels</td>
+<td>18-35岁</td>
+</tr>
+<tr>
+<td><strong>YouTube</strong></td>
+<td>~8000万+</td>
+<td>Shopping/长视频</td>
+<td>18-40岁</td>
+</tr>
+<tr>
+<td><strong>WhatsApp</strong></td>
+<td>~1亿+</td>
+<td>私域运营/客服</td>
+<td>全年龄段</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42">4.2 品类社交热度</h3>
+<table>
+<thead>
+<tr>
+<th>品类</th>
+<th style="text-align: center;">TikTok</th>
+<th style="text-align: center;">Instagram</th>
+<th style="text-align: center;">YouTube</th>
+<th>首选平台</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🐾 宠物用品</td>
+<td style="text-align: center;">🔥🔥🔥🔥🔥</td>
+<td style="text-align: center;">🔥🔥🔥🔥</td>
+<td style="text-align: center;">🔥🔥🔥</td>
+<td>TikTok+IG</td>
+</tr>
+<tr>
+<td>🏠 家居收纳</td>
+<td style="text-align: center;">🔥🔥🔥🔥🔥</td>
+<td style="text-align: center;">🔥🔥🔥🔥🔥</td>
+<td style="text-align: center;">🔥🔥🔥🔥</td>
+<td>TikTok+IG</td>
+</tr>
+<tr>
+<td>🔋 电子配件</td>
+<td style="text-align: center;">🔥🔥🔥🔥</td>
+<td style="text-align: center;">🔥🔥🔥</td>
+<td style="text-align: center;">🔥🔥🔥🔥🔥</td>
+<td>YouTube+TikTok</td>
+</tr>
+<tr>
+<td>🏋️ 运动装备</td>
+<td style="text-align: center;">🔥🔥🔥🔥🔥</td>
+<td style="text-align: center;">🔥🔥🔥🔥</td>
+<td style="text-align: center;">🔥🔥🔥🔥</td>
+<td>TikTok+IG</td>
+</tr>
+<tr>
+<td>🕌 穆斯林时尚</td>
+<td style="text-align: center;">🔥🔥🔥🔥🔥</td>
+<td style="text-align: center;">🔥🔥🔥🔥🔥</td>
+<td style="text-align: center;">🔥🔥🔥🔥</td>
+<td>TikTok+IG</td>
+</tr>
+</tbody>
+</table>
+<h3 id="43-kolkoc">4.3 KOL/KOC 影响力格局</h3>
+<table>
+<thead>
+<tr>
+<th>网红层级</th>
+<th style="text-align: center;">粉丝量</th>
+<th style="text-align: center;">信任度</th>
+<th style="text-align: center;">转化率</th>
+<th style="text-align: center;">建议预算占比</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>头部KOL</strong></td>
+<td style="text-align: center;">&gt;100万</td>
+<td style="text-align: center;">中</td>
+<td style="text-align: center;">1-3%</td>
+<td style="text-align: center;">10%</td>
+</tr>
+<tr>
+<td><strong>中腰部KOL</strong></td>
+<td style="text-align: center;">10-100万</td>
+<td style="text-align: center;">中高</td>
+<td style="text-align: center;">3-5%</td>
+<td style="text-align: center;">20%</td>
+</tr>
+<tr>
+<td><strong>微网红</strong></td>
+<td style="text-align: center;">1-10万</td>
+<td style="text-align: center;">高</td>
+<td style="text-align: center;">5-8%</td>
+<td style="text-align: center;">30%</td>
+</tr>
+<tr>
+<td><strong>纳米KOC</strong></td>
+<td style="text-align: center;">&lt;1万</td>
+<td style="text-align: center;"><strong>最高</strong></td>
+<td style="text-align: center;"><strong>8-15%</strong></td>
+<td style="text-align: center;"><strong>40%</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>📌 <strong>核心洞察</strong>：印尼 KOC（5k-50k粉）信任度 &gt; 头部KOL，真实使用体验内容转化率远高于品牌广告。</p>
+</blockquote>
+<h3 id="44">4.4 消费者痛点汇总</h3>
+<table>
+<thead>
+<tr>
+<th>品类</th>
+<th>#1 痛点</th>
+<th>#2 痛点</th>
+<th>#3 痛点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🐾 宠物</td>
+<td>智能设备质量差</td>
+<td>App 无印尼语</td>
+<td>清真宠物食品无供给</td>
+</tr>
+<tr>
+<td>🏠 收纳</td>
+<td>尺寸不适合印尼户型</td>
+<td>潮湿气候发霉</td>
+<td>中高端价格过高</td>
+</tr>
+<tr>
+<td>🔋 电子</td>
+<td>假货/山寨泛滥</td>
+<td>兼容性问题</td>
+<td>售后无保障</td>
+</tr>
+<tr>
+<td>🏋️ 运动</td>
+<td>瑜伽垫气味大</td>
+<td>防滑不足</td>
+<td>尺码偏大</td>
+</tr>
+<tr>
+<td>🕌 时尚</td>
+<td>运动 Hijab 不透气</td>
+<td>Hijab 易滑落</td>
+<td>面料色牢度差</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_15">五、竞品矩阵分析</h2>
+<h3 id="51">5.1 各品类最大市场空白</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">品类</th>
+<th>🥇 最大空白机会</th>
+<th style="text-align: center;">目标价格(IDR)</th>
+<th style="text-align: center;">竞争度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">🐾 <strong>宠物</strong></td>
+<td>Halal 认证宠物零食</td>
+<td style="text-align: center;">30-80K</td>
+<td style="text-align: center;">🟡 低</td>
+</tr>
+<tr>
+<td style="text-align: center;">🏠 <strong>收纳</strong></td>
+<td>印尼公寓适配+防潮+免打孔</td>
+<td style="text-align: center;">80-250K</td>
+<td style="text-align: center;">🟢 极低</td>
+</tr>
+<tr>
+<td style="text-align: center;">🔋 <strong>电子</strong></td>
+<td>手机摄影配件+MagSafe</td>
+<td style="text-align: center;">100-350K</td>
+<td style="text-align: center;">🟡 中</td>
+</tr>
+<tr>
+<td style="text-align: center;">🏋️ <strong>运动</strong></td>
+<td>热带气候运动装备+亚洲版型</td>
+<td style="text-align: center;">99-299K</td>
+<td style="text-align: center;">🟡 低</td>
+</tr>
+<tr>
+<td style="text-align: center;">🕌 <strong>时尚</strong></td>
+<td>穆斯林运动服饰+中端 Hijab</td>
+<td style="text-align: center;">99-299K</td>
+<td style="text-align: center;">🟡 低</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52">5.2 竞品品牌社交媒体表现</h3>
+<table>
+<thead>
+<tr>
+<th>品类</th>
+<th>品牌</th>
+<th style="text-align: center;">TikTok粉丝</th>
+<th style="text-align: center;">IG粉丝</th>
+<th>策略</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🐾 宠物</td>
+<td>Whiskas ID</td>
+<td style="text-align: center;">50万+</td>
+<td style="text-align: center;">30万+</td>
+<td>KOC矩阵+兽医背书</td>
+</tr>
+<tr>
+<td>🏠 家居</td>
+<td>IKEA Indonesia</td>
+<td style="text-align: center;">100万+</td>
+<td style="text-align: center;">80万+</td>
+<td>Room Makeover+UGC</td>
+</tr>
+<tr>
+<td>🕌 时尚</td>
+<td>Zoya</td>
+<td style="text-align: center;">300万+</td>
+<td style="text-align: center;">250万+</td>
+<td>全场景+KOC矩阵</td>
+</tr>
+<tr>
+<td>💄 美妆</td>
+<td>Wardah</td>
+<td style="text-align: center;">500万+</td>
+<td style="text-align: center;">400万+</td>
+<td>本土第一+Halal认证</td>
+</tr>
+<tr>
+<td>🏋️ 运动</td>
+<td>Decathlon ID</td>
+<td style="text-align: center;">80万+</td>
+<td style="text-align: center;">60万+</td>
+<td>体验店+全品类</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="top-10">六、Top 10 推荐产品</h2>
+<h3 id="p0">P0 级（立即启动）</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">#</th>
+<th>产品</th>
+<th>品类</th>
+<th style="text-align: center;">目标价格(IDR)</th>
+<th style="text-align: center;">目标价格(USD)</th>
+<th style="text-align: center;">月销量预估</th>
+<th style="text-align: center;">毛利率</th>
+<th>核心卖点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td><strong>Halal 认证宠物零食</strong></td>
+<td>🐾</td>
+<td style="text-align: center;">30-80K</td>
+<td style="text-align: center;">$2-5</td>
+<td style="text-align: center;">5,000+</td>
+<td style="text-align: center;">50%+</td>
+<td>印尼 2.3 亿穆斯林，Halal 宠物食品几乎空白</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td><strong>印尼公寓适配防潮收纳盒</strong></td>
+<td>🏠</td>
+<td style="text-align: center;">80-250K</td>
+<td style="text-align: center;">$5-16</td>
+<td style="text-align: center;">10,000+</td>
+<td style="text-align: center;">55%+</td>
+<td>公寓尺寸+防潮+免打孔</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td><strong>穆斯林运动 Hijab</strong></td>
+<td>🕌</td>
+<td style="text-align: center;">99-299K</td>
+<td style="text-align: center;">$6-19</td>
+<td style="text-align: center;">8,000+</td>
+<td style="text-align: center;">55%+</td>
+<td>透气+防滑+速干，增速+40%</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td><strong>热带气候运动T恤</strong></td>
+<td>🏋️</td>
+<td style="text-align: center;">99-299K</td>
+<td style="text-align: center;">$6-19</td>
+<td style="text-align: center;">10,000+</td>
+<td style="text-align: center;">50%+</td>
+<td>速干+透气+UPF50+，亚洲版型</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td><strong>手机摄影配件套装</strong></td>
+<td>🔋</td>
+<td style="text-align: center;">100-350K</td>
+<td style="text-align: center;">$6-22</td>
+<td style="text-align: center;">15,000+</td>
+<td style="text-align: center;">45%+</td>
+<td>手机镜头+补光灯+支架</td>
+</tr>
+</tbody>
+</table>
+<h3 id="p1-3">P1 级（3个月内启动）</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">#</th>
+<th>产品</th>
+<th>品类</th>
+<th style="text-align: center;">目标价格(IDR)</th>
+<th>核心卖点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">6</td>
+<td>中端天然无谷猫粮</td>
+<td>🐾</td>
+<td style="text-align: center;">80-200K</td>
+<td>填补 Royal Canin 含谷物空白</td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td>免打孔收纳系列</td>
+<td>🏠</td>
+<td style="text-align: center;">30-120K</td>
+<td>印尼公寓不允许打孔</td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td>亚洲版型运动内衣</td>
+<td>🏋️</td>
+<td style="text-align: center;">79-249K</td>
+<td>解决国际品牌尺码偏大痛点</td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td>中端时尚 Hijab</td>
+<td>🕌</td>
+<td style="text-align: center;">99-249K</td>
+<td>设计感+透气面料+多场景</td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td>MagSafe 兼容配件</td>
+<td>🔋</td>
+<td style="text-align: center;">100-350K</td>
+<td>Apple 生态衍生需求</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_16">七、成本与合规分析</h2>
+<h3 id="71">7.1 成本结构框架</h3>
+<table>
+<thead>
+<tr>
+<th>成本项</th>
+<th style="text-align: center;">占比</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>采购成本</td>
+<td style="text-align: center;">30-40%</td>
+<td>中国供应链优势</td>
+</tr>
+<tr>
+<td>头程物流</td>
+<td style="text-align: center;">10-15%</td>
+<td>海运/空运选择</td>
+</tr>
+<tr>
+<td>平台佣金</td>
+<td style="text-align: center;">5-15%</td>
+<td>各平台不同</td>
+</tr>
+<tr>
+<td>广告费</td>
+<td style="text-align: center;">10-20%</td>
+<td>ACOS 目标 &lt;30%</td>
+</tr>
+<tr>
+<td>税费</td>
+<td style="text-align: center;">11-26%</td>
+<td>PPN 11% + 进口税 0-15%</td>
+</tr>
+<tr>
+<td>退货损耗</td>
+<td style="text-align: center;">3-5%</td>
+<td>穆斯林时尚较高</td>
+</tr>
+</tbody>
+</table>
+<h3 id="72">7.2 合规要求</h3>
+<table>
+<thead>
+<tr>
+<th>品类</th>
+<th>关键认证</th>
+<th style="text-align: center;">周期</th>
+<th>成本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🐾 宠物食品</td>
+<td>MOA 许可</td>
+<td style="text-align: center;">2-4个月</td>
+<td>中</td>
+</tr>
+<tr>
+<td>🐾 宠物零食</td>
+<td>Halal（推荐）</td>
+<td style="text-align: center;">6-18个月</td>
+<td>中</td>
+</tr>
+<tr>
+<td>🕌 穆斯林时尚</td>
+<td>MUI Halal（推荐）</td>
+<td style="text-align: center;">6-18个月</td>
+<td>中</td>
+</tr>
+<tr>
+<td>💄 美妆</td>
+<td><strong>BPOM + Halal（强制）</strong></td>
+<td style="text-align: center;"><strong>6-12个月</strong></td>
+<td><strong>高</strong></td>
+</tr>
+<tr>
+<td>🔋 电子</td>
+<td>SNI（部分）</td>
+<td style="text-align: center;">3-6个月</td>
+<td>低</td>
+</tr>
+<tr>
+<td>🏠 收纳</td>
+<td>零认证</td>
+<td style="text-align: center;">—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>🏋️ 运动</td>
+<td>零认证</td>
+<td style="text-align: center;">—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_17">八、风险提示与行动建议</h2>
+<h3 id="81">8.1 风险矩阵</h3>
+<table>
+<thead>
+<tr>
+<th>风险</th>
+<th style="text-align: center;">严重程度</th>
+<th style="text-align: center;">概率</th>
+<th>缓解措施</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Halal 认证周期长</strong></td>
+<td style="text-align: center;">🔴 高</td>
+<td style="text-align: center;">高</td>
+<td>提前 6-18 个月启动</td>
+</tr>
+<tr>
+<td><strong>PMK 4/2025 免税门槛降低</strong></td>
+<td style="text-align: center;">🟡 中</td>
+<td style="text-align: center;">高</td>
+<td>考虑本地仓备货</td>
+</tr>
+<tr>
+<td><strong>假货信任危机</strong></td>
+<td style="text-align: center;">🔴 高</td>
+<td style="text-align: center;">中</td>
+<td>官方店+正品认证</td>
+</tr>
+<tr>
+<td><strong>物流挑战（17,000+岛屿）</strong></td>
+<td style="text-align: center;">🟡 中</td>
+<td style="text-align: center;">高</td>
+<td>轻小件优先+平台物流</td>
+</tr>
+<tr>
+<td><strong>汇率波动</strong></td>
+<td style="text-align: center;">🟡 中</td>
+<td style="text-align: center;">中</td>
+<td>本地定价+锁汇</td>
+</tr>
+<tr>
+<td><strong>TikTok 政策风险</strong></td>
+<td style="text-align: center;">🟡 中</td>
+<td style="text-align: center;">低</td>
+<td>多平台布局</td>
+</tr>
+</tbody>
+</table>
+<h3 id="82">8.2 行动建议</h3>
+<h4 id="1-2">立即行动（第 1-2 周）</h4>
+<ol>
+<li>✅ 启动 Halal 认证申请（宠物零食 + 穆斯林时尚）</li>
+<li>✅ 注册 Tokopedia + Shopee 卖家账号</li>
+<li>✅ 签约 10-20 个纳米 KOC（宠物/家居/运动品类）</li>
+<li>✅ 开发印尼语产品标签和说明书</li>
+</ol>
+<h4 id="3-4">短期行动（第 3-4 周）</h4>
+<ol start="5">
+<li>✅ 上架首批产品（家居收纳 + 运动装备，零认证门槛）</li>
+<li>✅ 启动 TikTok 短视频内容制作</li>
+<li>✅ 部署 Google Ads 搜索广告（P0 关键词）</li>
+<li>✅ 建立 WhatsApp 客服体系</li>
+</ol>
+<h4 id="2-3">中期行动（第 2-3 月）</h4>
+<ol start="9">
+<li>✅ 扩展至宠物用品（Halal 认证到位后）</li>
+<li>✅ 启动穆斯林时尚品类</li>
+<li>✅ 评估海外仓布局（应对 PMK 4/2025）</li>
+<li>✅ 建立品牌旗舰店</li>
+</ol>
+<h3 id="83">8.3 预算分配建议</h3>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th style="text-align: center;">占比</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>产品采购</td>
+<td style="text-align: center;">40%</td>
+<td>首批库存</td>
+</tr>
+<tr>
+<td>营销推广</td>
+<td style="text-align: center;">25%</td>
+<td>KOL+广告+内容</td>
+</tr>
+<tr>
+<td>物流仓储</td>
+<td style="text-align: center;">15%</td>
+<td>头程+本地仓</td>
+</tr>
+<tr>
+<td>认证合规</td>
+<td style="text-align: center;">10%</td>
+<td>Halal+BPOM+SNI</td>
+</tr>
+<tr>
+<td>运营储备</td>
+<td style="text-align: center;">10%</td>
+<td>客服+售后+应急</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_18">附录</h2>
+<h3 id="_19">数据来源</h3>
+<ol>
+<li>DataReportal — Digital 2025: Indonesia</li>
+<li>Similarweb — Top Websites in Indonesia Apr 2026</li>
+<li>Google-Temasek-Bain — e-Conomy SEA 2024</li>
+<li>Shopee/Tokopedia/Lazada 站内数据</li>
+<li>Compas.co.id、Mordor Intelligence</li>
+<li>TGM Research — Pet Care Insights Indonesia 2026</li>
+</ol>
+<h3 id="_20">详细报告</h3>
+<table>
+<thead>
+<tr>
+<th>报告</th>
+<th>路径</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>市场宏观画像</td>
+<td><code>reports/indonesia-market-overview-2026-06-13.md</code></td>
+</tr>
+<tr>
+<td>品类优先级矩阵</td>
+<td><code>reports/indonesia-category-matrix-2026-06-13.md</code></td>
+</tr>
+<tr>
+<td>搜索热点分析</td>
+<td><code>reports/indonesia-search-trends-2026-06-13.md</code></td>
+</tr>
+<tr>
+<td>舆情趋势分析</td>
+<td><code>reports/indonesia-sentiment-analysis-2026-06-13.md</code></td>
+</tr>
+<tr>
+<td>竞品矩阵分析</td>
+<td><code>reports/indonesia-competitor-matrix-2026-06-13.md</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>报告生成时间：2026-06-13 14:30 (Asia/Shanghai)</em><br />
+<em>OWL — 跨境电商运营专家</em><br />
+<em>本报告由 Emma XIE（普罗米修斯）编制，数据截至 2026年6月13日</em></p>
+</body>
+</html>

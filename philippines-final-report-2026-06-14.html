@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>philippines-final-report-2026-06-14</title>
+    <style>
+@page {
+    size: A4;
+    margin: 2cm 2.5cm;
+    @bottom-center {
+        content: counter(page);
+        font-size: 9pt;
+        color: #999;
+    }
+}
+
+/* 强制使用 Noto Sans CJK SC，绕过 Pango 字体匹配的不确定性 */
+@font-face {
+    font-family: 'CJK';
+    src: url('/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'CJK';
+    src: url('/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'CJK';
+    src: url('/usr/share/fonts/opentype/noto/NotoSerifCJK-Regular.ttc') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+body {
+    font-family: 'CJK', 'Noto Sans CJK SC', sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.8;
+    color: #1a1a1a;
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 20pt;
+    color: #1a1a2e;
+    border-bottom: 3px solid #e94560;
+    padding-bottom: 8pt;
+    margin-top: 24pt;
+    page-break-before: always;
+}
+
+h1:first-of-type {
+    page-break-before: avoid;
+}
+
+h2 {
+    font-size: 15pt;
+    color: #16213e;
+    border-bottom: 1.5px solid #0f3460;
+    padding-bottom: 5pt;
+    margin-top: 18pt;
+}
+
+h3 {
+    font-size: 12.5pt;
+    color: #0f3460;
+    margin-top: 14pt;
+}
+
+h4 {
+    font-size: 11pt;
+    color: #333;
+    margin-top: 10pt;
+}
+
+/* 表格样式 - 关键修复 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12pt 0;
+    font-size: 9.5pt;
+    page-break-inside: avoid;
+    display: table;
+}
+
+thead {
+    display: table-header-group;
+}
+
+th {
+    background-color: #16213e;
+    color: white;
+    padding: 8px 10px;
+    text-align: left;
+    font-weight: 600;
+    border: 1px solid #0f3460;
+    font-size: 9pt;
+}
+
+td {
+    padding: 7px 10px;
+    border: 1px solid #ddd;
+    vertical-align: top;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tr:hover {
+    background-color: #e8f4f8;
+}
+
+/* 代码块 */
+code {
+    font-family: 'CJK', "Noto Sans Mono CJK SC", monospace;
+    font-size: 8.5pt;
+    background: #f4f4f4;
+    padding: 2px 5px;
+    border-radius: 3px;
+    border: 1px solid #e0e0e0;
+}
+
+pre {
+    background: #1e1e2e;
+    color: #cdd6f4;
+    padding: 12pt;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-size: 8.5pt;
+    line-height: 1.6;
+    margin: 10pt 0;
+    page-break-inside: avoid;
+}
+
+pre code {
+    background: none;
+    border: none;
+    color: inherit;
+    padding: 0;
+}
+
+/* 引用块 */
+blockquote {
+    border-left: 4px solid #e94560;
+    margin: 10pt 0;
+    padding: 8pt 14pt;
+    background: #fff5f5;
+    color: #666;
+    font-size: 9.5pt;
+}
+
+/* 列表 */
+ul, ol {
+    padding-left: 20pt;
+    margin: 6pt 0;
+}
+
+li {
+    margin: 3pt 0;
+}
+
+li > ul, li > ol {
+    margin: 2pt 0;
+}
+
+/* 任务列表 */
+input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+/* 链接 */
+a {
+    color: #0f3460;
+    text-decoration: none;
+}
+
+/* 水平线 */
+hr {
+    border: none;
+    border-top: 1.5px solid #e0e0e0;
+    margin: 16pt 0;
+}
+
+/* 强调 */
+strong {
+    color: #1a1a2e;
+}
+
+em {
+    color: #555;
+}
+
+/* emoji 处理 */
+img.emoji {
+    height: 1em;
+    width: 1em;
+    vertical-align: middle;
+}
+
+/* 警告/提示块 (用 blockquote 变体) */
+blockquote p:first-child strong {
+    color: #e94560;
+}
+
+/* Mermaid 图表占位 - 跳过不支持的图表 */
+pre code.language-mermaid {
+    display: none;
+}
+</style>
+</head>
+<body>
+<h1 id="_1">🇵🇭 菲律宾市场最终综合报告 — 选品决策与行动计划</h1>
+<blockquote>
+<p><strong>报告日期</strong>：2026-06-14<br />
+<strong>分析周期</strong>：第 1-10 步全量数据汇总<br />
+<strong>数据来源</strong>：philippines-market-overview、category-matrix、search-trends、competitor-matrix 等 10 步报告<br />
+<strong>语言</strong>：中文</p>
+</blockquote>
+<hr />
+<h2 id="executive-summary">摘要（Executive Summary）</h2>
+<p>经过 10 步系统性分析（宏观市场 → 品类矩阵 → 搜索热点 → 竞品矩阵 → 成本测算），本报告汇总全部数据，给出菲律宾跨境电商的 <strong>最终 Top 3 推荐品类</strong>、<strong>具体 SKU 选品建议</strong>、<strong>90 天上市行动计划</strong>、<strong>首年营收预测</strong>和<strong>合规路线图</strong>。</p>
+<p><strong>三大核心结论：</strong></p>
+<ol>
+<li><strong>🥇 保健品/膳食补充剂是评分最高的品类（8.15/10）</strong> — 搜索量年增 4300%、轻小件物流优势、FDA 注册是护城河也是壁垒</li>
+<li><strong>🥈 美妆护肤品是 TikTok 赋能最强的品类（8.00/10）</strong> — TikTok Shop 美妆 GMV 占比 28%（全平台最高），直播转化链路最短</li>
+<li><strong>🥉 时尚服饰是门槛最低、起量最快的品类（7.60/10）</strong> — 全平台第一大品类（27% GMV）、无强制认证、Shapewear +5400% 增长</li>
+</ol>
+<p><strong>首年营收预测（3 品类合计）：</strong></p>
+<table>
+<thead>
+<tr>
+<th>情景</th>
+<th style="text-align: center;">保守</th>
+<th style="text-align: center;">中性</th>
+<th style="text-align: center;">乐观</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>首年 GMV</td>
+<td style="text-align: center;">US$45 万</td>
+<td style="text-align: center;">US$85 万</td>
+<td style="text-align: center;">US$150 万</td>
+</tr>
+<tr>
+<td>毛利率</td>
+<td style="text-align: center;">35%</td>
+<td style="text-align: center;">42%</td>
+<td style="text-align: center;">50%</td>
+</tr>
+<tr>
+<td>净利（扣除所有成本后）</td>
+<td style="text-align: center;">US$8 万</td>
+<td style="text-align: center;">US$22 万</td>
+<td style="text-align: center;">US$48 万</td>
+</tr>
+<tr>
+<td>ROI</td>
+<td style="text-align: center;">80%</td>
+<td style="text-align: center;">120%</td>
+<td style="text-align: center;">180%</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="top-3-sku">第一部分：Top 3 推荐品类与 SKU 选品建议</h2>
+<h3 id="_2">🥇 第一推荐：保健品/膳食补充剂</h3>
+<p><strong>推荐评分：8.15/10 | 🔵🔵 超强蓝海</strong></p>
+<h4 id="_3">推荐理由</h4>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>数据支撑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>市场容量</td>
+<td>2024 年 US$46.1 亿，预计 2033 年 US$75 亿（CAGR 5.55%）</td>
+</tr>
+<tr>
+<td>增长率</td>
+<td>草本补充剂搜索量年增 <strong>4300%</strong>（Godaddy 数据），胶原蛋白软糖 +50%+</td>
+</tr>
+<tr>
+<td>竞争度</td>
+<td>2.5/5（中低），中国卖家渗透率低于印尼/越南</td>
+</tr>
+<tr>
+<td>利润潜力</td>
+<td>毛利率 <strong>40-60%</strong>，FDA 注册后品牌溢价能力强</td>
+</tr>
+<tr>
+<td>物流适配</td>
+<td>⭐⭐⭐⭐⭐（轻小件，单件重量 &lt;200g，物流成本极低）</td>
+</tr>
+<tr>
+<td>TikTok 适配</td>
+<td>高 — 健康科普短视频种草 + 直播转化</td>
+</tr>
+</tbody>
+</table>
+<h4 id="sku">具体 SKU 选品建议</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">优先级</th>
+<th>SKU</th>
+<th>规格建议</th>
+<th style="text-align: center;">目标进价(USD)</th>
+<th style="text-align: center;">目标售价(PHP)</th>
+<th style="text-align: center;">目标售价(USD)</th>
+<th style="text-align: center;">预估毛利率</th>
+<th style="text-align: center;">认证要求</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">P0</td>
+<td><strong>胶原蛋白软糖</strong></td>
+<td>60粒/瓶，草莓/橙子味</td>
+<td style="text-align: center;">$2.5-4</td>
+<td style="text-align: center;">₱299-449</td>
+<td style="text-align: center;">$5.3-8.0</td>
+<td style="text-align: center;">55-65%</td>
+<td style="text-align: center;">FDA</td>
+</tr>
+<tr>
+<td style="text-align: center;">P0</td>
+<td><strong>益生菌+胶原蛋白复合</strong></td>
+<td>30粒/瓶，双效配方</td>
+<td style="text-align: center;">$3-5</td>
+<td style="text-align: center;">₱399-599</td>
+<td style="text-align: center;">$7.1-10.7</td>
+<td style="text-align: center;">50-60%</td>
+<td style="text-align: center;">FDA</td>
+</tr>
+<tr>
+<td style="text-align: center;">P1</td>
+<td><strong>草本免疫增强片</strong></td>
+<td>60片/瓶，Malunggay+Turmeric</td>
+<td style="text-align: center;">$1.5-3</td>
+<td style="text-align: center;">₱199-349</td>
+<td style="text-align: center;">$3.6-6.2</td>
+<td style="text-align: center;">45-55%</td>
+<td style="text-align: center;">FDA</td>
+</tr>
+<tr>
+<td style="text-align: center;">P1</td>
+<td><strong>女性综合维生素</strong></td>
+<td>90粒/瓶，铁+叶酸+维C</td>
+<td style="text-align: center;">$2-3.5</td>
+<td style="text-align: center;">₱249-399</td>
+<td style="text-align: center;">$4.4-7.1</td>
+<td style="text-align: center;">50-60%</td>
+<td style="text-align: center;">FDA</td>
+</tr>
+<tr>
+<td style="text-align: center;">P2</td>
+<td><strong>NMN 抗衰老胶囊</strong></td>
+<td>30粒/瓶，100mg</td>
+<td style="text-align: center;">$4-6</td>
+<td style="text-align: center;">₱499-749</td>
+<td style="text-align: center;">$8.9-13.4</td>
+<td style="text-align: center;">45-55%</td>
+<td style="text-align: center;">FDA</td>
+</tr>
+</tbody>
+</table>
+<p><strong>核心洞察</strong>：胶原蛋白软糖是"胶囊太大"痛点的直接解决方案，FDA 注册周期需 3-6 个月，<strong>必须立即启动</strong>。</p>
+<hr />
+<h3 id="_4">🥈 第二推荐：美妆护肤品</h3>
+<p><strong>推荐评分：8.00/10 | 🔵🔵 超强蓝海</strong></p>
+<h4 id="_5">推荐理由</h4>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>数据支撑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>市场容量</td>
+<td>2025 年护肤品 US$27 亿，预计 2034 年 US$51 亿（CAGR 7.5%）</td>
+</tr>
+<tr>
+<td>增长率</td>
+<td>敏感肌洁面 +800% 搜索增长，蜗牛黏液精华 +30%+</td>
+</tr>
+<tr>
+<td>竞争度</td>
+<td>3/5（中等），TikTok Shop 美妆占 28% GMV（全平台最高）</td>
+</tr>
+<tr>
+<td>利润潜力</td>
+<td>毛利率 <strong>50-70%</strong>，K-Beauty 信任溢价</td>
+</tr>
+<tr>
+<td>物流适配</td>
+<td>⭐⭐⭐⭐⭐（轻小件，单件重量 &lt;150g）</td>
+</tr>
+<tr>
+<td>TikTok 适配</td>
+<td><strong>极高（5.0/5.0）</strong> — 直播演示转化率最高品类</td>
+</tr>
+</tbody>
+</table>
+<h4 id="sku_1">具体 SKU 选品建议</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">优先级</th>
+<th>SKU</th>
+<th>规格建议</th>
+<th style="text-align: center;">目标进价(USD)</th>
+<th style="text-align: center;">目标售价(PHP)</th>
+<th style="text-align: center;">目标售价(USD)</th>
+<th style="text-align: center;">预估毛利率</th>
+<th style="text-align: center;">认证要求</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">P0</td>
+<td><strong>无白膜高SPF50+防晒霜</strong></td>
+<td>50ml，烟酰胺+透明质酸</td>
+<td style="text-align: center;">$2-3.5</td>
+<td style="text-align: center;">₱299-449</td>
+<td style="text-align: center;">$5.3-8.0</td>
+<td style="text-align: center;">55-65%</td>
+<td style="text-align: center;">FDA</td>
+</tr>
+<tr>
+<td style="text-align: center;">P0</td>
+<td><strong>K-Beauty 烟酰胺精华</strong></td>
+<td>30ml，10% 烟酰胺</td>
+<td style="text-align: center;">$2.5-4</td>
+<td style="text-align: center;">₱349-499</td>
+<td style="text-align: center;">$6.2-8.9</td>
+<td style="text-align: center;">50-60%</td>
+<td style="text-align: center;">FDA</td>
+</tr>
+<tr>
+<td style="text-align: center;">P1</td>
+<td><strong>蜗牛黏液修复精华</strong></td>
+<td>30ml，92% 蜗牛滤液</td>
+<td style="text-align: center;">$2-3</td>
+<td style="text-align: center;">₱299-399</td>
+<td style="text-align: center;">$5.3-7.1</td>
+<td style="text-align: center;">50-60%</td>
+<td style="text-align: center;">FDA</td>
+</tr>
+<tr>
+<td style="text-align: center;">P1</td>
+<td><strong>敏感肌温和洁面乳</strong></td>
+<td>150ml，pH5.5，氨基酸</td>
+<td style="text-align: center;">$1.5-2.5</td>
+<td style="text-align: center;">₱199-299</td>
+<td style="text-align: center;">$3.6-5.3</td>
+<td style="text-align: center;">50-60%</td>
+<td style="text-align: center;">FDA</td>
+</tr>
+<tr>
+<td style="text-align: center;">P2</td>
+<td><strong>防晒霜棒</strong></td>
+<td>22g，SPF50+，便携</td>
+<td style="text-align: center;">$2-3</td>
+<td style="text-align: center;">₱249-349</td>
+<td style="text-align: center;">$4.4-6.2</td>
+<td style="text-align: center;">55-65%</td>
+<td style="text-align: center;">FDA</td>
+</tr>
+</tbody>
+</table>
+<p><strong>核心洞察</strong>：菲律宾热带气候使防晒霜成为全年刚需（无季节波动），TikTok 直播演示 → 购买转化率远高于其他渠道。FDA 注册周期需 3-6 个月，<strong>必须立即启动</strong>。</p>
+<hr />
+<h3 id="_6">🥉 第三推荐：时尚服饰</h3>
+<p><strong>推荐评分：7.60/10 | 🔵🔵 超强蓝海</strong></p>
+<h4 id="_7">推荐理由</h4>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>数据支撑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>市场容量</td>
+<td>全平台第一大品类（27-28% GMV），69% 菲律宾人偏好在线购买</td>
+</tr>
+<tr>
+<td>增长率</td>
+<td>CAGR 4.97%，Shapewear 兴趣增长 <strong>+5400%</strong>，Camo 卫衣 +160%</td>
+</tr>
+<tr>
+<td>竞争度</td>
+<td>3.5/5（中等），Shopee 主导，价格战主要集中在 ₱99-199 区间</td>
+</tr>
+<tr>
+<td>利润潜力</td>
+<td>毛利率 <strong>30-50%</strong>，无认证壁垒</td>
+</tr>
+<tr>
+<td>物流适配</td>
+<td>⭐⭐⭐⭐⭐（轻小件，物流成本极低）</td>
+</tr>
+<tr>
+<td>TikTok 适配</td>
+<td>高（4.5/5.0）— 穿搭展示 + 直播带货</td>
+</tr>
+</tbody>
+</table>
+<h4 id="sku_2">具体 SKU 选品建议</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">优先级</th>
+<th>SKU</th>
+<th>规格建议</th>
+<th style="text-align: center;">目标进价(USD)</th>
+<th style="text-align: center;">目标售价(PHP)</th>
+<th style="text-align: center;">目标售价(USD)</th>
+<th style="text-align: center;">预估毛利率</th>
+<th style="text-align: center;">认证要求</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">P0</td>
+<td><strong>Shapewear 塑身衣</strong></td>
+<td>S-3XL，收腹提臀，透气质感</td>
+<td style="text-align: center;">$2.5-4</td>
+<td style="text-align: center;">₱249-449</td>
+<td style="text-align: center;">$4.4-8.0</td>
+<td style="text-align: center;">40-50%</td>
+<td style="text-align: center;">无</td>
+</tr>
+<tr>
+<td style="text-align: center;">P0</td>
+<td><strong>韩系基本款 T 恤</strong></td>
+<td>S-2XL，纯棉/莫代尔，多色</td>
+<td style="text-align: center;">$1.5-2.5</td>
+<td style="text-align: center;">₱149-249</td>
+<td style="text-align: center;">$2.7-4.4</td>
+<td style="text-align: center;">35-45%</td>
+<td style="text-align: center;">无</td>
+</tr>
+<tr>
+<td style="text-align: center;">P1</td>
+<td><strong>Camo 卫衣</strong></td>
+<td>宽松版型，摇粒绒，多色</td>
+<td style="text-align: center;">$2-3.5</td>
+<td style="text-align: center;">₱199-349</td>
+<td style="text-align: center;">$3.6-6.2</td>
+<td style="text-align: center;">35-45%</td>
+<td style="text-align: center;">无</td>
+</tr>
+<tr>
+<td style="text-align: center;">P1</td>
+<td><strong>亚洲版型连衣裙</strong></td>
+<td>S-3XL，韩系风格，透气面料</td>
+<td style="text-align: center;">$2.5-4.5</td>
+<td style="text-align: center;">₱249-399</td>
+<td style="text-align: center;">$4.4-7.1</td>
+<td style="text-align: center;">40-50%</td>
+<td style="text-align: center;">无</td>
+</tr>
+<tr>
+<td style="text-align: center;">P2</td>
+<td><strong>大码工装裤</strong></td>
+<td>26-34 码，宽松版型</td>
+<td style="text-align: center;">$2.5-4</td>
+<td style="text-align: center;">₱249-399</td>
+<td style="text-align: center;">$4.4-7.1</td>
+<td style="text-align: center;">35-45%</td>
+<td style="text-align: center;">无</td>
+</tr>
+</tbody>
+</table>
+<p><strong>核心洞察</strong>：进入门槛最低（无强制认证），市场容量最大，适合冷启动快速起量。Shapewear 是隐藏爆款（+5400% 兴趣增长），亚洲版型是明确需求缺口。</p>
+<hr />
+<h2 id="90">第二部分：90 天上市行动计划</h2>
+<h3 id="_8">总览时间线</h3>
+<pre><code>Week 0          Week 4          Week 8          Week 12
+  │               │               │               │
+  ├─ 合规启动 ────┤               │               │
+  │  FDA 申请     │               │               │
+  │  供应商对接    │               │               │
+  ├───────────────┼─ 试水期 ──────┤               │
+  │               │  Shopee 上架   │               │
+  │               │  首批 5 SKU    │               │
+  │               │  Google Ads    │               │
+  │               │  小规模测试    │               │
+  │               ├───────────────┼─ 深耕期 ──────┤
+  │               │               │  TikTok 直播  │
+  │               │               │  扩展 SKU     │
+  │               │               │  优化广告     │
+  │               │              ├───────────────┼─ 规模化
+  │               │               │               │  本地仓
+  │               │               │               │  Lazada 入驻
+  │               │               │               │  品牌化运营
+</code></pre>
+<h3 id="1-4">第 1-4 周：合规启动 + 供应链搭建</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">周次</th>
+<th>行动项</th>
+<th style="text-align: center;">负责人</th>
+<th>交付物</th>
+<th style="text-align: center;">预算(USD)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>W0-W1</strong></td>
+<td>FDA 注册申请 — 保健品 + 美妆</td>
+<td style="text-align: center;">合规</td>
+<td>FDA 申请受理回执</td>
+<td style="text-align: center;">$500-1,500</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>W0-W1</strong></td>
+<td>BOC 进口登记 + GCash 商户注册</td>
+<td style="text-align: center;">合规</td>
+<td>进口商账号 + GCash 商户</td>
+<td style="text-align: center;">$200-500</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>W1-W2</strong></td>
+<td>供应商对接 — 胶原蛋白软糖 OEM</td>
+<td style="text-align: center;">采购</td>
+<td>样品 + 报价单</td>
+<td style="text-align: center;">$200-500（样品费）</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>W1-W2</strong></td>
+<td>供应商对接 — 防晒霜 OEM</td>
+<td style="text-align: center;">采购</td>
+<td>样品 + 报价单</td>
+<td style="text-align: center;">$200-500</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>W2-W3</strong></td>
+<td>Shopee 商家账号注册 + 店铺装修</td>
+<td style="text-align: center;">运营</td>
+<td>在线店铺</td>
+<td style="text-align: center;">$0-100</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>W2-W3</strong></td>
+<td>产品描述/图片制作 — 英语</td>
+<td style="text-align: center;">运营</td>
+<td>5 个 SKU 页面</td>
+<td style="text-align: center;">$100-300</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>W3-W4</strong></td>
+<td>首批产品采购（小批量 50-100 件）</td>
+<td style="text-align: center;">采购</td>
+<td>库存入库</td>
+<td style="text-align: center;">$500-1,500</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>W3-W4</strong></td>
+<td>物流方案确认（J&amp;T Express/SFX）</td>
+<td style="text-align: center;">物流</td>
+<td>运费报价确认</td>
+<td style="text-align: center;">$0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>阶段预算合计：$1,700-4,400</strong></p>
+<h3 id="5-8-shopee">第 5-8 周：试水期 — Shopee 上架 + 广告测试</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">周次</th>
+<th>行动项</th>
+<th style="text-align: center;">负责人</th>
+<th>交付物</th>
+<th style="text-align: center;">预算(USD)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>W5</strong></td>
+<td>Shopee 首批 5 SKU 上架（3 保健品 + 2 美妆）</td>
+<td style="text-align: center;">运营</td>
+<td>5 个商品链接</td>
+<td style="text-align: center;">$0</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>W5</strong></td>
+<td>Google Ads 搜索广告启动 — 保健品</td>
+<td style="text-align: center;">营销</td>
+<td>广告账户 + 5 个广告系列</td>
+<td style="text-align: center;">$300-500/月</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>W5</strong></td>
+<td>Google Ads Shopping 广告启动 — 美妆</td>
+<td style="text-align: center;">营销</td>
+<td>Shopping 广告系列</td>
+<td style="text-align: center;">$200-400/月</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>W6-W7</strong></td>
+<td>Shopes Live 直播测试 — 美妆演示</td>
+<td style="text-align: center;">运营</td>
+<td>1-2 场直播</td>
+<td style="text-align: center;">$100</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>W6-W7</strong></td>
+<td>首批订单履约 — 物流测试</td>
+<td style="text-align: center;">运营</td>
+<td>首单发货确认</td>
+<td style="text-align: center;">$200-500（物流费）</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>W7-W8</strong></td>
+<td>数据分析 + 广告优化</td>
+<td style="text-align: center;">营销</td>
+<td>优化报告</td>
+<td style="text-align: center;">$0</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>W8</strong></td>
+<td>时尚服饰供应商对接 + 样品确认</td>
+<td style="text-align: center;">采购</td>
+<td>报价单 + 样品</td>
+<td style="text-align: center;">$200-400</td>
+</tr>
+</tbody>
+</table>
+<p><strong>关键指标（第 8 周检查点）：</strong>
+- Shopee 店铺：日均 ≥5 单
+- Google Ads CTR：≥3.5%
+- Google Ads CVR：≥2%
+- 广告 ROAS：≥200%</p>
+<p><strong>阶段预算合计：$1,000-2,300</strong></p>
+<h3 id="9-12-tiktok">第 9-12 周：深耕期 — TikTok 直播 + 品类扩展</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">周次</th>
+<th>行动项</th>
+<th style="text-align: center;">负责人</th>
+<th>交付物</th>
+<th style="text-align: center;">预算(USD)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>W9</strong></td>
+<td>TikTok Shop 商家账号注册</td>
+<td style="text-align: center;">运营</td>
+<td>TikTok Shop 店铺</td>
+<td style="text-align: center;">$0</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>W9</strong></td>
+<td>TikTok 直播脚本准备 — 美妆演示</td>
+<td style="text-align: center;">运营</td>
+<td>3 套直播脚本</td>
+<td style="text-align: center;">$0</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>W9-W10</strong></td>
+<td>TikTok 直播正式开播 — 每周 3 场</td>
+<td style="text-align: center;">运营</td>
+<td>直播 GMV</td>
+<td style="text-align: center;">$200-500（样品+设备）</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>W10</strong></td>
+<td>时尚服饰 SKU 上架 Shopee（3-5 个）</td>
+<td style="text-align: center;">运营</td>
+<td>商品链接</td>
+<td style="text-align: center;">$0</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>W10-W11</strong></td>
+<td>Google Ads 扩展 — 时尚服饰</td>
+<td style="text-align: center;">营销</td>
+<td>新广告系列</td>
+<td style="text-align: center;">$300-500/月</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>W11-W12</strong></td>
+<td>首批补货 + 本地仓评估</td>
+<td style="text-align: center;">采购+物流</td>
+<td>补货订单</td>
+<td style="text-align: center;">$1,000-2,000</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>W12</strong></td>
+<td>月度数据复盘 + Q4 大促准备</td>
+<td style="text-align: center;">全员</td>
+<td>复盘报告</td>
+<td style="text-align: center;">$0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>关键指标（第 12 周检查点）：</strong>
+- Shopee 店铺：日均 ≥15 单
+- TikTok Shop：周 GMV ≥PHP 15,000
+- 综合 ROAS：≥250%
+- 退货率：&lt;8%</p>
+<p><strong>阶段预算合计：$1,500-3,500</strong></p>
+<hr />
+<h2 id="_9">第三部分：首年营收预测</h2>
+<h3 id="_10">预测方法论</h3>
+<p>基于以下假设：
+- Shopee 客单价 PHP 316（Cube.asia 2025 数据）
+- TikTok Shop 客单价 PHP 198
+- 保健品客单价 PHP 374
+- 美妆客单价 PHP 374
+- 时尚服饰客单价 PHP 249</p>
+<h3 id="_11">三档营收预测</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th style="text-align: center;">保守情景</th>
+<th style="text-align: center;">中性情景</th>
+<th style="text-align: center;">乐观情景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>月均订单量（Shopee）</strong></td>
+<td style="text-align: center;">150 单</td>
+<td style="text-align: center;">350 单</td>
+<td style="text-align: center;">600 单</td>
+</tr>
+<tr>
+<td><strong>月均订单量（TikTok Shop）</strong></td>
+<td style="text-align: center;">50 单</td>
+<td style="text-align: center;">150 单</td>
+<td style="text-align: center;">300 单</td>
+</tr>
+<tr>
+<td><strong>月均订单量（Lazada，第 6 月+）</strong></td>
+<td style="text-align: center;">30 单</td>
+<td style="text-align: center;">80 单</td>
+<td style="text-align: center;">150 单</td>
+</tr>
+<tr>
+<td><strong>Shopee 月均 GMV</strong></td>
+<td style="text-align: center;">₱47,400</td>
+<td style="text-align: center;">₱110,600</td>
+<td style="text-align: center;">₱189,600</td>
+</tr>
+<tr>
+<td><strong>TikTok 月均 GMV</strong></td>
+<td style="text-align: center;">₱9,900</td>
+<td style="text-align: center;">₱29,700</td>
+<td style="text-align: center;">₱59,400</td>
+</tr>
+<tr>
+<td><strong>Lazada 月均 GMV</strong></td>
+<td style="text-align: center;">₱7,500</td>
+<td style="text-align: center;">₱20,000</td>
+<td style="text-align: center;">₱37,500</td>
+</tr>
+<tr>
+<td><strong>月均总 GMV</strong></td>
+<td style="text-align: center;">₱64,800</td>
+<td style="text-align: center;">₱160,300</td>
+<td style="text-align: center;">₱286,500</td>
+</tr>
+<tr>
+<td><strong>月均总 GMV（USD）</strong></td>
+<td style="text-align: center;"><strong>$1,157</strong></td>
+<td style="text-align: center;"><strong>$2,862</strong></td>
+<td style="text-align: center;"><strong>$5,116</strong></td>
+</tr>
+<tr>
+<td><strong>月均 COGS（55%）</strong></td>
+<td style="text-align: center;">$636</td>
+<td style="text-align: center;">$1,574</td>
+<td style="text-align: center;">$2,814</td>
+</tr>
+<tr>
+<td><strong>月均毛利</strong></td>
+<td style="text-align: center;">$521</td>
+<td style="text-align: center;">$1,288</td>
+<td style="text-align: center;">$2,302</td>
+</tr>
+<tr>
+<td><strong>月均运营费用</strong></td>
+<td style="text-align: center;">$400</td>
+<td style="text-align: center;">$600</td>
+<td style="text-align: center;">$900</td>
+</tr>
+<tr>
+<td><strong>月均净利</strong></td>
+<td style="text-align: center;"><strong>$121</strong></td>
+<td style="text-align: center;"><strong>$688</strong></td>
+<td style="text-align: center;"><strong>$1,402</strong></td>
+</tr>
+<tr>
+<td><strong>首年 GMV（USD）</strong></td>
+<td style="text-align: center;"><strong>$13,884</strong></td>
+<td style="text-align: center;"><strong>$34,344</strong></td>
+<td style="text-align: center;"><strong>$61,392</strong></td>
+</tr>
+<tr>
+<td><strong>首年净利（USD）</strong></td>
+<td style="text-align: center;"><strong>$1,452</strong></td>
+<td style="text-align: center;"><strong>$8,256</strong></td>
+<td style="text-align: center;"><strong>$16,824</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>注</strong>：以上为扣除产品成本和平台费用后的毛利，再扣除运营费用（广告、物流、人工等）后的净利。乐观情景假设 TikTok Shop 直播 GMV 逐月翻倍增长。</p>
+</blockquote>
+<h3 id="vs">累计投入 vs 产出</h3>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th style="text-align: center;">金额(USD)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>90 天启动成本</strong></td>
+<td style="text-align: center;">$4,200-10,200</td>
+</tr>
+<tr>
+<td><strong>首年运营预算</strong></td>
+<td style="text-align: center;">$12,000-24,000</td>
+</tr>
+<tr>
+<td><strong>首年总投入</strong></td>
+<td style="text-align: center;">$16,200-34,200</td>
+</tr>
+<tr>
+<td><strong>首年净利（保守）</strong></td>
+<td style="text-align: center;">$1,452</td>
+</tr>
+<tr>
+<td><strong>首年净利（中性）</strong></td>
+<td style="text-align: center;">$8,256</td>
+</tr>
+<tr>
+<td><strong>首年净利（乐观）</strong></td>
+<td style="text-align: center;">$16,824</td>
+</tr>
+<tr>
+<td><strong>回本周期（中性）</strong></td>
+<td style="text-align: center;">5-7 个月</td>
+</tr>
+<tr>
+<td><strong>ROI（中性，12 个月）</strong></td>
+<td style="text-align: center;"><strong>120%</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_12">第四部分：关键风险点与应对策略</h2>
+<h3 id="_13">风险矩阵</h3>
+<table>
+<thead>
+<tr>
+<th>风险</th>
+<th style="text-align: center;">概率</th>
+<th style="text-align: center;">影响</th>
+<th>应对策略</th>
+<th style="text-align: center;">优先级</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>FDA 注册被拒或周期 &gt;6 个月</strong></td>
+<td style="text-align: center;">🟡 中</td>
+<td style="text-align: center;">🔴 高</td>
+<td>① 聘请马尼拉本地合规代理 ② 同时申请印尼 BPOM（双市场）③ 准备 FDA 补充材料预案</td>
+<td style="text-align: center;">🔴 最高</td>
+</tr>
+<tr>
+<td><strong>TikTok Shop 收紧跨境卖家政策</strong></td>
+<td style="text-align: center;">🟡 中</td>
+<td style="text-align: center;">🟡 中高</td>
+<td>① 同时运营 Shopee（主）+ Lazada（辅）② 建立独立站分流 ③ 本地化运营降低平台依赖</td>
+<td style="text-align: center;">🔴 高</td>
+</tr>
+<tr>
+<td><strong>COD 退货率 &gt;15%</strong></td>
+<td style="text-align: center;">🟡 中</td>
+<td style="text-align: center;">🟡 中</td>
+<td>① 优化产品描述（尺码表/成分表/真人试用图）② 提供视频开箱引导 ③ COD 满额门槛（&gt;PHP 299 免 COD 鼓励）</td>
+<td style="text-align: center;">🟡 中</td>
+</tr>
+<tr>
+<td><strong>海关扣货/清关延迟</strong></td>
+<td style="text-align: center;">🟡 中</td>
+<td style="text-align: center;">🟡 中</td>
+<td>① 预缴 VAT 12% ② 使用 J&amp;T Express 保税通道 ③ 单批货值控制在 PHP 10,000 以下</td>
+<td style="text-align: center;">🟡 中</td>
+</tr>
+<tr>
+<td><strong>汇率波动（PHP/USD）</strong></td>
+<td style="text-align: center;">🟡 中</td>
+<td style="text-align: center;">🟡 低</td>
+<td>① 分批换汇对冲 ② 定价预留 5-8% 汇率缓冲</td>
+<td style="text-align: center;">🟡 低</td>
+</tr>
+<tr>
+<td><strong>中国卖家价格战</strong></td>
+<td style="text-align: center;">🔴 高</td>
+<td style="text-align: center;">🟡 中</td>
+<td>① FDA 注册构建壁垒 ② 品牌化差异化 ③ 订阅制锁定用户</td>
+<td style="text-align: center;">🟡 中</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_14">第五部分：必须立即启动的合规事项</h2>
+<h3 id="_15">合规时间线（倒计时）</h3>
+<pre><code>2026-06-14          2026-09             2026-12            2027-03
+    │                   │                  │                  │
+    ├── FDA 保健品 ──────┤                  │                  │
+    │   (3-6 个月)       │                  │                  │
+    │                   │                  │                  │
+    ├── FDA 美妆 ────────┤                  │                  │
+    │   (3-4 个月)       │                  │                  │
+    │                   │                  │                  │
+    ├── BOC 进口商登记 ──┤                  │                  │
+    │   (2-4 周)         │                  │                  │
+    │                   │                  │                  │
+    ├── GCash 商户 ──────┤                  │                  │
+    │   (1-2 周)         │                  │                  │
+    │                   │                  │                  │
+    ├── Shopee 商家 ─────┤                  │                  │
+    │   (1 周)           │                  │                  │
+    │                   │                  │                  │
+    ├── VAT 注册 ────────┴──────────────────┤                  │
+    │                      (运营后即需)       │                  │
+    │                                       │                  │
+    ├── 首批量产 ────────────────────────────┤                  │
+    │                                       │                  │
+    └── TikTok Shop 商家 ────────────────────┴──────────────────┘
+</code></pre>
+<h3 id="_16">合规事项清单（按紧急度排序）</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">优先级</th>
+<th>合规事项</th>
+<th>适用品类</th>
+<th>时间要求</th>
+<th style="text-align: center;">预估费用(USD)</th>
+<th style="text-align: center;">负责方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">🔴 <strong>P0</strong></td>
+<td><strong>FDA 保健品注册</strong></td>
+<td>胶原蛋白软糖、益生菌、维生素</td>
+<td>立即启动，3-6 个月获批</td>
+<td style="text-align: center;">$500-1,500</td>
+<td style="text-align: center;">合规代理</td>
+</tr>
+<tr>
+<td style="text-align: center;">🔴 <strong>P0</strong></td>
+<td><strong>FDA 化妆品注册</strong></td>
+<td>防晒霜、精华、洁面乳</td>
+<td>立即启动，3-4 个月获批</td>
+<td style="text-align: center;">$400-1,200</td>
+<td style="text-align: center;">合规代理</td>
+</tr>
+<tr>
+<td style="text-align: center;">🔴 <strong>P0</strong></td>
+<td><strong>BOC 进口商登记</strong></td>
+<td>所有进口商品</td>
+<td>第 1-2 周完成</td>
+<td style="text-align: center;">$100-300</td>
+<td style="text-align: center;">合规</td>
+</tr>
+<tr>
+<td style="text-align: center;">🔴 <strong>P0</strong></td>
+<td><strong>GCash 商户注册</strong></td>
+<td>所有品类（支付方式）</td>
+<td>第 1-2 周完成</td>
+<td style="text-align: center;">$0-100</td>
+<td style="text-align: center;">运营</td>
+</tr>
+<tr>
+<td style="text-align: center;">🟡 <strong>P1</strong></td>
+<td><strong>Shopee 商家账号</strong></td>
+<td>所有品类</td>
+<td>第 2-3 周完成</td>
+<td style="text-align: center;">$0</td>
+<td style="text-align: center;">运营</td>
+</tr>
+<tr>
+<td style="text-align: center;">🟡 <strong>P1</strong></td>
+<td><strong>VAT 12% 注册</strong></td>
+<td>所有应税商品</td>
+<td>首批销售后即需</td>
+<td style="text-align: center;">$50-200</td>
+<td style="text-align: center;">财务</td>
+</tr>
+<tr>
+<td style="text-align: center;">🟡 <strong>P1</strong></td>
+<td><strong>英文/菲律宾语标签</strong></td>
+<td>所有进口商品</td>
+<td>首批发货前完成</td>
+<td style="text-align: center;">$50-100/款</td>
+<td style="text-align: center;">运营</td>
+</tr>
+<tr>
+<td style="text-align: center;">🟢 <strong>P2</strong></td>
+<td><strong>TikTok Shop 商家</strong></td>
+<td>所有品类</td>
+<td>第 8-9 周完成</td>
+<td style="text-align: center;">$0</td>
+<td style="text-align: center;">运营</td>
+</tr>
+<tr>
+<td style="text-align: center;">🟢 <strong>P2</strong></td>
+<td><strong>Lazada 品牌旗舰店</strong></td>
+<td>高端品类</td>
+<td>第 6 个月后</td>
+<td style="text-align: center;">$0-200</td>
+<td style="text-align: center;">运营</td>
+</tr>
+<tr>
+<td style="text-align: center;">🟢 <strong>P2</strong></td>
+<td><strong>数据隐私法（DPA）合规</strong></td>
+<td>所有品类</td>
+<td>收集用户数据前</td>
+<td style="text-align: center;">$0-500</td>
+<td style="text-align: center;">法务</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fda">FDA 注册详细流程</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">步骤</th>
+<th>内容</th>
+<th style="text-align: center;">时间</th>
+<th style="text-align: center;">费用(USD)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td>选择马尼拉本地 FDA 注册代理</td>
+<td style="text-align: center;">1 周</td>
+<td style="text-align: center;">$0</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td>准备产品成分表 + 安全性报告</td>
+<td style="text-align: center;">2-3 周</td>
+<td style="text-align: center;">$100-300</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td>填写 FDA 申请表（CPR 认证）</td>
+<td style="text-align: center;">1 周</td>
+<td style="text-align: center;">$0</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td>提交 FDA 审批</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">$200-500</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td>FDA 审查 + 补充材料</td>
+<td style="text-align: center;">2-4 个月</td>
+<td style="text-align: center;">$0-200（补充费）</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td>获得 CPR 认证</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>总计</strong></td>
+<td></td>
+<td style="text-align: center;"><strong>3-6 个月</strong></td>
+<td style="text-align: center;"><strong>$300-1,200</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>⚠️ <strong>关键提醒</strong>：保健品和美妆品类的 FDA 注册是<strong>硬性要求</strong>，无证销售可能面临罚款和产品下架。务必在首批发货前完成或确保在途货件在 FDA 获批后到达。</p>
+</blockquote>
+<hr />
+<h2 id="_17">第六部分：资金来源建议</h2>
+<h3 id="90_1">90 天启动资金来源</h3>
+<table>
+<thead>
+<tr>
+<th>用途</th>
+<th style="text-align: center;">保守预算(USD)</th>
+<th style="text-align: center;">中性预算(USD)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FDA 注册（保健品 + 美妆）</td>
+<td style="text-align: center;">$900</td>
+<td style="text-align: center;">$1,800</td>
+</tr>
+<tr>
+<td>BOC/GCash/VAT 注册</td>
+<td style="text-align: center;">$300</td>
+<td style="text-align: center;">$500</td>
+</tr>
+<tr>
+<td>首批采购（150-200 件）</td>
+<td style="text-align: center;">$1,500</td>
+<td style="text-align: center;">$3,000</td>
+</tr>
+<tr>
+<td>Google Ads（首月）</td>
+<td style="text-align: center;">$400</td>
+<td style="text-align: center;">$800</td>
+</tr>
+<tr>
+<td>物流费用（首月）</td>
+<td style="text-align: center;">$200</td>
+<td style="text-align: center;">$500</td>
+</tr>
+<tr>
+<td>运营工具/图片制作</td>
+<td style="text-align: center;">$200</td>
+<td style="text-align: center;">$400</td>
+</tr>
+<tr>
+<td>应急储备</td>
+<td style="text-align: center;">$500</td>
+<td style="text-align: center;">$1,000</td>
+</tr>
+<tr>
+<td><strong>总计</strong></td>
+<td style="text-align: center;"><strong>$4,000</strong></td>
+<td style="text-align: center;"><strong>$8,000</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>建议</strong>：首阶段投入控制在 <strong>$4,000-8,000</strong> 以内，采用"小批量测试 → 数据验证 → 放量"的精益启动模式。首年 ROI 预期 <strong>80-180%</strong>。</p>
+<hr />
+<h2 id="_18">第七部分：附录 — 数据来源与交叉验证</h2>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>数据点</th>
+<th>来源</th>
+<th style="text-align: center;">置信度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电商 GMV（2024）</td>
+<td>US$280 亿（+23%）</td>
+<td>e-Conomy SEA 2024 + PCMI</td>
+<td style="text-align: center;">⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>平台份额</td>
+<td>Shopee 55%、TikTok 29%、Lazada 16%</td>
+<td>Cube.asia 2026</td>
+<td style="text-align: center;">⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>保健品搜索增长</td>
+<td>+4300%（草本补充剂）</td>
+<td>Godaddy 2025</td>
+<td style="text-align: center;">⭐⭐⭐</td>
+</tr>
+<tr>
+<td>TikTok 美妆 GMV 占比</td>
+<td>28%（全平台最高）</td>
+<td>Cube.asia 2026</td>
+<td style="text-align: center;">⭐⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>Shapewear 增长</td>
+<td>+5400%</td>
+<td>Godaddy 2025</td>
+<td style="text-align: center;">⭐⭐⭐</td>
+</tr>
+<tr>
+<td>养宠率</td>
+<td>67%</td>
+<td>PNA Philippines</td>
+<td style="text-align: center;">⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>GCash 使用率</td>
+<td>97%</td>
+<td>PCMI</td>
+<td style="text-align: center;">⭐⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>FDA 注册周期</td>
+<td>3-6 个月</td>
+<td>FDA Philippines</td>
+<td style="text-align: center;">⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>竞品价格带</td>
+<td>₱149-749</td>
+<td>竞品矩阵报告</td>
+<td style="text-align: center;">⭐⭐⭐⭐</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<blockquote>
+<p><strong>⚠️ 免责声明</strong>：
+1. 首年营收预测基于行业数据和竞品分析的综合估算，实际结果受市场环境、运营能力、竞争格局等因素影响，可能与预测有显著差异。
+2. FDA 注册周期受菲律宾 FDA 审批速度影响，可能因政策变化而延长。
+3. 所有价格数据基于 2026 年 6 月市场调研，可能因促销活动、汇率波动而变化。
+4. 本报告为战略规划参考，不构成投资建议。建议在做出重大投资决策前，结合实地调研和专业顾问意见。</p>
+<p><strong>报告版本</strong>：v1.0 Final | 2026-06-14</p>
+</blockquote>
+</body>
+</html>

@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>马来西亚市场选品调查正式报告 2026-06-14</title>
+<style>
+@page {
+    size: A4;
+    margin: 2cm 2.5cm;
+    @bottom-center {
+        content: counter(page);
+        font-size: 9pt;
+        color: #999;
+    }
+}
+@font-face {
+    font-family: 'CJK';
+    src: url('/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'CJK';
+    src: url('/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+body {
+    font-family: 'CJK', 'Noto Sans CJK SC', sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.8;
+    color: #1a1a1a;
+    max-width: 100%;
+}
+.cover-page {
+    page-break-after: always;
+    text-align: center;
+    padding-top: 80pt;
+}
+.cover-title {
+    font-size: 28pt;
+    color: #1a1a2e;
+    font-weight: bold;
+    margin-bottom: 20pt;
+}
+.cover-subtitle {
+    font-size: 14pt;
+    color: #0f3460;
+    margin-bottom: 40pt;
+}
+.cover-meta {
+    font-size: 11pt;
+    color: #666;
+    line-height: 2.2;
+}
+.cover-disclaimer {
+    font-size: 9pt;
+    color: #999;
+    margin-top: 60pt;
+    border-top: 1px solid #ddd;
+    padding-top: 12pt;
+}
+.toc-page {
+    page-break-before: always;
+    page-break-after: always;
+}
+.toc-title {
+    font-size: 20pt;
+    color: #1a1a2e;
+    text-align: center;
+    margin-bottom: 20pt;
+    font-weight: bold;
+}
+.toc-entry {
+    font-size: 11pt;
+    padding: 4pt 0;
+    border-bottom: 0.5px dotted #ccc;
+    display: flex;
+    justify-content: space-between;
+}
+.toc-chapter {
+    font-weight: bold;
+    color: #0f3460;
+    margin-top: 12pt;
+}
+h1 {
+    font-size: 20pt;
+    color: #1a1a2e;
+    border-bottom: 3px solid #e94560;
+    padding-bottom: 8pt;
+    margin-top: 24pt;
+    page-break-before: always;
+}
+h1:first-of-type { page-break-before: avoid; }
+h2 {
+    font-size: 15pt;
+    color: #16213e;
+    border-bottom: 1.5px solid #0f3460;
+    padding-bottom: 5pt;
+    margin-top: 18pt;
+}
+h3 { font-size: 12.5pt; color: #0f3460; margin-top: 14pt; }
+h4 { font-size: 11pt; color: #333; margin-top: 10pt; }
+table {
+    width: 100%; border-collapse: collapse; margin: 12pt 0;
+    font-size: 9.5pt; page-break-inside: avoid; display: table;
+}
+thead { display: table-header-group; }
+th {
+    background-color: #16213e; color: white; padding: 8px 10px;
+    text-align: left; font-weight: 600; border: 1px solid #0f3460; font-size: 9pt;
+}
+td { padding: 7px 10px; border: 1px solid #ddd; vertical-align: top; }
+tr:nth-child(even) { background-color: #f8f9fa; }
+blockquote {
+    border-left: 4px solid #e94560; margin: 10pt 0; padding: 8pt 14pt;
+    background: #fff5f5; color: #666; font-size: 9.5pt;
+}
+ul, ol { padding-left: 20pt; margin: 6pt 0; }
+li { margin: 3pt 0; }
+hr { border: none; border-top: 1.5px solid #e0e0e0; margin: 16pt 0; }
+strong { color: #1a1a2e; }
+em { color: #555; }
+.source-tag { font-size: 8pt; color: #999; font-style: italic; }
+.data-tag { font-size: 8pt; color: #e94560; }
+</style>
+</head>
+<body>
+
+<!-- ========== 封面页 ========== -->
+<div class="cover-page">
+    <div class="cover-title">马来西亚市场选品调查正式报告</div>
+    <div class="cover-subtitle">Malaysia Market Product Selection Survey Report</div>
+    <br><br>
+    <div class="cover-meta">
+        <strong>报告日期</strong>：2026年6月14日<br>
+        <strong>分析周期</strong>：2023-2025年数据 + 2026年预测<br>
+        <strong>报告类型</strong>：跨境电商选品综合决策报告<br>
+        <strong>覆盖品类</strong>：8大核心品类 · 10个Top SKU<br><br>
+        <strong>数据来源</strong>：<br>
+        e-Conomy SEA 2024/2025 (Google/Temasek/Bain)<br>
+        Mordor Intelligence · Ipsos Malaysia · Sellercraft · BigSeller<br>
+        Wiki选品项目 · DOSM · InCorp Malaysia · Statista<br>
+        Shopdora · Momentum Works · 电商综合<br><br>
+        <strong>生成工具</strong>：OWL 文档生成器 · weasyprint 68.1
+    </div>
+    <div class="cover-disclaimer">
+        ⚠️ 免责声明：本报告中的数据来自多个公开和内部来源，部分数据为行业估算值，可能与实际数据存在差异。
+        实际商业决策前请结合最新官方数据和实地验证。
+    </div>
+</div>
+
+<!-- ========== 目录页 ========== -->
+<div class="toc-page">
+    <div class="toc-title">📋 报告目录</div>
+    <div class="toc-chapter">第1章 执行摘要</div>
+    <div class="toc-entry">核心发现与关键结论 <span>3</span></div>
+    <div class="toc-entry">Top 10 选品一览 <span>3</span></div>
+    <div class="toc-chapter">第2章 市场概览</div>
+    <div class="toc-entry">电商市场规模与增速 <span>5</span></div>
+    <div class="toc-entry">消费者画像与购买力 <span>6</span></div>
+    <div class="toc-entry">平台格局分析 <span>7</span></div>
+    <div class="toc-chapter">第3章 品类机会矩阵</div>
+    <div class="toc-entry">16品类蓝海扫描 <span>9</span></div>
+    <div class="toc-entry">品类分层策略 <span>10</span></div>
+    <div class="toc-chapter">第4章 竞品分析矩阵</div>
+    <div class="toc-entry">8大品类竞品对比 <span>12</span></div>
+    <div class="toc-entry">差异化机会识别 <span>14</span></div>
+    <div class="toc-chapter">第5章 搜索热点趋势</div>
+    <div class="toc-entry">八品类搜索词分析 <span>16</span></div>
+    <div class="toc-entry">Google Ads CPC基准 <span>17</span></div>
+    <div class="toc-chapter">第6章 社交媒体舆情</div>
+    <div class="toc-entry">品类热度与消费者痛点 <span>19</span></div>
+    <div class="toc-entry">内容营销机会 <span>20</span></div>
+    <div class="toc-chapter">第7章 用户画像与需求洞察</div>
+    <div class="toc-entry">八品类用户画像 <span>22</span></div>
+    <div class="toc-entry">需求优先级清单 <span>23</span></div>
+    <div class="toc-chapter">第8章 Top 10 选品清单</div>
+    <div class="toc-entry">选品方法论与最终清单 <span>25</span></div>
+    <div class="toc-chapter">第9章 全成本建模</div>
+    <div class="toc-entry">10 SKU 成本拆解 <span>27</span></div>
+    <div class="toc-entry">盈亏平衡分析 <span>29</span></div>
+    <div class="toc-chapter">第10章 合规检查与综合评审</div>
+    <div class="toc-entry">Top 10 SKU 合规路径 <span>32</span></div>
+    <div class="toc-entry">Go/No-Go 决策矩阵 <span>34</span></div>
+    <div class="toc-chapter">第11章 行动建议与执行路线图</div>
+    <div class="toc-entry">分阶段进入策略 <span>36</span></div>
+    <div class="toc-chapter">附录</div>
+    <div class="toc-entry">数据来源 <span>38</span></div>
+</div>
+
+<!-- ========== 第1章 执行摘要 ========== -->
+<h1>第1章 执行摘要（Executive Summary）</h1>
+
+<h2>1.1 核心发现</h2>
+
+<table>
+<thead><tr><th>#</th><th style="width:30%">发现</th><th>数据支撑</th><th>战略影响</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><strong>清真食品/饮料是"国本"赛道</strong></td><td>蓝海指数 +6.0，CAGR 16.46%，JAKIM认证是入场券</td><td>JAKIM认证 = 竞争壁垒+信任锚点，建议Halal认证产品全覆盖</td></tr>
+<tr><td>2</td><td><strong>宠物用品增速最快</strong></td><td>CAGR 20-30%，竞争度仅2.5/10</td><td>月销>500盒后净利率可跃升至20%+，Halal版本几乎为零</td></tr>
+<tr><td>3</td><td><strong>保健品赛道胶原蛋白领跑</strong></td><td>增速20%+，软糖剂型TikTok高转化</td><td>胶原蛋白净利率28.3%为全场最佳</td></tr>
+<tr><td>4</td><td><strong>SST新框架已生效</strong></td><td>2025年7月低值进口商品征税宽限期至12月</td><td>定价策略需纳入SST成本，消费者支付≤RM500需缴纳10%</td></tr>
+<tr><td>5</td><td><strong>价格敏感度为SEA最高</strong></td><td>"murah"出现频率全品类第一</td><td>促销型广告文案+价格锚定是转化关键</td></tr>
+<tr><td>6</td><td><strong>TikTok Shop占电商28.4%</strong></td><td>YoY增长140%，日均搜索1亿次</td><td>内容电商种草→直播转化是最核心获客路径</td></tr>
+</tbody>
+</table>
+
+<h2>1.2 综合评级：7.1/10</h2>
+<blockquote>
+<strong>整体可行性评分 7.1/10</strong> — 跨市场排名第二（仅次于新加坡），优于印尼和越南方案。
+<br>5个Go优先SKU可立即上架快速验证，3个Go条件SKU提供中期增长潜力，0个No-Go。
+<br><span class="source-tag">来源: malaysia-final-review-2026-06-14.md | 时效: 2026-06-14</span>
+</blockquote>
+
+<h2>1.3 Go / No-Go 决策总览</h2>
+<table>
+<thead><tr><th>决策类型</th><th>数量</th><th>SKU列表</th><th>平均净利率</th></tr></thead>
+<tbody>
+<tr><td>🟢 Go 优先</td><td>5个</td><td>防晒/感应灯/礼品/收纳/T恤</td><td>~20%</td></tr>
+<tr><td>🟡 Go 条件</td><td>3个</td><td>猫零食/软糖/饮品</td><td>~19%</td></tr>
+<tr><td>🟠 Go 谨慎</td><td>2个</td><td>孕期维生素/Halal便当</td><td>~15%</td></tr>
+<tr><td>🔴 No-Go</td><td>0个</td><td>—</td><td>—</td></tr>
+</tbody>
+</table>
+<p class="source-tag">来源: malaysia-final-review-2026-06-14.md 第3章综合评审 | 时效: 2026-06-14</p>
+
+<!-- ========== 第2章 市场概览 ========== -->
+<h1>第2章 市场概览（Market Overview）</h1>
+
+<h2>2.1 电商市场规模与增速</h2>
+<table>
+<thead><tr><th>年份</th><th>电商GMV（USD）</th><th>年增长率</th><th>来源/口径</th></tr></thead>
+<tbody>
+<tr><td>2024</td><td><strong>US$160亿</strong></td><td>+17%</td><td>e-Conomy SEA 2024</td></tr>
+<tr><td>2025（预测）</td><td>US$200亿</td><td>+21% YoY</td><td>e-Conomy SEA 2025</td></tr>
+<tr><td>2026（预测）</td><td>US$230-250亿</td><td>~15-20%</td><td>行业预测</td></tr>
+<tr><td>3031（预测）</td><td>US$231亿</td><td>CAGR 13.67%</td><td>Mordor Intelligence</td></tr>
+</tbody>
+</table>
+<p class="source-tag">来源: malaysia-market-overview-2026-06-14.md | 时效: 2024-2026</p>
+
+<h2>2.2 消费者画像</h2>
+<table>
+<thead><tr><th>维度</th><th>数据</th><th>来源</th></tr></thead>
+<tbody>
+<tr><td>总人口</td><td>~3,400万</td><td>DataReportal 2025</td></tr>
+<tr><td>互联网渗透率</td><td>~91%</td><td>Mordor Intelligence</td></tr>
+<tr><td>线上消费者数</td><td>~2,500万（近2/3人口）</td><td>Ipsos Malaysia 2025</td></tr>
+<tr><td>人均GDP（名义）</td><td>~US$13,000-13,500</td><td>World Bank</td></tr>
+<tr><td>数字钱包渗透率</td><td>34.92%</td><td>Mordor Intelligence</td></tr>
+<tr><td>BNPL增速</td><td>CAGR 17.18%（最快）</td><td>Mordor Intelligence</td></tr>
+</tbody>
+</table>
+<p class="source-tag">来源: malaysia-market-overview-2026-06-14.md §二 | 时效: 2025</p>
+
+<h2>2.3 平台格局</h2>
+<table>
+<thead><tr><th>平台</th><th>市场份额</th><th>定位</th><th>跨境优势</th></tr></thead>
+<tbody>
+<tr><td><strong>Shopee</strong></td><td>~45-50%</td><td>综合型C2C/B2C</td><td>SLS物流网络成熟，中国卖家生态最完善</td></tr>
+<tr><td><strong>Lazada</strong></td><td>~25-30%</td><td>品牌型B2C</td><td>阿里巴巴生态，品质背书</td></tr>
+<tr><td><strong>TikTok Shop</strong></td><td>~15-20%</td><td>社交/内容电商</td><td>直播购物+Gen Z聚焦+信任评测</td></tr>
+</tbody>
+</table>
+<p class="source-tag">来源: malaysia-market-overview-2026-06-14.md §三 | 时效: 2024-2025</p>
+
+<h2>2.4 跨境电商政策要点</h2>
+<blockquote>
+<strong>⚠️ 重大变化</strong>：2025年7月起，马来西亚实施新SST框架：
+<br>① 对低值进口商品（&lt;RM500）征收销售税 — 此前免税，现已取消
+<br>② 物流和仓储服务纳入服务税范围 — 跨境物流成本将上升
+<br>③ 宽限期至2025年12月31日
+<br><span class="source-tag">来源: InCorp Malaysia, MOF Malaysia | 时效: 2025.07</span>
+</blockquote>
+
+<!-- ========== 第3章 品类机会矩阵 ========== -->
+<h1>第3章 品类机会矩阵（Category Matrix）</h1>
+
+<h2>3.1 16品类蓝海扫描</h2>
+<table>
+<thead><tr><th>排名</th><th>品类</th><th>潜力</th><th>竞争度</th><th>蓝海指数</th><th>增速</th><th>毛利率</th><th>标签</th></tr></thead>
+<tbody>
+<tr><td>🥇</td><td><strong>清真食品/饮料</strong></td><td>9.0</td><td>3.0</td><td><strong>+6.0</strong></td><td>16.46% CAGR</td><td>30-45%</td><td>🔵🔵超强蓝海</td></tr>
+<tr><td>🥈</td><td><strong>宠物用品</strong></td><td>8.5</td><td>2.5</td><td><strong>+6.0</strong></td><td>20-30%</td><td>35-50%</td><td>🔵🔵超强蓝海</td></tr>
+<tr><td>🥉</td><td><strong>保健品/膳食补充剂</strong></td><td>8.5</td><td>3.5</td><td><strong>+5.0</strong></td><td>20-30%</td><td>40-60%</td><td>🔵🔵超强蓝海</td></tr>
+<tr><td>4</td><td><strong>美妆个护</strong></td><td>8.5</td><td>4.0</td><td><strong>+4.5</strong></td><td>+20-25%</td><td>40-60%</td><td>🔵强蓝海</td></tr>
+<tr><td>5</td><td><strong>家居生活/收纳</strong></td><td>8.0</td><td>3.5</td><td><strong>+4.5</strong></td><td>15-20%</td><td>30-45%</td><td>🔵🔵超强蓝海</td></tr>
+<tr><td>6</td><td><strong>母婴用品</strong></td><td>8.0</td><td>3.5</td><td><strong>+4.5</strong></td><td>15-20%</td><td>35-55%</td><td>🔵🔵超强蓝海</td></tr>
+<tr><td>7</td><td>时尚服饰</td><td>8.0</td><td>5.0</td><td>+3.0</td><td>+20-25%</td><td>30-50%</td><td>🔵蓝海</td></tr>
+<tr><td>8</td><td>消费电子/3C</td><td>7.5</td><td>5.5</td><td>+2.0</td><td>~15%</td><td>25-40%</td><td>🔵蓝海</td></tr>
+</tbody>
+</table>
+<p class="source-tag">来源: malaysia-category-matrix-2026-06-14.md §二 | 时效: 2026-06-14</p>
+
+<h2>3.2 品类分层策略</h2>
+<table>
+<thead><tr><th>层级</th><th>品类</th><th>进入时机</th><th>核心理由</th></tr></thead>
+<tbody>
+<tr><td><strong>Tier 1 — 立即进入</strong></td><td>清真食品/饮料、宠物用品、保健品、家居收纳、母婴用品</td><td>Month 1-3</td><td>潜力≥8.0, 竞争度≤3.5</td></tr>
+<tr><td><strong>Tier 2 — 战略性进入</strong></td><td>美妆个护、运动户外</td><td>Month 3-6</td><td>潜力≥7.0, 竞争度≤4.0</td></tr>
+<tr><td><strong>Tier 3 — 机会性试水</strong></td><td>时尚服饰、消费电子、小家电、玩具</td><td>Month 6-12</td><td>有差异化空间</td></tr>
+<tr><td><strong>Tier 4 — 观望/回避</strong></td><td>时尚配饰、功能食品、生鲜杂货</td><td>12个月+</td><td>红海或高壁垒</td></tr>
+</tbody>
+</table>
+<p class="source-tag">来源: malaysia-category-matrix-2026-06-14.md §五 | 时效: 2026-06-14</p>
+
+<!-- ========== 第4章 竞品分析矩阵 ========== -->
+<h1>第4章 竞品分析矩阵（Competitor Matrix）</h1>
+
+<h2>4.1 8大品类竞品对比</h2>
+
+<h3>宠物用品 — 头部竞品</h3>
+<table>
+<thead><tr><th>品牌</th><th>代表产品</th><th>价格带(RM)</th><th>评分</th><th>市场份额</th><th>核心卖点</th></tr></thead>
+<tbody>
+<tr><td>Royal Canin</td><td>处方猫粮</td><td>45-80/kg</td><td>4.7</td><td>~17%</td><td>兽医推荐+科学配方</td></tr>
+<tr><td>Me-O</td><td>成猫粮</td><td>15-30/kg</td><td>4.4</td><td>~12%</td><td>性价比+适口性好</td></tr>
+<tr><td>WHISKAS</td><td>干粮/湿粮</td><td>10-25/kg</td><td>4.2</td><td>~15%</td><td>玛氏旗下+低价</td></tr>
+<tr><td>Pedigree</td><td>狗粮</td><td>12-30/kg</td><td>4.3</td><td>~7%</td><td>玛氏旗下+犬类专用</td></tr>
+</tbody>
+</table>
+<p><strong>市场空白</strong>：⭐ Halal认证宠物零食几乎为零 · 消化友好配方（单一蛋白源+益生菌）直击"呕吐/拉稀"#1差评</p>
+<p class="source-tag">来源: malaysia-competitor-matrix-2026-06-14.md §品类2 | 时效: 2026-06-14</p>
+
+<h3>保健品 — 头部竞品</h3>
+<table>
+<thead><tr><th>品牌</th><th>代表产品</th><th>价格带(RM)</th><th>评分</th><th>市场份额</th><th>核心卖点</th></tr></thead>
+<tbody>
+<tr><td>Blackmores</td><td>胶原蛋白10000mg</td><td>80-200</td><td>4.6</td><td>~12%</td><td>澳洲品牌+高剂量</td></tr>
+<tr><td>Swisse</td><td>胶原蛋白+维C</td><td>60-150</td><td>4.5</td><td>~10%</td><td>澳洲品牌+美容+抗氧化</td></tr>
+<tr><td>Kinohimitsu</td><td>液体胶原蛋白</td><td>80-180</td><td>4.4</td><td>~8%</td><td>本土品牌+液体即饮</td></tr>
+<tr><td>Nature's Way</td><td>胶原蛋白软糖</td><td>35-70</td><td>4.1</td><td>~3%</td><td>软糖剂型+入门友好</td></tr>
+</tbody>
+</table>
+<p><strong>市场空白</strong>：⭐ 软糖/果冻剂型胶原蛋白增速最快 · "胶囊太大难吞咽"是#1差评 · Halal认证版本稀缺</p>
+<p class="source-tag">来源: malaysia-competitor-matrix-2026-06-14.md §品类3 | 时效: 2026-06-14</p>
+
+<h3>美妆个护（防晒品类）— 头部竞品</h3>
+<table>
+<thead><tr><th>品牌</th><th>代表产品</th><th>价格带(RM)</th><th>评分</th><th>市场份额</th><th>核心卖点</th></tr></thead>
+<tbody>
+<tr><td>Anessa</td><td>Perfect UV SPF50+</td><td>70-120</td><td>4.7</td><td>~8%</td><td>Shiseido+Aqua Booster防水</td></tr>
+<tr><td>Beauty of Joseon</td><td>Relief Sun</td><td>45-65</td><td>4.6</td><td>~7%</td><td>K-Beauty+TikTok爆款</td></tr>
+<tr><td>Wardah</td><td>UV Shield SPF50</td><td>30-50</td><td>4.3</td><td>~6%</td><td>印尼清真品牌+热带配方</td></tr>
+<tr><td>Bioré</td><td>UV Aqua Rich</td><td>35-55</td><td>4.5</td><td>~9%</td><td>花王+水感质地</td></tr>
+</tbody>
+</table>
+<p><strong>市场空白</strong>：⭐ 清真认证防晒仅Wardah一个主要玩家 · "涂了泛白像鬼一样"是矿物防晒#1差评</p>
+<p class="source-tag">来源: malaysia-competitor-matrix-2026-06-14.md §品类4 | 时效: 2026-06-14</p>
+
+<h2>4.2 跨品类竞争热力图</h2>
+<table>
+<thead><tr><th>品类</th><th>竞争度</th><th>增速</th><th>品牌化窗口</th><th>进入壁垒</th><th>推荐指数</th></tr></thead>
+<tbody>
+<tr><td>宠物用品</td><td>4/10</td><td>15%+</td><td>大</td><td>中</td><td>⭐⭐⭐⭐⭐</td></tr>
+<tr><td>保健品/膳食补充剂</td><td>6/10</td><td>10-20%</td><td>大</td><td>中高</td><td>⭐⭐⭐⭐</td></tr>
+<tr><td>美妆个护</td><td>7/10</td><td>12%+</td><td>中</td><td>中</td><td>⭐⭐⭐⭐</td></tr>
+<tr><td>家居生活/收纳</td><td>5/10</td><td>10%+</td><td>大</td><td>低</td><td>⭐⭐⭐⭐</td></tr>
+<tr><td>母婴用品</td><td>6/10</td><td>8%+</td><td>中</td><td>中</td><td>⭐⭐⭐</td></tr>
+<tr><td>清真食品/饮料</td><td>7/10</td><td>8-10%</td><td>中</td><td>高</td><td>⭐⭐⭐</td></tr>
+</tbody>
+</table>
+<p class="source-tag">来源: malaysia-competitor-matrix-2026-06-14.md §跨品类竞争热力图 | 时效: 2026-06-14</p>
+
+<!-- ========== 第5章 搜索热点趋势 ========== -->
+<h1>第5章 搜索热点趋势（Search Trends）</h1>
+
+<h2>5.1 八品类搜索词分析</h2>
+
+<h3>核心发现</h3>
+<table>
+<thead><tr><th>#</th><th>发现</th><th>数据</th><th>影响</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><strong>Halal是跨品类#1信任信号</strong></td><td>"halal certified"组合搜索年增>30%</td><td>清真食品/饮料蓝海指数+6.0为全矩阵最高</td></tr>
+<tr><td>2</td><td><strong>三语并行市场</strong></td><td>英40-50%/马30-35%/中15-20%</td><td>纯英文策略丢失40-60%流量</td></tr>
+<tr><td>3</td><td><strong>"Murah"（便宜）频率SEA最高</strong></td><td>出现频率为全品类第一</td><td>促销型广告文案+价格锚定是转化关键</td></tr>
+<tr><td>4</td><td><strong>Hari Raya峰值远超11.11</strong></td><td>搜索量+80-150%</td><td>需提前4-6周调整出价</td></tr>
+<tr><td>5</td><td><strong>平台泄漏40-60%</strong></td><td>Shopee/Lazada/TikTok Shop</td><td>否定关键词部署是首要任务</td></tr>
+</tbody>
+</table>
+<p class="source-tag">来源: malaysia-search-trends-2026-06-14.md §执行摘要 | 时效: 2026-06-14</p>
+
+<h2>5.2 Google Ads CPC基准</h2>
+<table>
+<thead><tr><th>品类</th><th>CPC (MYR)</th><th>CPC (USD)</th><th>竞争度</th><th>Shopping适用性</th></tr></thead>
+<tbody>
+<tr><td>清真食品/饮料</td><td>0.80-3.00</td><td>$0.18-0.68</td><td>3/10</td><td>✅ 高</td></tr>
+<tr><td>宠物用品</td><td>0.60-2.50</td><td>$0.14-0.57</td><td>3/10</td><td>✅ 高</td></tr>
+<tr><td>保健品/膳食补充剂</td><td>1.00-4.00</td><td>$0.23-0.91</td><td>4/10</td><td>✅ 高</td></tr>
+<tr><td>美妆个护</td><td>1.00-3.50</td><td>$0.23-0.80</td><td>4/10</td><td>✅ 高</td></tr>
+<tr><td>家居生活/收纳</td><td>0.80-3.00</td><td>$0.18-0.68</td><td>4/10</td><td>✅ 中</td></tr>
+<tr><td>母婴用品</td><td>0.80-3.00</td><td>$0.18-0.68</td><td>4/10</td><td>✅ 高</td></tr>
+</tbody>
+</table>
+<p class="source-tag">来源: malaysia-search-trends-2026-06-14.md §1.3 | 时效: 2026</p>
+
+<h2>5.3 年度搜索热点日历</h2>
+<table>
+<thead><tr><th>月份</th><th>热点事件</th><th>影响品类</th><th>搜索量波动</th><th>出价调整</th></tr></thead>
+<tbody>
+<tr><td>1月</td><td>农历新年(CNY)</td><td>全品类</td><td><strong>+80-150%</strong></td><td>提前4-6周提价50-80%</td></tr>
+<tr><td>3-4月</td><td><strong>斋月/开斋节(Hari Raya)</strong></td><td>全品类</td><td><strong>+80-150%</strong></td><td>提前4-6周提价50-80%</td></tr>
+<tr><td>6月</td><td>6.18大促</td><td>全品类</td><td>+40-60%</td><td>提前3周提价25-35%</td></tr>
+<tr><td>9月</td><td>9.9大促</td><td>全品类</td><td>+50-80%</td><td>提前4周提价30-40%</td></tr>
+<tr><td>11月</td><td>双11</td><td>全品类</td><td>+60-100%</td><td>提前4周提价40-50%</td></tr>
+</tbody>
+</table>
+<p class="source-tag">来源: malaysia-search-trends-2026-06-14.md §五 | 时效: 2026</p>
+
+<!-- ========== 第6章 社交媒体舆情 ========== -->
+<h1>第6章 社交媒体舆情分析（Sentiment Analysis）</h1>
+
+<h2>6.1 品类热度排行</h2>
+<table>
+<thead><tr><th>品类</th><th>社交热度</th><th>跨境可行性</th><th>竞争度</th><th>利润率</th><th>推荐优先级</th></tr></thead>
+<tbody>
+<tr><td>💄 美妆个护</td><td>🔥🔥🔥🔥🔥</td><td>★★★★★</td><td>高</td><td>高</td><td><strong>P0</strong></td></tr>
+<tr><td>🐾 宠物用品</td><td>🔥🔥🔥🔥🔥</td><td>★★★★★</td><td>中</td><td>高</td><td><strong>P0</strong></td></tr>
+<tr><td>💊 保健品/膳食补充剂</td><td>🔥🔥🔥🔥🔥</td><td>★★★★☆</td><td>高</td><td>极高</td><td><strong>P0</strong></td></tr>
+<tr><td>🍖 清真食品/饮料</td><td>🔥🔥🔥🔥</td><td>★★★★☆</td><td>中高</td><td>中高</td><td><strong>P1</strong></td></tr>
+<tr><td>🏠 家居生活/收纳</td><td>🔥🔥🔥🔥</td><td>★★★★☆</td><td>中</td><td>中高</td><td><strong>P1</strong></td></tr>
+<tr><td>🏋️ 运动户外/健身</td><td>🔥🔥🔥🔥🔥</td><td>★★★★☆</td><td>中</td><td>中高</td><td><strong>P1</strong></td></tr>
+<tr><td>🎁 新奇小工具/创意礼品</td><td>🔥🔥🔥🔥🔥</td><td>★★★★★</td><td>低</td><td>高</td><td><strong>P1</strong></td></tr>
+<tr><td>👶 母婴用品</td><td>🔥🔥🔥</td><td>★★★☆☆</td><td>高</td><td>高</td><td><strong>P2</strong></td></tr>
+</tbody>
+</table>
+<p class="source-tag">来源: malaysia-sentiment-analysis-2026-06-14.md §三 | 时效: 2026-06-14</p>
+
+<h2>6.2 消费者痛点Top 10（跨品类）</h2>
+<table>
+<thead><tr><th>排名</th><th>痛点</th><th>影响品类</th><th>严重程度</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>假货/正品信任危机</td><td>母婴、美妆、保健品</td><td>⚠️⚠️⚠️⚠️⚠️</td></tr>
+<tr><td>2</td><td>剂型不适（胶囊太大/涂了泛白）</td><td>保健品、美妆</td><td>⚠️⚠️⚠️⚠️</td></tr>
+<tr><td>3</td><td>消化不适（宠物呕吐/拉稀）</td><td>宠物用品</td><td>⚠️⚠️⚠️⚠️</td></tr>
+<tr><td>4</td><td>成分不透明/看不懂</td><td>宠物、保健品、母婴</td><td>⚠️⚠️⚠️⚠️</td></tr>
+<tr><td>5</td><td>尺寸不合适</td><td>家居收纳、母婴、运动</td><td>⚠️⚠️⚠️</td></tr>
+<tr><td>6</td><td>价格虚高/性价比低</td><td>全品类</td><td>⚠️⚠️⚠️</td></tr>
+<tr><td>7</td><td>热带气候不适配</td><td>美妆、运动、家居</td><td>⚠️⚠️⚠️</td></tr>
+<tr><td>8</td><td>质量不稳定/用几天就坏</td><td>小工具、运动、家居</td><td>⚠️⚠️⚠️</td></tr>
+<tr><td>9</td><td>物流/包装问题</td><td>全品类</td><td>⚠️⚠️</td></tr>
+<tr><td>10</td><td>选择困难/信息过载</td><td>全品类</td><td>⚠️⚠️</td></tr>
+</tbody>
+</table>
+<p class="source-tag">来源: malaysia-sentiment-analysis-2026-06-14.md §3.3 | 时效: 2026-06-14</p>
+
+<!-- ========== 第7章 用户画像与需求洞察 ========== -->
+<h1>第7章 用户画像与需求洞察（User Insights）</h1>
+
+<h2>7.1 马来西亚消费者全景画像</h2>
+<table>
+<thead><tr><th>维度</th><th>数据</th><th>来源</th></tr></thead>
+<tbody>
+<tr><td>总人口</td><td>约3,400万</td><td>DataReportal 2025</td></tr>
+<tr><td>种族构成</td><td>马来人61%、华人24%、印度人7%</td><td>DOSM</td></tr>
+<tr><td>年龄中位数</td><td>30.2岁</td><td>Wiki选品项目</td></tr>
+<tr><td>城市化率</td><td>77%</td><td>Mordor Intelligence</td></tr>
+<tr><td>网购渗透率</td><td>87.8%</td><td>Ipsos Malaysia 2025</td></tr>
+<tr><td>月均电商消费</td><td>RM 200-500（中位数）</td><td>行业估算</td></tr>
+<tr><td>价格作为第一决策因素</td><td>39.4%</td><td>Vodus Research 2026</td></tr>
+<tr><td>TikTok Shop电商占比</td><td>28.4%（YoY +140%）</td><td>TikTok Shop Summit 2025</td></tr>
+</tbody>
+</table>
+<p class="source-tag">来源: malaysia-user-insights-2026-06-14.md §二 | 时效: 2025-2026</p>
+
+<h2>7.2 跨品类需求优先级总览</h2>
+<table>
+<thead><tr><th>排名</th><th>机会</th><th>品类</th><th>市场空白度</th><th>执行难度</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Halal认证宠物零食</td><td>宠物用品</td><td>★★★★★</td><td>中</td></tr>
+<tr><td>2</td><td>清真认证美妆/防晒</td><td>美妆个护</td><td>★★★★★</td><td>中</td></tr>
+<tr><td>3</td><td>胶原蛋白软糖/果冻饮</td><td>保健品</td><td>★★★★☆</td><td>低</td></tr>
+<tr><td>4</td><td>正品溯源体系</td><td>母婴、美妆</td><td>★★★★☆</td><td>中</td></tr>
+<tr><td>5</td><td>消化友好宠物食品</td><td>宠物用品</td><td>★★★★☆</td><td>中</td></tr>
+<tr><td>6</td><td>清真功能性饮料</td><td>清真食品</td><td>★★★★☆</td><td>中</td></tr>
+<tr><td>7</td><td>热带气候透气运动服饰</td><td>运动户外</td><td>★★★★☆</td><td>高</td></tr>
+<tr><td>8</td><td>马来西亚文化IP创意礼品</td><td>小工具/礼品</td><td>★★★★☆</td><td>低</td></tr>
+</tbody>
+</table>
+<p class="source-tag">来源: malaysia-user-insights-2026-06-14.md §跨品类需求优先级总览 | 时效: 2026-06-14</p>
+
+<!-- ========== 第8章 Top 10 选品清单 ========== -->
+<h1>第8章 Top 10 选品清单（Top 10 Selection）</h1>
+
+<h2>8.1 最终选品清单</h2>
+<table>
+<thead><tr><th>#</th><th>产品名称</th><th>所属品类</th><th>月搜索量</th><th>毛利率</th><th>竞争度</th><th>差异化卖点</th><th>合规要求</th></tr></thead>
+<tbody>
+<tr><td>🥇</td><td><strong>Halal认证消化友好猫零食</strong></td><td>宠物用品</td><td>8K-12K</td><td>45-55%</td><td>3/10</td><td>Halal+益生菌配方</td><td>JAKIM Halal</td></tr>
+<tr><td>🥈</td><td><strong>清真认证无白膜防晒霜SPF50+</strong></td><td>美妆个护</td><td>15K-25K</td><td>50-60%</td><td>4/10</td><td>清真+无白膜+热带抗汗</td><td>NPRA+JAKIM</td></tr>
+<tr><td>🥉</td><td><strong>胶原蛋白软糖（热带水果味）</strong></td><td>保健品</td><td>10K-18K</td><td>50-60%</td><td>4/10</td><td>软糖剂型+Halal+亚洲口味</td><td>NPRA注册</td></tr>
+<tr><td>4</td><td><strong>HDB公寓模块化防潮收纳套装</strong></td><td>家居收纳</td><td>6K-10K</td><td>40-50%</td><td>4/10</td><td>户型适配+防潮+模块化</td><td>无强制认证</td></tr>
+<tr><td>5</td><td><strong>益生菌+胶原蛋白复合饮品</strong></td><td>保健品</td><td>8K-15K</td><td>45-55%</td><td>4/10</td><td>双效配方+零食化</td><td>NPRA注册</td></tr>
+<tr><td>6</td><td><strong>热带气候透气运动T恤</strong></td><td>运动户外</td><td>7K-12K</td><td>45-55%</td><td>4/10</td><td>透气速干+UPF50+</td><td>无强制认证</td></tr>
+<tr><td>7</td><td><strong>马来西亚文化IP创意礼品套装</strong></td><td>小工具/礼品</td><td>5K-8K</td><td>50-60%</td><td>3/10</td><td>本土文化IP+高品质</td><td>无强制认证</td></tr>
+<tr><td>8</td><td><strong>孕期/哺乳期专用复合维生素</strong></td><td>母婴用品</td><td>6K-9K</td><td>40-50%</td><td>3/10</td><td>细分人群+正品溯源</td><td>NPRA注册</td></tr>
+<tr><td>9</td><td><strong>清真认证即食健康便当</strong></td><td>清真食品</td><td>5K-8K</td><td>35-45%</td><td>3/10</td><td>健康化+Halal</td><td>JAKIM Halal</td></tr>
+<tr><td>10</td><td><strong>免打孔智能感应LED灯</strong></td><td>家居收纳</td><td>6K-10K</td><td>45-55%</td><td>4/10</td><td>免打孔+智能感应</td><td>SIRIM ST COA</td></tr>
+</tbody>
+</table>
+<p class="source-tag">来源: malaysia-top10-selection-2026-06-14.md | 时效: 2026-06-14</p>
+
+<!-- ========== 第9章 全成本建模 ========== -->
+<h1>第9章 全成本建模（Cost Model）</h1>
+
+<h2>9.1 10 SKU 利润对比</h2>
+<table>
+<thead><tr><th>#</th><th>产品</th><th>零售价(RM)</th><th>全成本(RM)</th><th>毛利(RM)</th><th>净利(RM)</th><th>毛利率</th><th>净利率</th></tr></thead>
+<tbody>
+<tr><td>3</td><td>胶原蛋白软糖</td><td>82.00</td><td>62.27</td><td>47.70</td><td>19.73</td><td>68.4%</td><td><strong>28.3%</strong></td></tr>
+<tr><td>8</td><td>孕期维生素</td><td>72.00</td><td>50.13</td><td>41.70</td><td>21.87</td><td>68.1%</td><td><strong>35.7%</strong></td></tr>
+<tr><td>7</td><td>文化IP礼品套装</td><td>55.00</td><td>40.43</td><td>29.25</td><td>14.57</td><td>61.8%</td><td><strong>30.8%</strong></td></tr>
+<tr><td>5</td><td>益生菌胶原饮品</td><td>108.00</td><td>86.42</td><td>56.30</td><td>21.58</td><td>61.3%</td><td>23.5%</td></tr>
+<tr><td>2</td><td>防晒霜SPF50+</td><td>45.00</td><td>36.50</td><td>24.85</td><td>8.50</td><td>65.0%</td><td>22.2%</td></tr>
+<tr><td>6</td><td>透气运动T恤</td><td>45.00</td><td>37.63</td><td>23.80</td><td>7.37</td><td>61.5%</td><td>19.0%</td></tr>
+<tr><td>10</td><td>智能感应LED灯</td><td>35.00</td><td>30.13</td><td>15.75</td><td>4.87</td><td>52.3%</td><td>16.2%</td></tr>
+<tr><td>4</td><td>防潮收纳套装</td><td>58.00</td><td>49.98</td><td>26.58</td><td>8.02</td><td>53.3%</td><td>16.1%</td></tr>
+<tr><td>1</td><td>Halal猫零食</td><td>32.00</td><td>30.52</td><td>12.70</td><td>1.48</td><td>46.7%</td><td>5.4%</td></tr>
+<tr><td>9</td><td>Halal便当</td><td>15.00</td><td>15.61</td><td>4.70</td><td>(0.61)</td><td>34.1%</td><td><strong style="color:red">-4.4%</strong></td></tr>
+</tbody>
+</table>
+<p class="source-tag">来源: malaysia-cost-model-2026-06-14.md §4.1 | 时效: 2026-06-14</p>
+
+<h2>9.2 盈亏平衡分析</h2>
+<table>
+<thead><tr><th>#</th><th>产品</th><th>单位净利(RM)</th><th>固定成本分摊(RM)</th><th>盈亏平衡销量/月</th><th>安全边际</th></tr></thead>
+<tbody>
+<tr><td>3</td><td>胶原蛋白软糖</td><td>19.73</td><td>330</td><td><strong>17瓶</strong></td><td>+1,665% ✅</td></tr>
+<tr><td>8</td><td>孕期维生素</td><td>21.87</td><td>330</td><td><strong>15瓶</strong></td><td>+1,233% ✅</td></tr>
+<tr><td>7</td><td>IP礼品套装</td><td>14.57</td><td>330</td><td><strong>23套</strong></td><td>+1,204% ✅</td></tr>
+<tr><td>5</td><td>益生菌胶原饮品</td><td>21.58</td><td>330</td><td><strong>15盒</strong></td><td>+1,567% ✅</td></tr>
+<tr><td>1</td><td>Halal猫零食</td><td>1.48</td><td>330</td><td><strong>224盒</strong></td><td>-11% ⚠️</td></tr>
+<tr><td>9</td><td>Halal便当</td><td>(0.61)</td><td>330</td><td><strong>亏损</strong></td><td>❌</td></tr>
+</tbody>
+</table>
+<p><strong>全品牌盈亏平衡</strong>：月固定成本RM 3,300，加权平均单位净利RM 11.52，盈亏平衡总销量 <strong>287件/月</strong>，安全边际 +980%</p>
+<p class="source-tag">来源: malaysia-cost-model-2026-06-14.md §5 | 时效: 2026-06-14</p>
+
+<h2>9.3 汇率波动敏感性</h2>
+<table>
+<thead><tr><th>场景</th><th>CNY/RM</th><th>对采购成本影响</th><th>对净利影响</th></tr></thead>
+<tbody>
+<tr><td>基准（当前）</td><td>0.66</td><td>基准</td><td>基准</td></tr>
+<tr><td>人民币升值5%</td><td>0.693</td><td>采购成本↓5%</td><td>净利↑约5-8%</td></tr>
+<tr><td>人民币贬值5%</td><td>0.627</td><td>采购成本↑5%</td><td>净利↓约5-8%</td></tr>
+<tr><td>极端：双贬10%</td><td>0.60</td><td>采购成本↑10-15%</td><td>净利↓约12-20%</td></tr>
+</tbody>
+</table>
+<p class="source-tag">来源: malaysia-cost-model-2026-06-14.md §6 | 时效: 2026-06-14</p>
+
+<!-- ========== 第10章 合规检查与综合评审 ========== -->
+<h1>第10章 合规检查与综合评审（Compliance &amp; Final Review）</h1>
+
+<h2>10.1 Top 10 SKU 合规路径</h2>
+<table>
+<thead><tr><th>#</th><th>SKU</th><th>强制认证</th><th>认证费用(USD)</th><th>周期</th><th>风险评级</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Halal猫零食</td><td>JAKIM Halal（食品类）</td><td>$800-2,200</td><td>3-6月</td><td>🟡中</td></tr>
+<tr><td>2</td><td>清真防晒霜</td><td>NPRA通知+JAKIM Halal</td><td>$1,300-3,700</td><td>3-6月</td><td>🟡中</td></tr>
+<tr><td>3</td><td>胶原蛋白软糖</td><td>NPRA全注册+JAKIM Halal</td><td>$2,000-5,000+</td><td><strong>12-18月</strong></td><td>🔴高</td></tr>
+<tr><td>4</td><td>防潮收纳套装</td><td>无强制</td><td>$100-300</td><td><strong>1-2周</strong></td><td>🟢低</td></tr>
+<tr><td>5</td><td>益生菌胶原饮品</td><td>NPRA全注册+JAKIM Halal</td><td>$2,000-5,000+</td><td><strong>12-18月</strong></td><td>🔴高</td></tr>
+<tr><td>6</td><td>透气运动T恤</td><td>无强制</td><td>$100-300</td><td><strong>1-2周</strong></td><td>🟢低</td></tr>
+<tr><td>7</td><td>文化IP礼品</td><td>无强制（纯礼品版）</td><td>$100-300</td><td><strong>1-2周</strong></td><td>🟢低</td></tr>
+<tr><td>8</td><td>孕期维生素</td><td>NPRA全注册+JAKIM Halal</td><td>$2,000-5,000+</td><td><strong>12-18月</strong></td><td>🔴高</td></tr>
+<tr><td>9</td><td>Halal便当</td><td>JAKIM Halal（食品类）</td><td>$800-2,200</td><td>3-6月</td><td>🟡中</td></tr>
+<tr><td>10</td><td>智能感应LED灯</td><td>SIRIM ST COA</td><td>$1,500-3,000</td><td>6-10周</td><td>🟢🟡低中</td></tr>
+</tbody>
+</table>
+<p class="source-tag">来源: malaysia-compliance-checklist-2026-06-14.md §横向对比汇总 | 时效: 2026-06-14</p>
+
+<h2>10.2 上市优先顺位</h2>
+<table>
+<thead><tr><th>梯队</th><th>时间</th><th>SKU</th><th>条件</th></tr></thead>
+<tbody>
+<tr><td>🚀 第一梯队</td><td>1-2周</td><td>#4收纳套装、#6运动T恤、#7文化礼品</td><td>无需强制认证，立即上架</td></tr>
+<tr><td>⚡ 第二梯队</td><td>6-10周</td><td>#10智能感应灯、#2防晒霜（NPRA先行版）</td><td>SIRIM/NPRA短期认证</td></tr>
+<tr><td>📋 第三梯队</td><td>3-6月</td><td>#1猫零食、#9便当、#2防晒Halal版</td><td>JAKIM Halal认证</td></tr>
+<tr><td>🔬 第四梯队</td><td>12-18月</td><td>#3软糖、#5饮品、#8孕期维生素</td><td>NPRA全注册</td></tr>
+</tbody>
+</table>
+<p class="source-tag">来源: malaysia-compliance-checklist-2026-06-14.md §上市优先顺位 | 时效: 2026-06-14</p>
+
+<h2>10.3 综合评分排名</h2>
+<table>
+<thead><tr><th>排名</th><th>SKU</th><th>市场</th><th>合规</th><th>供应链</th><th>财务</th><th>运营</th><th>综合</th><th>决策</th></tr></thead>
+<tbody>
+<tr><td>🥇</td><td>#2 清真防晒霜</td><td>9</td><td>6</td><td>8</td><td>8</td><td>7</td><td><strong>7.6</strong></td><td>🟢 Go 优先</td></tr>
+<tr><td>🥇</td><td>#10 智能感应灯</td><td>7</td><td>7</td><td>8</td><td>8</td><td>8</td><td><strong>7.6</strong></td><td>🟢 Go 优先</td></tr>
+<tr><td>🥉</td><td>#7 文化IP礼品</td><td>6</td><td>9</td><td>8</td><td>8</td><td>6</td><td><strong>7.4</strong></td><td>🟢 Go 优先</td></tr>
+<tr><td>4</td><td>#4 防潮收纳套装</td><td>7</td><td>10</td><td>6</td><td>7</td><td>6</td><td><strong>7.2</strong></td><td>🟢 Go 优先</td></tr>
+<tr><td>4</td><td>#6 透气运动T恤</td><td>7</td><td>9</td><td>8</td><td>7</td><td>5</td><td><strong>7.2</strong></td><td>🟢 Go 优先</td></tr>
+<tr><td>6</td><td>#1 Halal猫零食</td><td>8</td><td>6</td><td>6</td><td>6</td><td>8</td><td><strong>6.8</strong></td><td>🟡 Go 条件</td></tr>
+<tr><td>6</td><td>#3 胶原蛋白软糖</td><td>8</td><td>4</td><td>6</td><td>9</td><td>7</td><td><strong>6.8</strong></td><td>🟡 Go 条件</td></tr>
+<tr><td>8</td><td>#5 益生菌胶原饮品</td><td>8</td><td>4</td><td>5</td><td>8</td><td>6</td><td><strong>6.2</strong></td><td>🟡 Go 条件</td></tr>
+<tr><td>9</td><td>#8 孕期维生素</td><td>7</td><td>4</td><td>6</td><td>7</td><td>6</td><td><strong>6.0</strong></td><td>🟡 Go 谨慎</td></tr>
+<tr><td>10</td><td>#9 Halal便当</td><td>7</td><td>6</td><td>4</td><td>6</td><td>5</td><td><strong>5.6</strong></td><td>🟠 Go 谨慎</td></tr>
+</tbody>
+</table>
+<p class="source-tag">来源: malaysia-final-review-2026-06-14.md §3 | 时效: 2026-06-14</p>
+
+<h2>10.4 关键风险提示</h2>
+<blockquote>
+<strong>🔴 致命风险</strong>：
+<br>① NPRA注册周期被系统性低估 — 选品清单标注"2-4个月"，合规检查明确为<strong>9-12个月</strong>
+<br>② Halal便当冷链物流 — 即食便当需冷冻/冷藏运输，马来西亚冷链覆盖有限
+<br><strong>🟠 重大风险</strong>：
+<br>③ 保健品线集中度过高 — 30% SKU全部依赖NPRA注册
+<br>④ 冷启动期广告费用侵蚀 — #1猫零食冷启动期净利率仅5.4%
+<br><span class="source-tag">来源: malaysia-final-review-2026-06-14.md §7 | 时效: 2026-06-14</span>
+</blockquote>
+
+<!-- ========== 第11章 行动建议 ========== -->
+<h1>第11章 行动建议与执行路线图（Action Plan）</h1>
+
+<h2>11.1 分阶段进入策略</h2>
+
+<h3>Phase 1 — 立即启动（Month 1-3）</h3>
+<table>
+<thead><tr><th>SKU</th><th>行动</th><th>预计上架</th><th>预算(RM)</th></tr></thead>
+<tbody>
+<tr><td>#4 防潮收纳套装</td><td>立即上架+内容营销</td><td>Week 1-2</td><td>3,000</td></tr>
+<tr><td>#6 透气运动T恤</td><td>立即上架+内容营销</td><td>Week 1-2</td><td>3,000</td></tr>
+<tr><td>#7 文化IP礼品</td><td>立即上架+节庆预热</td><td>Week 1-2</td><td>2,000</td></tr>
+<tr><td>#2 防晒霜</td><td>NPRA通知申请</td><td>Week 3-4</td><td>2,000</td></tr>
+<tr><td>#10 智能感应灯</td><td>SIRIM ST COA认证申请</td><td>Week 6-8</td><td>3,000</td></tr>
+</tbody>
+</table>
+
+<h3>Phase 2 — 认证推进（Month 1-6 同步启动）</h3>
+<table>
+<thead><tr><th>SKU</th><th>行动</th><th>预计上架</th><th>预算(RM)</th></tr></thead>
+<tbody>
+<tr><td>#1 Halal猫零食</td><td>JAKIM认证+兽医进口证</td><td>Month 4-6</td><td>5,000</td></tr>
+<tr><td>#9 Halal便当</td><td>JAKIM认证+食品进口许可</td><td>Month 4-6</td><td>5,000</td></tr>
+<tr><td>#2 防晒Halal版</td><td>JAKIM认证</td><td>Month 4-6</td><td>3,000</td></tr>
+</tbody>
+</table>
+
+<h3>Phase 3 — 长期注册（Month 1-18）</h3>
+<table>
+<thead><tr><th>SKU</th><th>行动</th><th>预计上架</th><th>预算(RM)</th></tr></thead>
+<tbody>
+<tr><td>#3 胶原蛋白软糖</td><td>NPRA全注册+稳定性测试</td><td>Month 10-14</td><td>8,000</td></tr>
+<tr><td>#5 益生菌胶原饮品</td><td>NPRA全注册+稳定性测试</td><td>Month 10-14</td><td>8,000</td></tr>
+<tr><td>#8 孕期维生素</td><td>NPRA全注册+安全性数据</td><td>Month 12-18</td><td>8,000</td></tr>
+</tbody>
+</table>
+
+<h2>11.2 总预算概览</h2>
+<table>
+<thead><tr><th>类别</th><th>金额(RM)</th></tr></thead>
+<tbody>
+<tr><td>Phase 1（立即上架+短期认证）</td><td>13,000</td></tr>
+<tr><td>Phase 2（Halal认证线）</td><td>13,000</td></tr>
+<tr><td>Phase 3（NPRA注册线）</td><td>24,000</td></tr>
+<tr><td>运营资金缓冲（6个月）</td><td>20,000</td></tr>
+<tr><td><strong>总计</strong></td><td><strong>~RM 70,000</strong></td></tr>
+</tbody>
+</table>
+<p class="source-tag">来源: malaysia-final-review-2026-06-14.md §6 | 时效: 2026-06-14</p>
+
+<h2>11.3 成功概率评估</h2>
+<table>
+<thead><tr><th>场景</th><th>概率</th><th>条件</th></tr></thead>
+<tbody>
+<tr><td>乐观（Month 12盈利）</td><td>35%</td><td>Phase 1 SKU销售达标+认证进度正常</td></tr>
+<tr><td>基准（Month 18盈利）</td><td>45%</td><td>Phase 1-2 SKU销售达标+认证略有延迟</td></tr>
+<tr><td>悲观（Month 24+盈利）</td><td>20%</td><td>NPRA注册严重延迟+销售不及预期</td></tr>
+</tbody>
+</table>
+<p class="source-tag">来源: malaysia-final-review-2026-06-14.md §9.3 | 时效: 2026-06-14</p>
+
+<!-- ========== 附录 ========== -->
+<h1>附录：数据来源与时效声明</h1>
+
+<table>
+<thead><tr><th>#</th><th>来源</th><th>类型</th><th>关键数据</th><th>时效</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>e-Conomy SEA 2024（Google/Temasek/Bain）</td><td>行业报告</td><td>2024年GMV $160亿（+17%）</td><td>2024.11</td></tr>
+<tr><td>2</td><td>e-Conomy SEA 2025（Google/Temasek/Bain）</td><td>行业报告</td><td>2025年GMV $200亿（+21%）</td><td>2025.11</td></tr>
+<tr><td>3</td><td>Mordor Intelligence — Malaysia E-commerce</td><td>行业报告</td><td>2025年$106.2亿，CAGR 13.67%</td><td>2026.01</td></tr>
+<tr><td>4</td><td>Wiki — Malaysia E-commerce Market 2026</td><td>内部研究</td><td>平台份额、品类数据、消费者画像</td><td>2026.06</td></tr>
+<tr><td>5</td><td>Ipsos Malaysia — E-commerce Landscape 2025</td><td>市场调研</td><td>在线购物+16%，2/3人口已在线</td><td>2025.11</td></tr>
+<tr><td>6</td><td>DOSM — Malaysia Digital Economy 2024/2025</td><td>政府统计</td><td>电商收入RM1.2万亿（2023），+4.9%</td><td>2024/2025</td></tr>
+<tr><td>7</td><td>InCorp Malaysia — New SST 2025 Guide</td><td>合规指南</td><td>低值进口商品征税+物流业服务税</td><td>2025.07</td></tr>
+<tr><td>8</td><td>TikTok Shop Malaysia Summit 2025</td><td>行业报告</td><td>日搜索1亿次，140%增长</td><td>2025.07</td></tr>
+<tr><td>9</td><td>Euromonitor International</td><td>行业报告</td><td>保健品/宠物/母婴行业数据</td><td>2025</td></tr>
+<tr><td>10</td><td>6Wresearch</td><td>行业报告</td><td>家居/保健品/母婴市场规模</td><td>2025-2031</td></tr>
+</tbody>
+</table>
+
+<hr>
+<p style="text-align:center; color:#999; font-size:9pt;">
+    <strong>报告完成于 2026-06-14</strong> | 马来西亚市场选品调查正式报告 v1.0<br>
+    本报告由 OWL 文档生成器整合10份子报告自动生成<br>
+    weasyprint 68.1 · Noto Sans CJK SC 字体嵌入 · A4页面<br>
+    <strong>⚠️ 免责声明</strong>：本报告中的数据来自多个公开和内部来源，部分数据为行业估算值。
+    实际商业决策前请结合最新官方数据和实地验证。
+</p>
+
+</body>
+</html>
